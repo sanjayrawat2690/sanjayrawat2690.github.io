@@ -1,0 +1,14 @@
+For the Ghibli-style images of Hindu deities, you would need to:
+
+1. Commission an artist who can create Ghibli-inspired artwork of the 50 deities
+2. Generate images using AI image generation tools like Midjourney or DALL-E with prompts like "studio ghibli style art of [deity name], soft colors, peaceful, detailed, spiritual"
+3. Use placeholder images initially while the artwork is being created
+
+Image specifications:
+- Square images with 1:1 aspect ratio (recommended size: 500x500px)
+- Soft Ghibli-like colors with pastel tones
+- Peaceful and reverent artistic style
+- Focus on the deity's face and distinctive features
+- Simple backgrounds with soft gradients
+
+Remember to name each image according to the deity id in the data.js file (e.g., "ganesh.jpg", "lakshmi.jpg"). 

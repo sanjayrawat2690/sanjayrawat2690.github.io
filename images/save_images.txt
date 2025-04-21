@@ -1,0 +1,11 @@
+To implement the image changes:
+
+1. Save the first image in the conversation (Lord Ganesh with marigold garlands) as "ganesh.jpg" in the images folder.
+
+2. Save the second image in the conversation (Lord Shiva meditating with blue skin) as "shiva.jpg" in the images folder.
+
+3. Save the third image in the conversation (Goddess Lakshmi on lotus) as "lakshmi.jpg" in the images folder.
+
+After saving these images, the website will display these beautiful Ghibli-style deity images instead of the default SVG placeholders.
+
+Note: Make sure the image dimensions are appropriate (recommended: 500x500px or similar square aspect ratio) and that the file sizes are optimized for web. 
