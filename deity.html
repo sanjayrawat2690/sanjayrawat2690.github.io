@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deity Aarti - Aarti Sangrah</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo (Om symbol) -->
+            <a href="index.html" class="logo-link">
+                <div class="om-logo">ॐ</div>
+            </a>
+            
+            <!-- Site title -->
+            <div class="site-title">
+                <h1>आरती संग्रह</h1>
+                <h2>Aarti Sangrah</h2>
+            </div>
+            
+            <!-- Navigation menu -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container deity-page">
+        <header class="deity-header">
+            <h1 id="deity-name">Deity Name</h1>
+            <a href="index.html" class="back-button">← Back to All Deities</a>
+        </header>
+        
+        <main>
+            <div class="deity-detail">
+                <div id="deity-image" class="deity-image ghibli-style"></div>
+                
+                <!-- Aarti Cards Section -->
+                <div class="aarti-cards-container">
+                    <h3>Select an Aarti</h3>
+                    <div id="aarti-cards" class="aarti-cards">
+                        <!-- Aarti cards will be populated here -->
+                    </div>
+                </div>
+                
+                <div class="aarti-container">
+                    <div class="aarti-header">
+                        <h2 id="aarti-title">आरती</h2>
+                        <div class="language-toggle">
+                            <button id="hindi-btn" class="active">हिंदी</button>
+                            <button id="english-btn">English</button>
+                        </div>
+                    </div>
+                    <div class="aarti-content" id="aarti-lyrics">
+                        <!-- Aarti lyrics will be populated here via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Aarti Sangrah</h3>
+                <p>A digital collection of traditional Hindu devotional hymns</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Aarti" target="_blank">About Aarti</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Aarti Sangrah. Created with devotion and love.</p>
+            <p><a href="admin.html" class="admin-link">Manage Images</a></p>
+        </div>
+    </footer>
+    
+    <script src="data.js"></script>
+    <script src="deity.js"></script>
+</body>
+</html> 

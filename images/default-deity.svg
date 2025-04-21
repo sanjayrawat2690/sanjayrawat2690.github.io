@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <!-- Ghibli-style background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#83ccd2" />
+      <stop offset="100%" stop-color="#a0d8b3" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="500" fill="url(#bg-gradient)" />
+  
+  <!-- Soft glow -->
+  <circle cx="250" cy="250" r="200" fill="url(#glow)" />
+  
+  <!-- Stylized deity silhouette -->
+  <path d="M250,120 C180,120 150,200 150,260 C150,320 200,380 250,380 C300,380 350,320 350,260 C350,200 320,120 250,120 Z" 
+        fill="#f9f2e7" stroke="#fff" stroke-width="2" />
+  
+  <!-- Simplified face features (Ghibli style) -->
+  <circle cx="220" cy="220" r="10" fill="#333" /> <!-- Left eye -->
+  <circle cx="280" cy="220" r="10" fill="#333" /> <!-- Right eye -->
+  <path d="M235,260 C245,270 255,270 265,260" stroke="#333" stroke-width="4" fill="none" /> <!-- Smile -->
+  
+  <!-- Decorative elements -->
+  <path d="M250,120 L250,80" stroke="#f9f2e7" stroke-width="6" fill="none" />
+  <circle cx="250" cy="70" r="15" fill="#f9f2e7" />
+  
+  <!-- Text indication -->
+  <text x="250" y="450" font-family="Arial" font-size="24" text-anchor="middle" fill="#fff">
+    Ghibli-Style Deity
+  </text>
+</svg> 
