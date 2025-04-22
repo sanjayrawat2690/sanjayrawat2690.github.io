@@ -1,305 +1,210 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Main header search elements
+    // DOM Elements
     const searchInput = document.getElementById('search-input');
     const searchButton = document.getElementById('search-button');
     const searchResults = document.getElementById('search-results');
+    const mainSearchResults = document.getElementById('main-search-results');
+    const searchResultsGrid = document.getElementById('search-results-grid');
+    const deityGrid = document.getElementById('deity-grid');
+    const searchInfo = document.getElementById('search-info');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const loadMoreWrap = document.getElementById('load-more-wrap');
     
-    // Debug: Log which search elements are found or missing
-    console.log("Search Elements Found:");
-    console.log("Header Search Input:", searchInput ? "✓" : "✗");
-    console.log("Header Search Button:", searchButton ? "✓" : "✗");
-    console.log("Header Search Results:", searchResults ? "✓" : "✗");
+    // Search settings
+    const RESULTS_PER_PAGE = 12;
+    let currentResults = [];
+    let currentPage = 1;
     
-    // Build a searchable index from the deities data
-    const searchIndex = buildSearchIndex();
+    // Event listeners
+    searchInput.addEventListener('input', handleSearchInput);
+    searchButton.addEventListener('click', () => performMainSearch(searchInput.value));
+    clearSearchBtn.addEventListener('click', clearSearch);
+    loadMoreBtn.addEventListener('click', loadMoreResults);
     
-    // Set up search functionality for the header search bar
-    if (searchInput && searchButton && searchResults) {
-        setupSearch(searchInput, searchButton, searchResults);
-    } else {
-        console.log("Warning: Header search elements missing");
-    }
-    
-    // Generic function to set up search for any search bar
-    function setupSearch(input, button, results) {
-        console.log(`Setting up search for ${input.id}`);
+    // Handle the dropdown quick search
+    function handleSearchInput() {
+        const query = searchInput.value.trim().toLowerCase();
         
-        // Handle search input
-        input.addEventListener('input', debounce(() => {
-            const query = input.value.trim().toLowerCase();
-            if (query.length < 2) {
-                results.classList.remove('active');
-                results.innerHTML = '';
-                return;
-            }
-            
-            const searchResults = performSearch(query);
-            displayResults(searchResults, query, results);
-        }, 300));
-        
-        // Handle search button click
-        button.addEventListener('click', () => {
-            const query = input.value.trim().toLowerCase();
-            if (query.length < 2) return;
-            
-            const searchResults = performSearch(query);
-            displayResults(searchResults, query, results);
-        });
-        
-        // Handle Enter key press
-        input.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                const query = input.value.trim().toLowerCase();
-                if (query.length < 2) return;
-                
-                const searchResults = performSearch(query);
-                displayResults(searchResults, query, results);
-            }
-        });
-    }
-    
-    // Hide search results when clicking outside
-    document.addEventListener('click', (e) => {
-        // Function to check if an element is part of a search component
-        const isPartOfSearch = (element, input, button, results) => {
-            return input && (
-                input.contains(e.target) || 
-                (button && button.contains(e.target)) || 
-                (results && results.contains(e.target))
-            );
-        };
-        
-        // Check and hide header search results if needed
-        if (searchResults && !isPartOfSearch(e.target, searchInput, searchButton, searchResults)) {
-            searchResults.classList.remove('active');
-        }
-    });
-    
-    // Build search index from deity data
-    function buildSearchIndex() {
-        const index = [];
-        
-        if (!window.deitiesData || !Array.isArray(window.deitiesData)) {
-            console.error("Error: deitiesData is not available or not an array");
-            return index;
-        }
-        
-        console.log(`Building search index with ${window.deitiesData.length} deities`);
-        
-        deitiesData.forEach(deity => {
-            // Add deity basic info to index
-            index.push({
-                type: 'deity',
-                id: deity.id,
-                name: deity.name,
-                content: deity.name.toLowerCase(),
-                url: `deity.html?id=${deity.id}`,
-                score: 100 // Base score for deity names
-            });
-            
-            // Add aartis to index (handle both old and new format)
-            if (deity.aartis) {
-                // New format with multiple aartis
-                deity.aartis.forEach(aarti => {
-                    // Add aarti title as a separate entry for better visibility
-                    index.push({
-                        type: 'aarti_title',
-                        id: aarti.id,
-                        deityId: deity.id,
-                        deityName: deity.name,
-                        title: aarti.title,
-                        content: aarti.title.toLowerCase(),
-                        url: `deity.html?id=${deity.id}&aarti=${aarti.id}`,
-                        score: 90 // High score for aarti titles
-                    });
-                    
-                    // Add full aarti content for searching
-                    index.push({
-                        type: 'aarti_content',
-                        id: aarti.id,
-                        deityId: deity.id,
-                        deityName: deity.name,
-                        title: aarti.title,
-                        content: `${aarti.title.toLowerCase()} ${aarti.hindi.toLowerCase()} ${aarti.english.toLowerCase()}`,
-                        url: `deity.html?id=${deity.id}&aarti=${aarti.id}`,
-                        hindi: aarti.hindi,
-                        english: aarti.english,
-                        score: 80 // Lower score for content matches
-                    });
-                });
-            } else if (deity.aarti) {
-                // Old format with single aarti
-                index.push({
-                    type: 'aarti_content',
-                    id: `${deity.id}-1`,
-                    deityId: deity.id,
-                    deityName: deity.name,
-                    title: "आरती",
-                    content: `आरती ${deity.aarti.toLowerCase()} ${deity.aartiEnglish ? deity.aartiEnglish.toLowerCase() : ''}`,
-                    url: `deity.html?id=${deity.id}`,
-                    hindi: deity.aarti,
-                    english: deity.aartiEnglish || "",
-                    score: 80 // Lower score for content matches
-                });
-            }
-        });
-        
-        console.log(`Search index built with ${index.length} entries`);
-        return index;
-    }
-    
-    // Perform search against index
-    function performSearch(query) {
-        // Filter items that match the query
-        const matchingItems = searchIndex.filter(item => item.content.includes(query));
-        
-        // Score each result based on how well it matches
-        const scoredResults = matchingItems.map(item => {
-            let finalScore = item.score;
-            
-            // Boost score if query is at the beginning of content
-            if (item.content.startsWith(query)) {
-                finalScore += 20;
-            }
-            
-            // Boost score based on how much of the query matches
-            const matchRatio = query.length / item.content.length;
-            finalScore += Math.round(matchRatio * 10);
-            
-            // Boost score if exact match in title
-            if (item.title && item.title.toLowerCase() === query) {
-                finalScore += 30;
-            }
-            
-            return {
-                ...item,
-                finalScore
-            };
-        });
-        
-        // Sort by score (highest first) and limit results
-        return scoredResults
-            .sort((a, b) => b.finalScore - a.finalScore)
-            .slice(0, 10);
-    }
-    
-    // Display search results
-    function displayResults(results, query, resultsContainer) {
-        console.log(`Displaying ${results.length} search results for "${query}"`);
-        
-        resultsContainer.innerHTML = '';
-        
-        if (results.length === 0) {
-            resultsContainer.innerHTML = '<div class="no-results">No results found</div>';
-            resultsContainer.classList.add('active');
+        if (query.length < 2) {
+            searchResults.style.maxHeight = '0';
             return;
         }
         
-        // Group results by deity
-        const groupedResults = {};
-        results.forEach(result => {
-            if (!groupedResults[result.deityId]) {
-                groupedResults[result.deityId] = [];
-            }
-            groupedResults[result.deityId].push(result);
-        });
+        // Filter deities based on search query
+        const matchedDeities = deitiesData.filter(deity => {
+            return deity.name.toLowerCase().includes(query) || 
+                   (deity.aartis && deity.aartis.some(aarti => 
+                       aarti.title.toLowerCase().includes(query) || 
+                       aarti.hindi.toLowerCase().includes(query) || 
+                       aarti.english.toLowerCase().includes(query)
+                   ));
+        }).slice(0, 5); // Only show 5 quick results in dropdown
         
-        // Display results grouped by deity
-        Object.entries(groupedResults).forEach(([deityId, items]) => {
-            // Get the first result to extract deity info
-            const firstItem = items[0];
-            
-            const deitySection = document.createElement('div');
-            deitySection.className = 'search-result-deity';
-            
-            // Create and append deity header
-            const deityHeader = document.createElement('div');
-            deityHeader.className = 'search-result-deity-header';
-            deityHeader.innerHTML = `<span class="deity-name">${firstItem.deityName}</span>`;
-            deityHeader.addEventListener('click', () => {
-                window.location.href = `deity.html?id=${deityId}`;
-            });
-            deitySection.appendChild(deityHeader);
-            
-            // Add each aarti result
-            items.forEach(item => {
-                if (item.type === 'aarti_content' || item.type === 'aarti_title') {
-                    const resultItem = document.createElement('div');
-                    resultItem.className = 'search-result-item';
-                    
-                    let itemContent = '';
-                    if (item.title) {
-                        itemContent += `<div class="aarti-title">${highlightMatch(item.title, query)}</div>`;
-                    }
-                    
-                    if (item.type === 'aarti_content') {
-                        // Get excerpt for hindi or english content based on match
-                        const excerpt = findExcerpt(item.hindi, item.english, query);
-                        itemContent += `<div class="aarti-excerpt">${excerpt}</div>`;
-                    }
-                    
-                    resultItem.innerHTML = itemContent;
-                    resultItem.addEventListener('click', () => {
-                        window.location.href = item.url;
-                    });
-                    
-                    deitySection.appendChild(resultItem);
-                }
-            });
-            
-            resultsContainer.appendChild(deitySection);
-        });
-        
-        resultsContainer.classList.add('active');
-    }
-    
-    // Find a relevant excerpt from the aarti that contains the query
-    function findExcerpt(hindi, english, query) {
-        // Try to find the query in hindi text first
-        let hindiLines = hindi.split('\n');
-        for (let line of hindiLines) {
-            if (line.toLowerCase().includes(query)) {
-                return highlightMatch(line, query);
-            }
+        if (matchedDeities.length === 0) {
+            searchResults.style.maxHeight = '0';
+            return;
         }
         
-        // If not found in hindi, try english
-        if (english) {
-            let englishLines = english.split('\n');
-            for (let line of englishLines) {
-                if (line.toLowerCase().includes(query)) {
-                    return highlightMatch(line, query);
-                }
-            }
+        // Display results
+        searchResults.innerHTML = '';
+        searchResults.style.maxHeight = '400px';
+        
+        matchedDeities.forEach(deity => {
+            const resultItem = document.createElement('div');
+            resultItem.className = 'search-result-item';
+            
+            const deityImage = document.createElement('div');
+            deityImage.className = 'search-result-image';
+            deityImage.style.backgroundImage = `url('${deity.image}')`;
+            
+            const deityInfo = document.createElement('div');
+            deityInfo.className = 'search-result-info';
+            
+            const deityName = document.createElement('div');
+            deityName.className = 'search-result-name';
+            deityName.textContent = deity.name;
+            
+            deityInfo.appendChild(deityName);
+            resultItem.appendChild(deityImage);
+            resultItem.appendChild(deityInfo);
+            searchResults.appendChild(resultItem);
+            
+            // Add click event
+            resultItem.addEventListener('click', () => {
+                window.location.href = `deity.html?id=${deity.id}`;
+            });
+        });
+        
+        // Add "Show all results" option if there are more results
+        if (deitiesData.filter(deity => 
+            deity.name.toLowerCase().includes(query) || 
+            (deity.aartis && deity.aartis.some(aarti => 
+                aarti.title.toLowerCase().includes(query) || 
+                aarti.hindi.toLowerCase().includes(query) || 
+                aarti.english.toLowerCase().includes(query)
+            ))
+        ).length > 5) {
+            const showAllItem = document.createElement('div');
+            showAllItem.className = 'search-result-show-all';
+            showAllItem.textContent = 'Show all results';
+            searchResults.appendChild(showAllItem);
+            
+            showAllItem.addEventListener('click', () => {
+                performMainSearch(query);
+            });
         }
+    }
+    
+    // Perform main search for the full results grid
+    function performMainSearch(query) {
+        if (!query || query.trim().length < 2) return;
         
-        // If no specific line found, return the first line
-        return hindiLines[0];
-    }
-    
-    // Highlight matching text
-    function highlightMatch(text, query) {
-        if (!text.toLowerCase().includes(query.toLowerCase())) return text;
+        query = query.trim().toLowerCase();
+        searchInput.value = query;
         
-        const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
-        return text.replace(regex, '<span class="highlight">$1</span>');
+        // Close dropdown
+        searchResults.style.maxHeight = '0';
+        
+        // Filter deities
+        currentResults = deitiesData.filter(deity => {
+            return deity.name.toLowerCase().includes(query) || 
+                   (deity.aartis && deity.aartis.some(aarti => 
+                       aarti.title.toLowerCase().includes(query) || 
+                       aarti.hindi.toLowerCase().includes(query) || 
+                       aarti.english.toLowerCase().includes(query)
+                   ));
+        });
+        
+        // Show search results section, hide main grid
+        deityGrid.style.display = 'none';
+        mainSearchResults.style.display = 'block';
+        
+        // Update search info
+        searchInfo.textContent = `Found ${currentResults.length} results for "${query}"`;
+        
+        // Reset pagination
+        currentPage = 1;
+        
+        // Display results
+        displaySearchResults();
     }
     
-    // Helper function to escape regex special characters
-    function escapeRegExp(string) {
-        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Display search results with pagination
+    function displaySearchResults() {
+        searchResultsGrid.innerHTML = '';
+        
+        const startIndex = 0;
+        const endIndex = Math.min(currentPage * RESULTS_PER_PAGE, currentResults.length);
+        const resultsToShow = currentResults.slice(startIndex, endIndex);
+        
+        resultsToShow.forEach(deity => {
+            const resultCard = document.createElement('div');
+            resultCard.className = 'search-result-deity';
+            resultCard.setAttribute('data-id', deity.id);
+            
+            const deityImage = document.createElement('div');
+            deityImage.className = 'deity-image';
+            deityImage.style.backgroundImage = `url('${deity.image}')`;
+            
+            const deityName = document.createElement('h3');
+            deityName.textContent = deity.name;
+            
+            // Add count of aartis
+            const aartiCount = document.createElement('span');
+            aartiCount.className = 'aarti-count';
+            
+            // Check if deity has aartis array (new format) or single aarti (old format)
+            if (deity.aartis) {
+                aartiCount.textContent = `${deity.aartis.length} Aarti${deity.aartis.length > 1 ? 's' : ''}`;
+            } else {
+                aartiCount.textContent = `1 Aarti`;
+            }
+            
+            resultCard.appendChild(deityImage);
+            resultCard.appendChild(deityName);
+            resultCard.appendChild(aartiCount);
+            searchResultsGrid.appendChild(resultCard);
+            
+            // Add click event to navigate to deity page
+            resultCard.addEventListener('click', () => {
+                window.location.href = `deity.html?id=${deity.id}`;
+            });
+        });
+        
+        // Show or hide load more button
+        if (currentPage * RESULTS_PER_PAGE < currentResults.length) {
+            loadMoreWrap.style.display = 'flex';
+        } else {
+            loadMoreWrap.style.display = 'none';
+        }
     }
     
-    // Debounce function to limit how often the search runs
-    function debounce(func, wait) {
-        let timeout;
-        return function() {
-            const context = this;
-            const args = arguments;
-            clearTimeout(timeout);
-            timeout = setTimeout(() => {
-                func.apply(context, args);
-            }, wait);
-        };
+    // Load more results
+    function loadMoreResults() {
+        currentPage++;
+        displaySearchResults();
     }
+    
+    // Clear search results and show original grid
+    function clearSearch() {
+        mainSearchResults.style.display = 'none';
+        deityGrid.style.display = 'grid';
+        searchInput.value = '';
+        currentResults = [];
+        currentPage = 1;
+    }
+    
+    // Check for URL parameters for direct search
+    function checkUrlForSearch() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('search');
+        
+        if (searchQuery) {
+            performMainSearch(searchQuery);
+        }
+    }
+    
+    // Initialize
+    checkUrlForSearch();
 }); 
