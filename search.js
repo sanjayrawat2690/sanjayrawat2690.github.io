@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Main header search elements
-    const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
-    const searchResults = document.getElementById('search-results');
-    
     // Banner search elements (home page)
     const bannerSearchInput = document.getElementById('banner-search-input');
     const bannerSearchButton = document.getElementById('banner-search-button');
@@ -16,9 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Debug: Log which search elements are found or missing
     console.log("Search Elements Found:");
-    console.log("Header Search Input:", searchInput ? "✓" : "✗");
-    console.log("Header Search Button:", searchButton ? "✓" : "✗");
-    console.log("Header Search Results:", searchResults ? "✓" : "✗");
     console.log("Banner Search Input:", bannerSearchInput ? "✓" : "✗");
     console.log("Banner Search Button:", bannerSearchButton ? "✓" : "✗");
     console.log("Banner Search Results:", bannerSearchResults ? "✓" : "✗");
@@ -28,13 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Build a searchable index from the deities data
     const searchIndex = buildSearchIndex();
-    
-    // Set up search functionality for all search bars
-    if (searchInput && searchButton && searchResults) {
-        setupSearch(searchInput, searchButton, searchResults);
-    } else {
-        console.log("Warning: Header search elements missing");
-    }
     
     // Set up banner search if elements exist (on home page)
     if (bannerSearchInput && bannerSearchButton && bannerSearchResults) {
@@ -99,15 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
             );
         };
         
-        // Check and hide all search results if needed
-        if (!isPartOfSearch(e.target, searchInput, searchButton, searchResults)) {
-            if (searchResults) searchResults.classList.remove('active');
-        }
-        
+        // Check and hide banner search results if needed
         if (bannerSearchResults && !isPartOfSearch(e.target, bannerSearchInput, bannerSearchButton, bannerSearchResults)) {
             bannerSearchResults.classList.remove('active');
         }
         
+        // Check and hide deity page search results if needed
         if (deityPageSearchResults && !isPartOfSearch(e.target, deityPageSearchInput, deityPageSearchButton, deityPageSearchResults)) {
             deityPageSearchResults.classList.remove('active');
         }

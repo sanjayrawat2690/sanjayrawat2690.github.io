@@ -99,24 +99,10 @@ body {
     color: var(--primary-color);
 }
 
-.search-container {
-    order: 3;
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: 20px;
-    width: 220px;
-    height: 36px;
-    border-radius: 18px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
 .main-nav {
-    order: 4;
+    order: 3;
     flex: 0 0 auto;
+    margin-left: auto;
 }
 
 .main-nav ul {
@@ -544,14 +530,8 @@ body {
         order: 2;
     }
     
-    .search-container {
-        order: 3;
-        width: 100%;
-        margin: 10px 0 15px;
-    }
-    
     .main-nav {
-        order: 4;
+        order: 3;
         width: 100%;
         margin-top: 10px;
     }
@@ -566,14 +546,6 @@ body {
     
     .site-title h2 {
         font-size: 1.2rem;
-    }
-    
-    #search-input {
-        width: 100%;
-    }
-    
-    #search-input:focus {
-        width: 100%;
     }
     
     .carousel-container {
