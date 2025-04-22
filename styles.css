@@ -59,7 +59,7 @@ body {
     text-decoration: none;
     display: block;
     order: 1;
-    margin-right: auto;
+    flex: 0 0 auto;
 }
 
 .om-logo {
@@ -83,7 +83,7 @@ body {
 
 .site-title {
     text-align: center;
-    flex: 0 1 auto;
+    flex: 1;
     order: 2;
     margin: 0 20px;
 }
@@ -99,9 +99,16 @@ body {
     color: var(--primary-color);
 }
 
-.main-nav {
+.search-container {
     order: 3;
-    margin-left: auto;
+    flex: 0 0 auto;
+    min-width: 220px;
+    margin-right: 15px;
+}
+
+.main-nav {
+    order: 4;
+    flex: 0 0 auto;
 }
 
 .main-nav ul {
@@ -526,11 +533,19 @@ body {
     .site-title {
         margin-bottom: 15px;
         margin: 10px 0;
+        order: 2;
+    }
+    
+    .search-container {
+        order: 3;
+        width: 100%;
+        margin: 10px 0 15px;
     }
     
     .main-nav {
-        margin-left: 0;
+        order: 4;
         width: 100%;
+        margin-top: 10px;
     }
     
     .main-nav ul {
@@ -543,6 +558,14 @@ body {
     
     .site-title h2 {
         font-size: 1.2rem;
+    }
+    
+    #search-input {
+        width: 100%;
+    }
+    
+    #search-input:focus {
+        width: 100%;
     }
     
     .carousel-container {
@@ -656,5 +679,106 @@ body {
     
     .aarti-card h4 {
         font-size: 1rem;
+    }
+}
+
+/* Search Bar Styles */
+#search-input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 200px;
+    font-size: 14px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+#search-input:focus {
+    width: 230px;
+    box-shadow: 0 0 5px rgba(255, 153, 51, 0.5);
+    border-color: var(--primary-color);
+}
+
+#search-button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: -35px;
+    position: relative;
+    z-index: 2;
+}
+
+#search-button:hover {
+    color: var(--accent-color);
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: none;
+}
+
+.search-results.active {
+    display: block;
+}
+
+.search-result-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.search-result-item:hover {
+    background-color: rgba(255, 153, 51, 0.1);
+}
+
+.search-result-item .deity-name {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.search-result-item .aarti-title {
+    font-size: 0.9em;
+    color: var(--accent-color);
+    margin-left: 10px;
+}
+
+.search-result-item .highlight {
+    background-color: rgba(255, 153, 51, 0.2);
+    padding: 0 2px;
+}
+
+.no-results {
+    padding: 15px;
+    text-align: center;
+    color: #888;
+}
+
+/* Responsive Adjustments for Search */
+@media (max-width: 768px) {
+    .search-container {
+        order: 3;
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    #search-input {
+        width: 100%;
+    }
+    
+    #search-input:focus {
+        width: 100%;
     }
 } 
