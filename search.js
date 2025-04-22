@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const query = searchInput.value.trim().toLowerCase();
         
         if (query.length < 2) {
-            searchResults.style.maxHeight = '0';
+            searchResults.style.display = 'none';
             return;
         }
         
@@ -42,13 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }).slice(0, 5); // Only show 5 quick results in dropdown
         
         if (matchedDeities.length === 0) {
-            searchResults.style.maxHeight = '0';
+            searchResults.style.display = 'none';
             return;
         }
         
         // Display results
         searchResults.innerHTML = '';
-        searchResults.style.maxHeight = '400px';
+        searchResults.style.display = 'block';
         
         matchedDeities.forEach(deity => {
             const resultItem = document.createElement('div');
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         searchInput.value = query;
         
         // Close dropdown
-        searchResults.style.maxHeight = '0';
+        searchResults.style.display = 'none';
         
         // Filter deities
         currentResults = deitiesData.filter(deity => {
