@@ -1,38 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Banner search elements (home page)
-    const bannerSearchInput = document.getElementById('banner-search-input');
-    const bannerSearchButton = document.getElementById('banner-search-button');
-    const bannerSearchResults = document.getElementById('banner-search-results');
-    
-    // Deity page search elements
-    const deityPageSearchInput = document.getElementById('deity-page-search-input');
-    const deityPageSearchButton = document.getElementById('deity-page-search-button');
-    const deityPageSearchResults = document.getElementById('deity-page-search-results');
+    // Main header search elements
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const searchResults = document.getElementById('search-results');
     
     // Debug: Log which search elements are found or missing
     console.log("Search Elements Found:");
-    console.log("Banner Search Input:", bannerSearchInput ? "✓" : "✗");
-    console.log("Banner Search Button:", bannerSearchButton ? "✓" : "✗");
-    console.log("Banner Search Results:", bannerSearchResults ? "✓" : "✗");
-    console.log("Deity Page Search Input:", deityPageSearchInput ? "✓" : "✗");
-    console.log("Deity Page Search Button:", deityPageSearchButton ? "✓" : "✗");
-    console.log("Deity Page Search Results:", deityPageSearchResults ? "✓" : "✗");
+    console.log("Header Search Input:", searchInput ? "✓" : "✗");
+    console.log("Header Search Button:", searchButton ? "✓" : "✗");
+    console.log("Header Search Results:", searchResults ? "✓" : "✗");
     
     // Build a searchable index from the deities data
     const searchIndex = buildSearchIndex();
     
-    // Set up banner search if elements exist (on home page)
-    if (bannerSearchInput && bannerSearchButton && bannerSearchResults) {
-        setupSearch(bannerSearchInput, bannerSearchButton, bannerSearchResults);
+    // Set up search functionality for the header search bar
+    if (searchInput && searchButton && searchResults) {
+        setupSearch(searchInput, searchButton, searchResults);
     } else {
-        console.log("Warning: Banner search elements missing");
-    }
-    
-    // Set up deity page search if elements exist (on deity page)
-    if (deityPageSearchInput && deityPageSearchButton && deityPageSearchResults) {
-        setupSearch(deityPageSearchInput, deityPageSearchButton, deityPageSearchResults);
-    } else {
-        console.log("Warning: Deity page search elements missing");
+        console.log("Warning: Header search elements missing");
     }
     
     // Generic function to set up search for any search bar
@@ -84,14 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
             );
         };
         
-        // Check and hide banner search results if needed
-        if (bannerSearchResults && !isPartOfSearch(e.target, bannerSearchInput, bannerSearchButton, bannerSearchResults)) {
-            bannerSearchResults.classList.remove('active');
-        }
-        
-        // Check and hide deity page search results if needed
-        if (deityPageSearchResults && !isPartOfSearch(e.target, deityPageSearchInput, deityPageSearchButton, deityPageSearchResults)) {
-            deityPageSearchResults.classList.remove('active');
+        // Check and hide header search results if needed
+        if (searchResults && !isPartOfSearch(e.target, searchInput, searchButton, searchResults)) {
+            searchResults.classList.remove('active');
         }
     });
     
@@ -271,26 +251,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         resultsContainer.classList.add('active');
-        
-        // Special positioning for banner search results to ensure they appear below the search box
-        if (resultsContainer.id === 'banner-search-results') {
-            const bannerSearchContainer = document.querySelector('.banner-search-container');
-            if (bannerSearchContainer) {
-                const containerRect = bannerSearchContainer.getBoundingClientRect();
-                resultsContainer.style.top = containerRect.height + 'px';
-                
-                // Ensure results are visible
-                setTimeout(() => {
-                    const resultsRect = resultsContainer.getBoundingClientRect();
-                    if (resultsRect.bottom > window.innerHeight) {
-                        window.scrollBy({
-                            top: resultsRect.bottom - window.innerHeight + 20,
-                            behavior: 'smooth'
-                        });
-                    }
-                }, 100);
-            }
-        }
     }
     
     // Find a relevant excerpt from the aarti that contains the query

@@ -99,10 +99,24 @@ body {
     color: var(--primary-color);
 }
 
-.main-nav {
+.search-container {
     order: 3;
-    flex: 0 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
     margin-left: auto;
+    margin-right: 20px;
+    width: 220px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.main-nav {
+    order: 4;
+    flex: 0 0 auto;
 }
 
 .main-nav ul {
@@ -530,8 +544,14 @@ body {
         order: 2;
     }
     
-    .main-nav {
+    .search-container {
         order: 3;
+        width: 100%;
+        margin: 10px 0 15px;
+    }
+    
+    .main-nav {
+        order: 4;
         width: 100%;
         margin-top: 10px;
     }
@@ -581,6 +601,14 @@ body {
     
     .aarti-content {
         font-size: 1.1rem;
+    }
+    
+    #search-input {
+        width: 100%;
+    }
+    
+    #search-input:focus {
+        width: 100%;
     }
 }
 
