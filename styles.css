@@ -769,19 +769,4 @@ body {
     color: #888;
 }
 
-/* Responsive Adjustments for Search */
-@media (max-width: 768px) {
-    .search-container {
-        order: 3;
-        width: 100%;
-        margin: 10px 0;
-    }
-    
-    #search-input {
-        width: 100%;
-    }
-    
-    #search-input:focus {
-        width: 100%;
-    }
-} 
+/* Responsive styles for search have been moved to the main responsive section */ 
