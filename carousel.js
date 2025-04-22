@@ -4,20 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Array of banner images with their captions
         slides: [
             {
-                image: 'images/banner-temple.jpg',
+                image: 'images/default-banner.svg',
                 caption: 'Discover the spiritual essence of Hindu devotional hymns'
-            },
-            {
-                image: 'images/banner-ganesh.jpg',
-                caption: 'Lord Ganesh - Remover of Obstacles and God of New Beginnings'
-            },
-            {
-                image: 'images/banner-shiva.jpg',
-                caption: 'Lord Shiva - The Destroyer and Transformer'
-            },
-            {
-                image: 'images/banner-durga.jpg',
-                caption: 'Goddess Durga - The Divine Mother and Embodiment of Shakti'
             }
         ],
         // Auto-slide interval in milliseconds (5 seconds)
@@ -31,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevButton = document.getElementById('carousel-prev');
     const nextButton = document.getElementById('carousel-next');
     const indicatorsContainer = document.getElementById('carousel-indicators');
+    const bannerSearchContainer = document.querySelector('.banner-search-container');
     
     // Check if carousel elements exist (they might not on other pages)
     if (!carouselTrack) return;
@@ -74,7 +63,22 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Set initial state
         updateCarousel();
-        startAutoSlide();
+        
+        // Make sure the banner search container is visible and positioned correctly
+        if (bannerSearchContainer) {
+            bannerSearchContainer.style.display = 'block';
+            bannerSearchContainer.style.zIndex = '20';
+        }
+        
+        // Only start auto-slide if there are multiple slides
+        if (carouselConfig.slides.length > 1) {
+            startAutoSlide();
+        } else {
+            // If there's only one slide, hide the navigation buttons
+            if (prevButton) prevButton.style.display = 'none';
+            if (nextButton) nextButton.style.display = 'none';
+            if (indicatorsContainer) indicatorsContainer.style.display = 'none';
+        }
     }
     
     // Update carousel display based on current index
@@ -123,49 +127,33 @@ document.addEventListener('DOMContentLoaded', () => {
         startAutoSlide();
     }
     
-    // Add event listeners for manual navigation
-    prevButton.addEventListener('click', () => {
-        prevSlide();
-        resetAutoSlide();
-    });
-    
-    nextButton.addEventListener('click', () => {
-        nextSlide();
-        resetAutoSlide();
-    });
-    
-    // Stop auto-sliding when user hovers over carousel
-    carouselTrack.addEventListener('mouseenter', () => {
-        clearInterval(autoSlideInterval);
-    });
-    
-    // Resume auto-sliding when user's mouse leaves the carousel
-    carouselTrack.addEventListener('mouseleave', () => {
-        startAutoSlide();
-    });
+    // Add event listeners for manual navigation if multiple slides
+    if (carouselConfig.slides.length > 1) {
+        if (prevButton) {
+            prevButton.addEventListener('click', () => {
+                prevSlide();
+                resetAutoSlide();
+            });
+        }
+        
+        if (nextButton) {
+            nextButton.addEventListener('click', () => {
+                nextSlide();
+                resetAutoSlide();
+            });
+        }
+        
+        // Stop auto-sliding when user hovers over carousel
+        carouselTrack.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+        
+        // Resume auto-sliding when user's mouse leaves the carousel
+        carouselTrack.addEventListener('mouseleave', () => {
+            startAutoSlide();
+        });
+    }
     
     // Initialize the carousel
     initCarousel();
-    
-    // Use a fallback image if the banner images fail to load
-    const fallbackImage = 'images/default-banner.jpg';
-    
-    // Check if the banner images exist, use fallbacks if they don't
-    carouselConfig.slides.forEach((slide, index) => {
-        const img = new Image();
-        img.onload = () => {
-            // Image loaded successfully, do nothing
-        };
-        
-        img.onerror = () => {
-            // Image failed to load, use a fallback
-            console.log(`Banner image ${slide.image} failed to load, using fallback`);
-            const slideElement = carouselTrack.children[index];
-            if (slideElement) {
-                slideElement.style.backgroundImage = `url('${fallbackImage}')`;
-            }
-        };
-        
-        img.src = slide.image;
-    });
 }); 

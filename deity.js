@@ -153,4 +153,250 @@ document.addEventListener('DOMContentLoaded', () => {
             aartiLyrics.style.fontFamily = "'Arial', sans-serif";
         }
     }
+    
+    // Add in-page aarti search functionality
+    // Listen for search changes to highlight matching parts in the current aarti
+    const searchInput = document.getElementById('search-input');
+    let searchTimeout;
+    
+    // Create a dedicated inline search for this deity's aartis
+    const aartiContainer = document.querySelector('.aarti-container');
+    if (aartiContainer) {
+        // Add inline search box
+        const inlineSearchContainer = document.createElement('div');
+        inlineSearchContainer.className = 'inline-search-container';
+        inlineSearchContainer.innerHTML = `
+            <div class="inline-search">
+                <input type="text" id="inline-search-input" placeholder="Search within aartis...">
+                <button id="inline-search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="inline-search-results"></div>
+        `;
+        
+        // Insert after the aarti cards container
+        const aartiCardsContainer = document.querySelector('.aarti-cards-container');
+        if (aartiCardsContainer && aartiCardsContainer.nextSibling) {
+            aartiCardsContainer.parentNode.insertBefore(inlineSearchContainer, aartiCardsContainer.nextSibling);
+        }
+        
+        // Set up inline search functionality
+        const inlineSearchInput = document.getElementById('inline-search-input');
+        const inlineSearchButton = document.getElementById('inline-search-button');
+        const inlineSearchResults = document.querySelector('.inline-search-results');
+        
+        const handleInlineSearch = () => {
+            const query = inlineSearchInput.value.trim().toLowerCase();
+            if (query.length < 2) {
+                inlineSearchResults.innerHTML = '';
+                inlineSearchResults.style.display = 'none';
+                resetAartiHighlighting();
+                return;
+            }
+            
+            // Search through all aartis for this deity
+            const matches = [];
+            deity.aartis.forEach(aarti => {
+                // Search in both Hindi and English texts
+                const hindiMatches = findMatchesInText(aarti.hindi, query);
+                const englishMatches = findMatchesInText(aarti.english, query);
+                
+                if (hindiMatches.length > 0 || englishMatches.length > 0) {
+                    matches.push({
+                        aarti: aarti,
+                        hindiMatches,
+                        englishMatches
+                    });
+                }
+            });
+            
+            // Display results
+            if (matches.length > 0) {
+                displayInlineSearchResults(matches, query);
+                
+                // If the current aarti has matches, highlight them
+                if (currentAarti) {
+                    const currentMatch = matches.find(m => m.aarti.id === currentAarti.id);
+                    if (currentMatch) {
+                        highlightAartiText(currentLanguage === 'hindi' 
+                            ? currentMatch.hindiMatches 
+                            : currentMatch.englishMatches, 
+                            query);
+                    }
+                }
+            } else {
+                inlineSearchResults.innerHTML = '<div class="no-results">No matches found in any aarti</div>';
+                inlineSearchResults.style.display = 'block';
+                resetAartiHighlighting();
+            }
+        };
+        
+        // Set up event listeners
+        inlineSearchInput.addEventListener('input', () => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(handleInlineSearch, 300);
+        });
+        
+        inlineSearchButton.addEventListener('click', handleInlineSearch);
+        
+        inlineSearchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                handleInlineSearch();
+            }
+        });
+    }
+    
+    // Function to find all matching text positions in a string
+    function findMatchesInText(text, query) {
+        if (!text) return [];
+        
+        const matches = [];
+        const textLower = text.toLowerCase();
+        let pos = 0;
+        
+        while (pos < textLower.length) {
+            const index = textLower.indexOf(query, pos);
+            if (index === -1) break;
+            
+            // Find the start of the line containing this match
+            let lineStart = text.lastIndexOf('\n', index);
+            lineStart = lineStart === -1 ? 0 : lineStart + 1;
+            
+            // Find the end of the line
+            let lineEnd = text.indexOf('\n', index);
+            lineEnd = lineEnd === -1 ? text.length : lineEnd;
+            
+            matches.push({
+                matchIndex: index,
+                matchLength: query.length,
+                lineText: text.substring(lineStart, lineEnd),
+                lineStart,
+                lineEnd
+            });
+            
+            pos = index + query.length;
+        }
+        
+        return matches;
+    }
+    
+    // Function to display inline search results
+    function displayInlineSearchResults(matches, query) {
+        inlineSearchResults.innerHTML = '';
+        
+        matches.forEach(match => {
+            const resultItem = document.createElement('div');
+            resultItem.className = 'inline-search-result';
+            
+            // Create heading with aarti title
+            const heading = document.createElement('div');
+            heading.className = 'result-heading';
+            heading.textContent = match.aarti.title;
+            resultItem.appendChild(heading);
+            
+            // Show up to 3 matching lines for each aarti
+            const allMatches = [...match.hindiMatches, ...match.englishMatches].slice(0, 3);
+            
+            allMatches.forEach(lineMatch => {
+                const matchLine = document.createElement('div');
+                matchLine.className = 'match-line';
+                
+                // Highlight the matching part of the line
+                const before = lineMatch.lineText.substring(0, lineMatch.matchIndex - lineMatch.lineStart);
+                const matched = lineMatch.lineText.substring(
+                    lineMatch.matchIndex - lineMatch.lineStart, 
+                    lineMatch.matchIndex - lineMatch.lineStart + lineMatch.matchLength
+                );
+                const after = lineMatch.lineText.substring(
+                    lineMatch.matchIndex - lineMatch.lineStart + lineMatch.matchLength
+                );
+                
+                matchLine.innerHTML = `${before}<span class="highlight">${matched}</span>${after}`;
+                resultItem.appendChild(matchLine);
+            });
+            
+            // Add click handler to go to this aarti
+            resultItem.addEventListener('click', () => {
+                selectAarti(match.aarti.id);
+                
+                // Update URL
+                const newUrl = new URL(window.location);
+                newUrl.searchParams.set('aarti', match.aarti.id);
+                window.history.pushState({}, '', newUrl);
+                
+                // Highlight matches in the selected aarti
+                const matchesToHighlight = currentLanguage === 'hindi' 
+                    ? match.hindiMatches 
+                    : match.englishMatches;
+                
+                highlightAartiText(matchesToHighlight, query);
+                
+                // Hide search results after selection
+                inlineSearchResults.style.display = 'none';
+            });
+            
+            inlineSearchResults.appendChild(resultItem);
+        });
+        
+        inlineSearchResults.style.display = 'block';
+    }
+    
+    // Function to highlight matches in the displayed aarti text
+    function highlightAartiText(matches, query) {
+        if (!matches || matches.length === 0) {
+            resetAartiHighlighting();
+            return;
+        }
+        
+        const aartiLyrics = document.getElementById('aarti-lyrics');
+        const text = aartiLyrics.textContent;
+        
+        // Create a temporary container to hold highlighted HTML
+        const tempContainer = document.createElement('div');
+        let lastPos = 0;
+        
+        // Sort matches by position
+        const sortedMatches = [...matches].sort((a, b) => a.matchIndex - b.matchIndex);
+        
+        // Build highlighted HTML
+        sortedMatches.forEach(match => {
+            // Add text before the match
+            tempContainer.appendChild(document.createTextNode(
+                text.substring(lastPos, match.matchIndex)
+            ));
+            
+            // Add the highlighted match
+            const highlightSpan = document.createElement('span');
+            highlightSpan.className = 'highlight';
+            highlightSpan.textContent = text.substring(
+                match.matchIndex, 
+                match.matchIndex + match.matchLength
+            );
+            tempContainer.appendChild(highlightSpan);
+            
+            lastPos = match.matchIndex + match.matchLength;
+        });
+        
+        // Add any remaining text
+        if (lastPos < text.length) {
+            tempContainer.appendChild(document.createTextNode(
+                text.substring(lastPos)
+            ));
+        }
+        
+        // Replace aarti lyrics content with highlighted version
+        aartiLyrics.innerHTML = '';
+        aartiLyrics.appendChild(tempContainer);
+    }
+    
+    // Reset aarti text highlighting
+    function resetAartiHighlighting() {
+        const aartiLyrics = document.getElementById('aarti-lyrics');
+        if (currentAarti) {
+            if (currentLanguage === 'hindi') {
+                aartiLyrics.textContent = currentAarti.hindi;
+            } else {
+                aartiLyrics.textContent = currentAarti.english || "English translation not available yet.";
+            }
+        }
+    }
 }); 
