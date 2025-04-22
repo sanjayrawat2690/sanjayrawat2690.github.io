@@ -104,6 +104,9 @@ body {
     flex: 0 0 auto;
     min-width: 220px;
     margin-right: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .main-nav {
