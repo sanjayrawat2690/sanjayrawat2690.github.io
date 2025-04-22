@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listeners
     searchInput.addEventListener('input', handleSearchInput);
     searchButton.addEventListener('click', () => performMainSearch(searchInput.value));
+    searchInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            performMainSearch(searchInput.value);
+        }
+    });
     clearSearchBtn.addEventListener('click', clearSearch);
     loadMoreBtn.addEventListener('click', loadMoreResults);
     
