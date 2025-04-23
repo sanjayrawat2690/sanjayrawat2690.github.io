@@ -40,10 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const matchedDeities = deitiesData.filter(deity => {
             return deity.name.toLowerCase().includes(query) || 
                    (deity.aartis && deity.aartis.some(aarti => 
-                       aarti.title.toLowerCase().includes(query) || 
-                       aarti.hindi.toLowerCase().includes(query) || 
-                       aarti.english.toLowerCase().includes(query)
-                   ));
+                       aarti.title && aarti.title.toLowerCase().includes(query) || 
+                       aarti.hindi && aarti.hindi.toLowerCase().includes(query) || 
+                       aarti.english && aarti.english.toLowerCase().includes(query)
+                   )) ||
+                   (deity.aarti && deity.aarti.toLowerCase().includes(query));
         }).slice(0, 5); // Only show 5 quick results in dropdown
         
         if (matchedDeities.length === 0) {
@@ -77,7 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Add click event
             resultItem.addEventListener('click', () => {
-                window.location.href = `deity.html?id=${deity.id}`;
+                // Check if we're on the deity page
+                const isDeityPage = window.location.pathname.includes('deity.html');
+                if (isDeityPage) {
+                    // If on deity page, navigate to that deity's page
+                    window.location.href = `deity.html?id=${deity.id}`;
+                } else {
+                    // If on index page, show the deity in search results
+                    performMainSearch(deity.name);
+                    searchResults.style.display = 'none';
+                }
             });
         });
         
@@ -85,10 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (deitiesData.filter(deity => 
             deity.name.toLowerCase().includes(query) || 
             (deity.aartis && deity.aartis.some(aarti => 
-                aarti.title.toLowerCase().includes(query) || 
-                aarti.hindi.toLowerCase().includes(query) || 
-                aarti.english.toLowerCase().includes(query)
-            ))
+                aarti.title && aarti.title.toLowerCase().includes(query) || 
+                aarti.hindi && aarti.hindi.toLowerCase().includes(query) || 
+                aarti.english && aarti.english.toLowerCase().includes(query)
+            )) ||
+            (deity.aarti && deity.aarti.toLowerCase().includes(query))
         ).length > 5) {
             const showAllItem = document.createElement('div');
             showAllItem.className = 'search-result-show-all';
@@ -97,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             showAllItem.addEventListener('click', () => {
                 performMainSearch(query);
+                searchResults.style.display = 'none';
             });
         }
     }
@@ -114,12 +126,22 @@ document.addEventListener('DOMContentLoaded', () => {
         // Filter deities
         currentResults = deitiesData.filter(deity => {
             return deity.name.toLowerCase().includes(query) || 
-                   (deity.aartis && deity.aartis.some(aarti => 
-                       aarti.title.toLowerCase().includes(query) || 
-                       aarti.hindi.toLowerCase().includes(query) || 
-                       aarti.english.toLowerCase().includes(query)
-                   ));
+                  (deity.aartis && deity.aartis.some(aarti => 
+                      aarti.title && aarti.title.toLowerCase().includes(query) || 
+                      aarti.hindi && aarti.hindi.toLowerCase().includes(query) || 
+                      aarti.english && aarti.english.toLowerCase().includes(query)
+                  )) ||
+                  (deity.aarti && deity.aarti.toLowerCase().includes(query));
         });
+        
+        // Check if we're on deity.html page
+        const isDeityPage = window.location.pathname.includes('deity.html');
+        
+        if (isDeityPage) {
+            // If on deity page, redirect to index with search query
+            window.location.href = `index.html?search=${encodeURIComponent(query)}`;
+            return;
+        }
         
         // Show search results section, hide main grid
         deityGrid.style.display = 'none';

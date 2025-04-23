@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevButton = document.getElementById('carousel-prev');
     const nextButton = document.getElementById('carousel-next');
     const indicatorsContainer = document.getElementById('carousel-indicators');
-    const bannerSearchContainer = document.querySelector('.banner-search-container');
     
     // Check if carousel elements exist (they might not on other pages)
     if (!carouselTrack) return;
@@ -76,58 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Set initial state
         updateCarousel();
         
-        // Check if we're on the deity page
-        const isDeityPage = window.location.pathname.includes('deity.html');
-        
-        // Create banner search only on index page
-        if (!isDeityPage) {
-            // If the banner search container doesn't exist, create it
-            if (!bannerSearchContainer) {
-                const newBannerSearchContainer = document.createElement('div');
-                newBannerSearchContainer.className = 'banner-search-container';
-                
-                // Add content to the banner search container
-                newBannerSearchContainer.innerHTML = `
-                    <h2>Find Devotional Aartis</h2>
-                    <div class="banner-search">
-                        <input type="text" id="banner-search-input" placeholder="Search by deity or keywords...">
-                        <button id="banner-search-button">Search</button>
-                    </div>
-                `;
-                
-                // Add it to the carousel container
-                const carouselContainer = document.querySelector('.carousel-container');
-                if (carouselContainer) {
-                    carouselContainer.appendChild(newBannerSearchContainer);
-                    
-                    // Add event listeners for the banner search
-                    const bannerSearchInput = document.getElementById('banner-search-input');
-                    const bannerSearchButton = document.getElementById('banner-search-button');
-                    
-                    // Function to perform search
-                    const performBannerSearch = () => {
-                        const query = bannerSearchInput.value.trim();
-                        if (query.length >= 2) {
-                            window.location.href = `index.html?search=${encodeURIComponent(query)}`;
-                        }
-                    };
-                    
-                    // Add event listeners
-                    bannerSearchButton.addEventListener('click', performBannerSearch);
-                    bannerSearchInput.addEventListener('keydown', (event) => {
-                        if (event.key === 'Enter') {
-                            performBannerSearch();
-                        }
-                    });
-                }
-            } else {
-                // If banner search container exists, make sure it's visible
-                bannerSearchContainer.style.display = 'block';
-                bannerSearchContainer.style.zIndex = '50';
-            }
-        } else if (bannerSearchContainer) {
-            // Hide banner search on deity page
-            bannerSearchContainer.style.display = 'none';
+        // Remove any existing banner search container
+        const existingBannerSearchContainer = document.querySelector('.banner-search-container');
+        if (existingBannerSearchContainer) {
+            existingBannerSearchContainer.remove();
         }
         
         startAutoSlide();
