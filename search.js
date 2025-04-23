@@ -15,9 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const RESULTS_PER_PAGE = 12;
     let currentResults = [];
     let currentPage = 1;
+    let isSearchFocused = false;
     
     // Event listeners
     searchInput.addEventListener('input', handleSearchInput);
+    searchInput.addEventListener('focus', () => {
+        isSearchFocused = true;
+        if (searchInput.value.trim().length >= 2) {
+            handleSearchInput();
+        }
+    });
+    
     searchButton.addEventListener('click', () => performMainSearch(searchInput.value));
     searchInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
@@ -45,17 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
                        aarti.english && aarti.english.toLowerCase().includes(query)
                    )) ||
                    (deity.aarti && deity.aarti.toLowerCase().includes(query));
-        }).slice(0, 5); // Only show 5 quick results in dropdown
+        }).slice(0, 5); // Show exactly 5 results in dropdown
+        
+        // Display results
+        searchResults.innerHTML = '';
         
         if (matchedDeities.length === 0) {
             searchResults.style.display = 'none';
             return;
         }
         
-        // Display results
-        searchResults.innerHTML = '';
         searchResults.style.display = 'block';
         
+        // Create and add items to dropdown
         matchedDeities.forEach(deity => {
             const resultItem = document.createElement('div');
             resultItem.className = 'search-result-item';
@@ -91,8 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         
-        // Add "Show all results" option if there are more results
-        if (deitiesData.filter(deity => 
+        // Only add "Show all results" if there are more results than what we're showing
+        const totalResults = deitiesData.filter(deity => 
             deity.name.toLowerCase().includes(query) || 
             (deity.aartis && deity.aartis.some(aarti => 
                 aarti.title && aarti.title.toLowerCase().includes(query) || 
@@ -100,10 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 aarti.english && aarti.english.toLowerCase().includes(query)
             )) ||
             (deity.aarti && deity.aarti.toLowerCase().includes(query))
-        ).length > 5) {
+        ).length;
+        
+        if (totalResults > 5) {
             const showAllItem = document.createElement('div');
             showAllItem.className = 'search-result-show-all';
-            showAllItem.textContent = 'Show all results';
+            showAllItem.textContent = `Show all ${totalResults} results`;
             searchResults.appendChild(showAllItem);
             
             showAllItem.addEventListener('click', () => {
@@ -111,6 +123,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 searchResults.style.display = 'none';
             });
         }
+
+        // Add click event to document to close dropdown when clicking outside
+        document.addEventListener('click', function closeDropdown(e) {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target) && !searchButton.contains(e.target)) {
+                searchResults.style.display = 'none';
+                document.removeEventListener('click', closeDropdown);
+            }
+        });
     }
     
     // Perform main search for the full results grid
