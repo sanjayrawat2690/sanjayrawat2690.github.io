@@ -657,4 +657,79 @@ body {
     .aarti-card h4 {
         font-size: 1rem;
     }
+}
+
+/* Autocomplete Dropdown Styles */
+.autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.autocomplete-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.autocomplete-item:hover, 
+.autocomplete-item.active {
+    background-color: #f0f0f0;
+}
+
+/* Ensure search input containers have proper positioning */
+.search-container {
+    position: relative;
+}
+
+/* Search Container Styles */
+.search-container {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+    border-color: #ffa500;
+}
+
+/* For deity page actions - includes search and back button */
+.deity-page-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.deity-page-actions .search-container {
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+}
+
+.deity-page-actions .back-button {
+    flex-shrink: 0;
 } 

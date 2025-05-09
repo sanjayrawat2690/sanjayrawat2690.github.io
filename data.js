@@ -33,26 +33,22 @@ const deitiesData = [
 
 जय गणेश, जय गणेश, जय गणेश देवा।
 माता जाकी पार्वती, पिता महादेवा॥`,
-                english: `Glory to Ganesh, Glory to Ganesh, Glory to Ganesh the God.
-Whose mother is Parvati, and father is Mahadev.
+                english: `Jai Ganesh, Jai Ganesh, Jai Ganesh Deva.
+Mata Jaaki Parvati, Pita Mahadeva.
 
-Single-tusked and merciful, bearing four arms.
-Forehead adorned with vermilion, with a mouse as his vehicle.
+Ek Dant Dayavant, Char Bhuja Dhari.
+Mathe Par Tilak Sohe, Moose Ki Savari.
 
-Glory to Ganesh, Glory to Ganesh, Glory to Ganesh the God.
-Whose mother is Parvati, and father is Mahadev.
+Paan Chade, Phool Chade, Aur Chade Meva.
+Ladduan Ka Bhog Lage, Sant Karen Seva.
 
-Who gives eyes to the blind, bodies to the lepers.
-Gives children to the barren, and wealth to the poor.
+Andhan Ko Aankh Det, Kodhin Ko Kaya.
+Baanjhan Ko Putra Det, Nirdhan Ko Maya.
 
-Glory to Ganesh, Glory to Ganesh, Glory to Ganesh the God.
-Whose mother is Parvati, and father is Mahadev.
+Soor Shyam Sharan Aaye, Safal Kije Seva.
+Jai Ganesh, Jai Ganesh, Jai Ganesh Deva.
 
-Garlands adorn him, flowers adorn him, and fruits are offered.
-Sweetmeats are offered, and saints serve him.
-
-Glory to Ganesh, Glory to Ganesh, Glory to Ganesh the God.
-Whose mother is Parvati, and father is Mahadev.`
+Mata Jaaki Parvati, Pita Mahadeva.`
             },
             {
                 id: "ganesh-2",
