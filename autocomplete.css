@@ -1,0 +1,38 @@
+/* Autocomplete Dropdown Styles */
+.autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    margin-top: -1px; /* Align with input bottom border */
+}
+
+.search-container {
+    position: relative !important;
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.autocomplete-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.autocomplete-item:hover, 
+.autocomplete-item.active {
+    background-color: #f0f0f0;
+}
