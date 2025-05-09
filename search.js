@@ -15,8 +15,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create the autocomplete dropdown element
     const autocompleteDropdown = document.createElement('div');
     autocompleteDropdown.className = 'autocomplete-dropdown';
-    searchInput.parentNode.style.position = 'relative';
-    searchInput.parentNode.appendChild(autocompleteDropdown);
+    
+    // Ensure the parent container has position:relative
+    const searchContainer = searchInput.closest('.search-container');
+    if (searchContainer) {
+        searchContainer.style.position = 'relative';
+        searchContainer.appendChild(autocompleteDropdown);
+    } else {
+        // If no search container, create a wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'search-container';
+        wrapper.style.position = 'relative';
+        wrapper.style.width = '100%';
+        
+        // Place the wrapper in the DOM
+        searchInput.parentNode.insertBefore(wrapper, searchInput);
+        wrapper.appendChild(searchInput);
+        wrapper.appendChild(autocompleteDropdown);
+    }
     
     // Add event listener for input changes
     searchInput.addEventListener('input', function() {
