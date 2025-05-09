@@ -2,6 +2,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Get main search input element
     const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const searchResults = document.getElementById('search-results');
+    const mainSearchResults = document.getElementById('main-search-results');
+    const searchResultsGrid = document.getElementById('search-results-grid');
     
     if (!searchInput) {
         console.warn('Search input element not found');
@@ -61,9 +65,22 @@ document.addEventListener('DOMContentLoaded', function() {
             resultItem.className = 'autocomplete-item';
             resultItem.textContent = deity.name;
             
-            // Add click event to navigate to deity page
+            // Add click event to search for this deity
             resultItem.addEventListener('click', function() {
-                window.location.href = `deity.html?id=${deity.id}`;
+                // Set the search input value to the deity name
+                searchInput.value = deity.name;
+                
+                // Hide the autocomplete dropdown
+                autocompleteDropdown.style.display = 'none';
+                
+                // Trigger search if search button exists
+                if (searchButton) {
+                    // Simulate a click on the search button
+                    searchButton.click();
+                } else {
+                    // Manual search implementation
+                    performSearch(deity.name);
+                }
             });
             
             autocompleteDropdown.appendChild(resultItem);
@@ -72,6 +89,82 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show the dropdown
         autocompleteDropdown.style.display = 'block';
     });
+    
+    // Function to perform search
+    function performSearch(query) {
+        // Check if we have the search results elements available
+        if (!mainSearchResults || !searchResultsGrid) {
+            // Navigate to deity page for the specific deity
+            const matchingDeity = deitiesData.find(deity => 
+                deity.name.toLowerCase() === query.toLowerCase()
+            );
+            
+            if (matchingDeity) {
+                window.location.href = `deity.html?id=${matchingDeity.id}`;
+            }
+            return;
+        }
+        
+        // Clear previous search results
+        searchResultsGrid.innerHTML = '';
+        
+        // Filter deities based on search query
+        const results = deitiesData.filter(deity => {
+            // Match deity name
+            if (deity.name.toLowerCase().includes(query.toLowerCase())) {
+                return true;
+            }
+            
+            // Match aarti titles if available
+            if (deity.aartis) {
+                for (const aarti of deity.aartis) {
+                    if (aarti.title.toLowerCase().includes(query.toLowerCase())) {
+                        return true;
+                    }
+                }
+            }
+            
+            return false;
+        });
+        
+        // Display search results count
+        const searchInfo = document.getElementById('search-info');
+        if (searchInfo) {
+            searchInfo.textContent = `Found ${results.length} result${results.length !== 1 ? 's' : ''}`;
+        }
+        
+        // Show search results section
+        mainSearchResults.style.display = 'block';
+        
+        // Hide deity grid
+        const deityGrid = document.getElementById('deity-grid');
+        if (deityGrid) {
+            deityGrid.style.display = 'none';
+        }
+        
+        // Create result cards
+        results.forEach(deity => {
+            const card = document.createElement('div');
+            card.className = 'deity-card';
+            card.innerHTML = `
+                <div class="deity-image" style="background-image: url('${deity.image}')"></div>
+                <h3>${deity.name}</h3>
+                <span class="aarti-count">${deity.aartis ? deity.aartis.length : 1} Aarti${deity.aartis && deity.aartis.length !== 1 ? 's' : ''}</span>
+            `;
+            
+            card.addEventListener('click', () => {
+                window.location.href = `deity.html?id=${deity.id}`;
+            });
+            
+            searchResultsGrid.appendChild(card);
+        });
+        
+        // Show "Clear Search" button
+        const clearSearchBtn = document.getElementById('clear-search-btn');
+        if (clearSearchBtn) {
+            clearSearchBtn.style.display = 'block';
+        }
+    }
     
     // Close dropdown when clicking outside
     document.addEventListener('click', function(event) {
