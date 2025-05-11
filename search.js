@@ -15,20 +15,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create the autocomplete dropdown element
     const autocompleteDropdown = document.createElement('div');
     autocompleteDropdown.className = 'autocomplete-dropdown';
+    autocompleteDropdown.id = 'autocomplete-dropdown';
     
-    // Ensure the parent container has position:relative
+    // Get search container
     const searchContainer = searchInput.closest('.search-container');
     if (searchContainer) {
-        // Append the dropdown directly to the search container
-        // This ensures it's positioned relative to the container
-        searchContainer.appendChild(autocompleteDropdown);
+        // Ensure container has position:relative
+        searchContainer.style.position = 'relative';
+        
+        // Insert the dropdown right after the search input but before any other elements
+        if (searchButton && searchContainer.contains(searchButton)) {
+            searchContainer.insertBefore(autocompleteDropdown, searchButton);
+        } else {
+            searchContainer.appendChild(autocompleteDropdown);
+        }
         
         // Make sure search results div comes after the dropdown
         if (searchResults && searchContainer.contains(searchResults)) {
             searchContainer.appendChild(searchResults);
         }
     } else {
-        // If no search container, wrap the input in one
         console.warn('No search container found, creating wrapper');
         const wrapper = document.createElement('div');
         wrapper.className = 'search-container';
@@ -87,7 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
             resultItem.textContent = deity.name;
             
             // Add click event to search for this deity
-            resultItem.addEventListener('click', function() {
+            resultItem.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
                 // Set the search input value to the deity name
                 searchInput.value = deity.name;
                 
@@ -109,9 +118,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Show the dropdown
         autocompleteDropdown.style.display = 'block';
-        
-        // Add debug highlight to help see the dropdown
-        // autocompleteDropdown.style.border = '2px solid red';
     });
     
     // Function to perform search
@@ -192,17 +198,30 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close dropdown when clicking outside
     document.addEventListener('click', function(event) {
-        if (!searchInput.contains(event.target) && !autocompleteDropdown.contains(event.target)) {
+        if (autocompleteDropdown.style.display === 'block' && 
+            !searchInput.contains(event.target) && 
+            !autocompleteDropdown.contains(event.target)) {
             autocompleteDropdown.style.display = 'none';
         }
     });
+    
+    // Prevent search form submission which would reload the page
+    const searchForm = searchInput.closest('form');
+    if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (searchButton) {
+                searchButton.click();
+            }
+        });
+    }
     
     // Handle keyboard navigation in dropdown
     searchInput.addEventListener('keydown', function(event) {
         const items = autocompleteDropdown.querySelectorAll('.autocomplete-item');
         const activeItem = autocompleteDropdown.querySelector('.autocomplete-item.active');
         
-        if (items.length === 0) return;
+        if (items.length === 0 || autocompleteDropdown.style.display !== 'block') return;
         
         if (event.key === 'ArrowDown') {
             event.preventDefault();
@@ -227,6 +246,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (event.key === 'Enter' && activeItem) {
             event.preventDefault();
             activeItem.click();
+        } else if (event.key === 'Escape') {
+            autocompleteDropdown.style.display = 'none';
         }
     });
 }); 
