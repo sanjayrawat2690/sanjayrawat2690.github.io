@@ -20,22 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get search container
     const searchContainer = searchInput.closest('.search-container');
     if (searchContainer) {
-        // Ensure container has position:relative
-        searchContainer.style.position = 'relative';
-        
-        // Insert the dropdown right after the search input but before any other elements
-        if (searchButton && searchContainer.contains(searchButton)) {
-            searchContainer.insertBefore(autocompleteDropdown, searchButton);
-        } else {
-            searchContainer.appendChild(autocompleteDropdown);
-        }
-        
-        // Make sure search results div comes after the dropdown
-        if (searchResults && searchContainer.contains(searchResults)) {
-            searchContainer.appendChild(searchResults);
-        }
+        // Position the dropdown correctly in the DOM structure
+        searchContainer.appendChild(autocompleteDropdown);
     } else {
-        console.warn('No search container found, creating wrapper');
+        // If no search container, create a wrapper
         const wrapper = document.createElement('div');
         wrapper.className = 'search-container';
         
@@ -45,12 +33,18 @@ document.addEventListener('DOMContentLoaded', function() {
         wrapper.appendChild(autocompleteDropdown);
     }
     
+    // Track if an item is selected from the dropdown
+    let itemSelected = false;
+    
     // Add event listener for input changes
     searchInput.addEventListener('input', function() {
         const query = this.value.trim().toLowerCase();
         
         // Clear the dropdown
         autocompleteDropdown.innerHTML = '';
+        
+        // Reset selection flag on new input
+        itemSelected = false;
         
         // Hide dropdown if query is less than 3 characters
         if (query.length < 3) {
@@ -100,15 +94,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Set the search input value to the deity name
                 searchInput.value = deity.name;
                 
+                // Set the flag that an item was selected
+                itemSelected = true;
+                
                 // Hide the autocomplete dropdown
                 autocompleteDropdown.style.display = 'none';
                 
-                // Trigger search if search button exists
+                // Trigger search
                 if (searchButton) {
-                    // Simulate a click on the search button
                     searchButton.click();
                 } else {
-                    // Manual search implementation
                     performSearch(deity.name);
                 }
             });
@@ -120,18 +115,68 @@ document.addEventListener('DOMContentLoaded', function() {
         autocompleteDropdown.style.display = 'block';
     });
     
+    // Handle search input form submission
+    const searchForm = searchInput.closest('form');
+    if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (searchInput.value.trim()) {
+                if (searchButton) {
+                    searchButton.click();
+                } else {
+                    performSearch(searchInput.value.trim());
+                }
+            }
+        });
+    }
+    
+    // Direct Enter key handling if not in form
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && searchInput.value.trim()) {
+            // If dropdown is open with active item, select that item
+            const activeItem = autocompleteDropdown.querySelector('.autocomplete-item.active');
+            if (autocompleteDropdown.style.display === 'block' && activeItem) {
+                e.preventDefault();
+                activeItem.click();
+                return;
+            }
+            
+            // Otherwise perform search with current input
+            if (searchButton) {
+                e.preventDefault();
+                searchButton.click();
+            } else {
+                e.preventDefault();
+                performSearch(searchInput.value.trim());
+            }
+        }
+    });
+    
+    // If search button exists, add click handler
+    if (searchButton) {
+        searchButton.addEventListener('click', function() {
+            if (searchInput.value.trim()) {
+                performSearch(searchInput.value.trim());
+            }
+        });
+    }
+    
     // Function to perform search
     function performSearch(query) {
         // Check if we have the search results elements available
         if (!mainSearchResults || !searchResultsGrid) {
-            // Navigate to deity page for the specific deity
+            // Navigate to deity page for the specific deity if exact match
             const matchingDeity = deitiesData.find(deity => 
                 deity.name.toLowerCase() === query.toLowerCase()
             );
             
             if (matchingDeity) {
                 window.location.href = `deity.html?id=${matchingDeity.id}`;
+                return;
             }
+            
+            // If no exact match but we have query, redirect to search page
+            window.location.href = `index.html?search=${encodeURIComponent(query)}`;
             return;
         }
         
@@ -198,23 +243,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close dropdown when clicking outside
     document.addEventListener('click', function(event) {
-        if (autocompleteDropdown.style.display === 'block' && 
-            !searchInput.contains(event.target) && 
-            !autocompleteDropdown.contains(event.target)) {
+        if (!searchInput.contains(event.target) && !autocompleteDropdown.contains(event.target)) {
             autocompleteDropdown.style.display = 'none';
         }
     });
-    
-    // Prevent search form submission which would reload the page
-    const searchForm = searchInput.closest('form');
-    if (searchForm) {
-        searchForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (searchButton) {
-                searchButton.click();
-            }
-        });
-    }
     
     // Handle keyboard navigation in dropdown
     searchInput.addEventListener('keydown', function(event) {
@@ -227,11 +259,13 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             if (!activeItem) {
                 items[0].classList.add('active');
+                items[0].scrollIntoView({ block: 'nearest' });
             } else {
                 const nextIndex = Array.from(items).indexOf(activeItem) + 1;
                 if (nextIndex < items.length) {
                     activeItem.classList.remove('active');
                     items[nextIndex].classList.add('active');
+                    items[nextIndex].scrollIntoView({ block: 'nearest' });
                 }
             }
         } else if (event.key === 'ArrowUp') {
@@ -241,13 +275,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (prevIndex >= 0) {
                     activeItem.classList.remove('active');
                     items[prevIndex].classList.add('active');
+                    items[prevIndex].scrollIntoView({ block: 'nearest' });
                 }
             }
-        } else if (event.key === 'Enter' && activeItem) {
-            event.preventDefault();
-            activeItem.click();
         } else if (event.key === 'Escape') {
             autocompleteDropdown.style.display = 'none';
         }
     });
-}); 
+    
+    // Check for URL search parameter on page load
+    window.addEventListener('load', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchParam = urlParams.get('search');
+        
+        if (searchParam) {
+            searchInput.value = searchParam;
+            performSearch(searchParam);
+        }
+    });
+});
