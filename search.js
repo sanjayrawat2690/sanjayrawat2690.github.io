@@ -46,53 +46,37 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset selection flag on new input
         itemSelected = false;
         
-        // Hide dropdown if query is less than 3 characters
-        if (query.length < 3) {
+        // Hide dropdown if query is less than 2 characters
+        if (query.length < 2) {
             autocompleteDropdown.style.display = 'none';
             return;
         }
         
-        // Filter deity data based on the search query
-        const matchingDeities = deitiesData.filter(deity => {
-            // Search in deity name
-            if (deity.name.toLowerCase().includes(query)) {
-                return true;
-            }
-            
-            // Search in aarti titles if available
-            if (deity.aartis) {
-                for (const aarti of deity.aartis) {
-                    if (aarti.title.toLowerCase().includes(query)) {
-                        return true;
-                    }
-                }
-            }
-            
-            return false;
-        });
+        // Generate suggestions based on the query
+        const suggestions = generateSearchSuggestions(query);
         
-        // Take only the top 5 matches
-        const topMatches = matchingDeities.slice(0, 5);
-        
-        // If no matches found, hide dropdown
-        if (topMatches.length === 0) {
+        // If no suggestions found, hide dropdown
+        if (suggestions.length === 0) {
             autocompleteDropdown.style.display = 'none';
             return;
         }
         
-        // Display matches in the dropdown
-        topMatches.forEach(deity => {
+        // Display suggestions in the dropdown
+        suggestions.forEach(suggestion => {
             const resultItem = document.createElement('div');
             resultItem.className = 'autocomplete-item';
-            resultItem.textContent = deity.name;
             
-            // Add click event to search for this deity
+            // Format the suggestion to highlight the matching part
+            const highlightedText = formatHighlightedText(suggestion, query);
+            resultItem.innerHTML = highlightedText;
+            
+            // Add click event to search for this suggestion
             resultItem.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 
-                // Set the search input value to the deity name
-                searchInput.value = deity.name;
+                // Set the search input value to the suggestion text
+                searchInput.value = suggestion;
                 
                 // Set the flag that an item was selected
                 itemSelected = true;
@@ -104,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (searchButton) {
                     searchButton.click();
                 } else {
-                    performSearch(deity.name);
+                    performSearch(suggestion);
                 }
             });
             
@@ -114,6 +98,73 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show the dropdown
         autocompleteDropdown.style.display = 'block';
     });
+    
+    // Generate search suggestions based on query and our deity data
+    function generateSearchSuggestions(query) {
+        let suggestions = [];
+        
+        // Filter deities based on the search query
+        const matchingDeities = deitiesData.filter(deity => 
+            deity.name.toLowerCase().includes(query)
+        );
+        
+        // Add the direct query as the first suggestion
+        suggestions.push(query);
+        
+        // Add matching deity names
+        matchingDeities.forEach(deity => {
+            if (!suggestions.includes(deity.name.toLowerCase()) && 
+                deity.name.toLowerCase() !== query) {
+                suggestions.push(deity.name.toLowerCase());
+            }
+            
+            // Add suggestions with common suffixes
+            if (suggestions.length < 6) {
+                const suffix1 = deity.name.toLowerCase() + " aarti";
+                const suffix2 = deity.name.toLowerCase() + " images";
+                const suffix3 = deity.name.toLowerCase() + " temple";
+                
+                if (!suggestions.includes(suffix1)) suggestions.push(suffix1);
+                if (!suggestions.includes(suffix2)) suggestions.push(suffix2);
+                if (suggestions.length < 6 && !suggestions.includes(suffix3)) 
+                    suggestions.push(suffix3);
+            }
+        });
+        
+        // Add matching deity aarti titles
+        if (suggestions.length < 6) {
+            for (const deity of deitiesData) {
+                if (deity.aartis) {
+                    for (const aarti of deity.aartis) {
+                        if (aarti.title.toLowerCase().includes(query) && 
+                            !suggestions.includes(aarti.title.toLowerCase())) {
+                            suggestions.push(aarti.title.toLowerCase());
+                            if (suggestions.length >= 6) break;
+                        }
+                    }
+                }
+                if (suggestions.length >= 6) break;
+            }
+        }
+        
+        // Limit to top 6 suggestions
+        return suggestions.slice(0, 6);
+    }
+    
+    // Format text to highlight matching query part
+    function formatHighlightedText(text, query) {
+        const lowerText = text.toLowerCase();
+        const index = lowerText.indexOf(query);
+        
+        if (index !== -1) {
+            const before = text.substring(0, index);
+            const match = text.substring(index, index + query.length);
+            const after = text.substring(index + query.length);
+            return `<span class="main-text">${before}<span class="highlight">${match}</span>${after}</span>`;
+        }
+        
+        return `<span class="main-text">${text}</span>`;
+    }
     
     // Handle search input form submission
     const searchForm = searchInput.closest('form');
