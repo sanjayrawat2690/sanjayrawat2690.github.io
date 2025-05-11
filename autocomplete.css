@@ -4,17 +4,16 @@
     top: 100%;
     left: 0;
     right: 0;
-    max-height: 300px;
+    max-height: 80vh;
     overflow-y: auto;
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-top: none;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 4px 6px rgba(32, 33, 36, 0.28);
     z-index: 10000;
     display: none;
     width: 100%;
-    margin-top: -1px; /* Connect seamlessly with search box */
+    margin-top: 0;
+    padding: 8px 0;
 }
 
 /* Ensure search container has proper positioning */
@@ -38,24 +37,50 @@
 
 /* Specific styles for dropdown items */
 .autocomplete-item {
-    padding: 10px 16px;
+    padding: 12px 16px;
     cursor: pointer;
     transition: background-color 0.15s;
-    border-bottom: 1px solid #f3f3f3;
     text-align: left;
-    color: #333;
-    font-size: 14px;
-    display: block;
-    width: 100%;
-    line-height: 1.5;
+    color: #212121;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    line-height: 1.58;
 }
 
-.autocomplete-item:last-child {
-    border-bottom: none;
-    border-radius: 0 0 8px 8px;
+/* Search icon */
+.autocomplete-item:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%239aa0a6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    opacity: 0.6;
+}
+
+.autocomplete-item .main-text {
+    font-weight: normal;
+}
+
+.autocomplete-item .highlight {
+    font-weight: bold;
 }
 
 .autocomplete-item:hover, 
 .autocomplete-item.active {
-    background-color: #f5f5f5;
+    background-color: #f1f3f4;
+}
+
+.autocomplete-item:last-child {
+    border-radius: 0 0 24px 24px;
+}
+
+/* Make dropdown appear like part of the search bar */
+.search-container:focus-within .autocomplete-dropdown {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
