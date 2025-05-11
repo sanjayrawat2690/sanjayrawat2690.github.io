@@ -19,14 +19,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ensure the parent container has position:relative
     const searchContainer = searchInput.closest('.search-container');
     if (searchContainer) {
-        searchContainer.style.position = 'relative';
+        // Append the dropdown directly to the search container
+        // This ensures it's positioned relative to the container
         searchContainer.appendChild(autocompleteDropdown);
+        
+        // Make sure search results div comes after the dropdown
+        if (searchResults && searchContainer.contains(searchResults)) {
+            searchContainer.appendChild(searchResults);
+        }
     } else {
-        // If no search container, create a wrapper div
+        // If no search container, wrap the input in one
+        console.warn('No search container found, creating wrapper');
         const wrapper = document.createElement('div');
         wrapper.className = 'search-container';
-        wrapper.style.position = 'relative';
-        wrapper.style.width = '100%';
         
         // Place the wrapper in the DOM
         searchInput.parentNode.insertBefore(wrapper, searchInput);
@@ -104,6 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Show the dropdown
         autocompleteDropdown.style.display = 'block';
+        
+        // Add debug highlight to help see the dropdown
+        // autocompleteDropdown.style.border = '2px solid red';
     });
     
     // Function to perform search
