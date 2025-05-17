@@ -52,53 +52,194 @@ Mata Jaaki Parvati, Pita Mahadeva.`
             },
             {
                 id: "ganesh-2",
-                title: "सुखकर्ता दुखहर्ता",
-                hindi: `सुखकर्ता दुखहर्ता वार्ता विघ्नाची।
-नुरवी पुरवी प्रेम कृपा जयाची॥
-सर्वांगी सुंदर उटी शेंदुराची।
-कंठी झळके माळ मुक्ताफळांची॥
+                title: "श्री गणेश चालीसा",
+                hindi: `॥ दोहा ॥
+जय गणपति सदगुण सदन,कविवर बदन कृपाल।
 
-जय देव जय देव जय मंगलमूर्ती।
-दर्शनमात्रे मनकामना पुरती॥
+विघ्न हरण मंगल करण,जय जय गिरिजालाल॥
 
-रत्नखचित फरा तुज गौरीकुमरा।
-चंदनाची उटी कुंकुमकेशरा॥
-हिरेजडित मुकुट शोभतो बरा।
-रुणझुणती नूपुरे चरणी घागरिया॥
+॥ चौपाई ॥
+जय जय जय गणपति गणराजू।मंगल भरण करण शुभः काजू॥
 
-जय देव जय देव जय मंगलमूर्ती।
-दर्शनमात्रे मनकामना पुरती॥
+जै गजबदन सदन सुखदाता।विश्व विनायका बुद्धि विधाता॥
 
-लम्बोदर पितांबर फणिवरबंधना।
-सरळ सोंड वक्रतुंड त्रिनयना॥
-दास रामाचा वाट पाहे सदना।
-संकटी पावावे निर्वाणी रक्षावे सुरवरवंदना॥
+वक्र तुण्ड शुची शुण्ड सुहावना।तिलक त्रिपुण्ड भाल मन भावन॥
 
-जय देव जय देव जय मंगलमूर्ती।
-दर्शनमात्रे मनकामना पुरती॥`,
-                english: `Creator of happiness, remover of sorrow, remover of obstacles.
-The bestower of love and mercy.
-Beautiful with vermilion applied on the forehead.
-Around the neck shines a garland of pearls.
+राजत मणि मुक्तन उर माला।स्वर्ण मुकुट शिर नयन विशाला॥
 
-Glory to the God, glory to the God, glory to the auspicious one.
-Just by seeing whom all desires are fulfilled.
+पुस्तक पाणि कुठार त्रिशूलं।मोदक भोग सुगन्धित फूलं॥
 
-Son of Gauri, you wear a jewel-studded crown.
-Adorned with sandal paste, kumkum and saffron.
-The diamond-studded crown looks beautiful.
-The anklets on your feet make a tinkling sound.
+सुन्दर पीताम्बर तन साजित।चरण पादुका मुनि मन राजित॥
 
-Glory to the God, glory to the God, glory to the auspicious one.
-Just by seeing whom all desires are fulfilled.
+धनि शिव सुवन षडानन भ्राता।गौरी लालन विश्व-विख्याता॥
 
-Pot-bellied, wearing yellow garments, with a serpent tied around.
-Straight trunk, curved mouth, three eyes.
-The servant Rama waits at your abode.
-In difficulties, save us, and in salvation, protect us, O one worshipped by the gods.
+ऋद्धि-सिद्धि तव चंवर सुधारे।मुषक वाहन सोहत द्वारे॥
 
-Glory to the God, glory to the God, glory to the auspicious one.
-Just by seeing whom all desires are fulfilled.`
+कहौ जन्म शुभ कथा तुम्हारी।अति शुची पावन मंगलकारी॥
+
+एक समय गिरिराज कुमारी।पुत्र हेतु तप कीन्हा भारी॥
+
+भयो यज्ञ जब पूर्ण अनूपा।तब पहुंच्यो तुम धरी द्विज रूपा॥
+
+अतिथि जानी के गौरी सुखारी।बहुविधि सेवा करी तुम्हारी॥
+
+अति प्रसन्न हवै तुम वर दीन्हा।मातु पुत्र हित जो तप कीन्हा॥
+
+मिलहि पुत्र तुहि, बुद्धि विशाला।बिना गर्भ धारण यहि काला॥
+
+गणनायक गुण ज्ञान निधाना।पूजित प्रथम रूप भगवाना॥
+
+अस कही अन्तर्धान रूप हवै।पालना पर बालक स्वरूप हवै॥
+
+बनि शिशु रुदन जबहिं तुम ठाना।लखि मुख सुख नहिं गौरी समाना॥
+
+सकल मगन, सुखमंगल गावहिं।नाभ ते सुरन, सुमन वर्षावहिं॥
+
+शम्भु, उमा, बहुदान लुटावहिं।सुर मुनिजन, सुत देखन आवहिं॥
+
+लखि अति आनन्द मंगल साजा।देखन भी आये शनि राजा॥
+
+निज अवगुण गुनि शनि मन माहीं।बालक, देखन चाहत नाहीं॥
+
+गिरिजा कछु मन भेद बढायो।उत्सव मोर, न शनि तुही भायो॥
+
+कहत लगे शनि, मन सकुचाई।का करिहौ, शिशु मोहि दिखाई॥
+
+नहिं विश्वास, उमा उर भयऊ।शनि सों बालक देखन कहयऊ॥
+
+पदतहिं शनि दृग कोण प्रकाशा।बालक सिर उड़ि गयो अकाशा॥
+
+गिरिजा गिरी विकल हवै धरणी।सो दुःख दशा गयो नहीं वरणी॥
+
+हाहाकार मच्यौ कैलाशा।शनि कीन्हों लखि सुत को नाशा॥
+
+तुरत गरुड़ चढ़ि विष्णु सिधायो।काटी चक्र सो गज सिर लाये॥
+
+बालक के धड़ ऊपर धारयो।प्राण मन्त्र पढ़ि शंकर डारयो॥
+
+नाम गणेश शम्भु तब कीन्हे।प्रथम पूज्य बुद्धि निधि, वर दीन्हे॥
+
+बुद्धि परीक्षा जब शिव कीन्हा।पृथ्वी कर प्रदक्षिणा लीन्हा॥
+
+चले षडानन, भरमि भुलाई।रचे बैठ तुम बुद्धि उपाई॥
+
+चरण मातु-पितु के धर लीन्हें।तिनके सात प्रदक्षिण कीन्हें॥
+
+धनि गणेश कही शिव हिये हरषे।नभ ते सुरन सुमन बहु बरसे॥
+
+तुम्हरी महिमा बुद्धि बड़ाई।शेष सहसमुख सके न गाई॥
+
+मैं मतिहीन मलीन दुखारी।करहूं कौन विधि विनय तुम्हारी॥
+
+भजत रामसुन्दर प्रभुदासा।जग प्रयाग, ककरा, दुर्वासा॥
+
+अब प्रभु दया दीना पर कीजै।अपनी शक्ति भक्ति कुछ दीजै॥
+
+॥ दोहा ॥
+श्री गणेश यह चालीसा,पाठ करै कर ध्यान।
+
+नित नव मंगल गृह बसै,लहे जगत सन्मान॥
+
+सम्बन्ध अपने सहस्र दश,ऋषि पंचमी दिनेश।
+
+पूरण चालीसा भयो,मंगल मूर्ती गणेश॥`,
+                english: `॥ Doha ॥
+Jaya Ganapati Sadhguna Sadana,Kavi Vara Badana Kripaala।
+
+Vighna Harana Mangala Karana,Jaya Jaya Girijaa Laala॥
+
+॥ Chaupai ॥
+Jaya Jaya Jaya Ganapati Gan Raaju।Mangala Bharana Karana Shubha Kaaju॥
+
+Jaya Gajabadana Sadana Sukhadaataa।Vishva Vinaayaka Buddhi Vidhaata॥
+
+Vakra Tunda Shuchi Shunda Suhaavana।Tilaka Tripunda Bhaala Mana Bhaavana॥
+
+Raajata Mani Muktana Ura Maala।Svarna Mukuta Shira Nayana Vishaala॥
+
+Pustaka Paani Kuthaara Trishoolam।Modaka Bhoga Sugandhita Phoolam॥
+
+Sundara Pitaambara Tana Saajita।Charana Paaduka Muni Mana Raajita॥
+
+Dhani Shiva Suvana Shadaanana Bhraata।Gauri Lalana Vishva-Vidhaata॥
+
+Riddhi Siddhi Tava Chanvara Sudhaare।Mushaka Vaahana Sohata Dvaare॥
+
+Kahaun Janma Shubha Kathaa Tumhaari।Ati Shuchi Paavana Mangala Kaari॥
+
+Eka Samaya Giriraaj Kumaari।Putra Hetu Tapa Kinha Bhaari॥
+
+Bhayo Yagya Jaba Poorna Anoopa।Taba Pahunchyo Tuma Dhari Dvija Roopa॥
+
+Atithi Jaani Kai Gauri Sukhaari।Bahuvidhi Sevaa Kari Tumhaari॥
+
+Ati Prasanna Hvai Tuma Vara Dinha।Maatu Putra Hita Jo Tapa Kinha॥
+
+Milahi Putra Tuhi Buddhi Vishaala।Binaa Garbha Dhaarana Yahi Kaala॥
+
+Gananaayaka, Guna Gyaana Nidhaana।Poojita Prathama Roopa Bhagavana॥
+
+Asa Kahi Antardhyaana Roopa Hvai।Palana Para Baalaka Svaroopa Hvai॥
+
+Bani Shishu Rudana Jabahi Tuma Thaana।Lakhi Mukha Sukha Nahin Gauri Samaan॥
+
+Sakala Magana, Sukha Mangala Gaavahin।Nabha Te Surana Sumana Varshaavahin॥
+
+Shambhu Uma, Bahu Dana Lutavahin।Sura Munijana, Suta Dekhana Aavahin॥
+
+Lakhi Ati Aananda Mangala Saaja।Dekhana Bhi Aaye Shani Raaja॥
+
+Nija Avaguna Guni Shani Mana Maahin।Baalaka, Dekhan Chaahata Naahin॥
+
+Giraja Kachhu Mana Bheda Badhaayo।Utsava Mora Na Shani Tuhi Bhaayo॥
+
+Kahana Lage Shani, Mana Sakuchaai।Kaa Karihau, Shishu Mohi Dikhaai॥
+
+Nahin Vishvaasa, Uma Ur Bhayau।Shani So Baalaka Dekhana Kahyau॥
+
+Padatahin, Shani Driga Kona Prakaasha।Baalaka Shira Udi Gayo Aakaasha॥
+
+Giraja Girin Vikala Hvai Dharani।So Dukha Dasha Gayo Nahin Varani॥
+
+Haahaakaara Machyo Kailaasha।Shani Kinhyon Lakhi Suta Ka Naasha॥
+
+Turata Garuda Chadhi Vishnu Sidhaaye।Kaati Chakra So Gaja Shira Laaye॥
+
+Baalaka Ke Dhada Upara Dhaarayo।Praana, Mantra Padha Shankara Darayo॥
+
+Naama 'Ganesha' Shambhu Taba Kinhe।Prathama Poojya Buddhi Nidhi, Vara Dinhe॥
+
+Buddhi Pariksha Jaba Shiva Kinha।Prithvi Kar Pradakshina Linha॥
+
+Chale Shadaanana, Bharami Bhulaii।Rachi Baitha Tuma Buddhi Upaai॥
+
+Charana Maatu-Pitu Ke Dhara Linhen।Tinake Saata Pradakshina Kinhen॥
+
+Dhani Ganesha, Kahi Shiva Hiya Harashe।Nabha Te Surana Sumana Bahu Barase॥॥
+
+Tumhari Mahima Buddhi Badaye।Shesha Sahasa Mukha Sakai Na Gaai॥
+
+Mein Mati Hina Malina Dukhaari।Karahun Kauna Vidhi Vinaya Tumhaari॥
+
+Bhajata 'Raamasundara' Prabhudaasa।Lakha Prayaga, Kakara, Durvasa॥
+
+Aba Prabhu Daya Dina Para Kijai।Apani Bhakti Shakti Kuchhu Dijai॥
+
+॥ Doha ॥
+Shri Ganesh Yah Chalisa,Path Karai Dhari Dhyan।
+
+Nit Nav Mangal Gruha Bashe,Lahi Jagat Sanman॥
+
+Sambandh Apne Sahasra Dasha,Rushi Panchami Dinesh।
+
+Puran Chalisa Bhayo,Mangal Murti Ganesha॥.`
+            },
+            {
+                id: "ganesh-3",
+                title: "श्री गणेश 108 नाम",
+                hindi: `
+
+`,
             }
         ]
     },
