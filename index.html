@@ -27,6 +27,9 @@
             <!-- Search Bar -->
             <div class="search-container">
                 <input type="text" class="search-input" id="search-input" placeholder="Search for deities or aartis...">
+                <button id="search-button" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
             
             <!-- Navigation menu (can be expanded later) -->
@@ -56,6 +59,16 @@
         <main>
             <section class="intro-section">
                 <p>A collection of devotional lyrics for Hindu deities</p>
+            </section>
+            
+            <!-- Search Results Section -->
+            <section id="main-search-results" style="display: none;">
+                <h2 class="section-title">Search Results</h2>
+                <p id="search-info"></p>
+                <button id="clear-search-btn" class="clear-search-btn" style="display: none;">Clear Search</button>
+                <div id="search-results-grid" class="deity-grid">
+                    <!-- Search results will be populated here -->
+                </div>
             </section>
             
             <section class="deities-section">

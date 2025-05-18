@@ -1,52 +1,62 @@
-// Search Feature (autocomplete disabled)
+// Search Feature
 document.addEventListener('DOMContentLoaded', function() {
     // Get main search input element
     const searchInput = document.getElementById('search-input');
     const searchButton = document.getElementById('search-button');
     const mainSearchResults = document.getElementById('main-search-results');
     const searchResultsGrid = document.getElementById('search-results-grid');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
     
     if (!searchInput) {
         console.warn('Search input element not found');
         return;
     }
     
-    // Handle search input form submission
-    const searchForm = searchInput.closest('form');
-    if (searchForm) {
-        searchForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (searchInput.value.trim()) {
-                if (searchButton) {
-                    searchButton.click();
-                } else {
-                    performSearch(searchInput.value.trim());
-                }
-            }
-        });
-    }
-    
-    // Direct Enter key handling if not in form
+    // Direct Enter key handling
     searchInput.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' && searchInput.value.trim()) {
-            // Perform search with current input
-            if (searchButton) {
-                e.preventDefault();
-                searchButton.click();
-            } else {
-                e.preventDefault();
-                performSearch(searchInput.value.trim());
-            }
+            e.preventDefault();
+            performSearch(searchInput.value.trim());
         }
     });
     
-    // If search button exists, add click handler
+    // Add click handler for search button
     if (searchButton) {
         searchButton.addEventListener('click', function() {
             if (searchInput.value.trim()) {
                 performSearch(searchInput.value.trim());
             }
         });
+    }
+    
+    // Add click handler for clear search button
+    if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', function() {
+            clearSearch();
+        });
+    }
+    
+    // Function to clear search and show all deities
+    function clearSearch() {
+        searchInput.value = '';
+        
+        if (mainSearchResults) {
+            mainSearchResults.style.display = 'none';
+        }
+        
+        const deityGrid = document.getElementById('deity-grid');
+        if (deityGrid) {
+            deityGrid.style.display = 'grid';
+        }
+        
+        if (clearSearchBtn) {
+            clearSearchBtn.style.display = 'none';
+        }
+        
+        // Clear URL search parameter
+        const url = new URL(window.location);
+        url.searchParams.delete('search');
+        window.history.pushState({}, '', url);
     }
     
     // Function to perform search
@@ -123,10 +133,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Show "Clear Search" button
-        const clearSearchBtn = document.getElementById('clear-search-btn');
         if (clearSearchBtn) {
             clearSearchBtn.style.display = 'block';
         }
+        
+        // Update URL with search parameter
+        const url = new URL(window.location);
+        url.searchParams.set('search', query);
+        window.history.pushState({}, '', url);
     }
     
     // Check for URL search parameter on page load
