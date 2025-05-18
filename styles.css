@@ -101,7 +101,6 @@ body {
 
 .main-nav {
     order: 3;
-    margin-left: auto;
 }
 
 .main-nav ul {
@@ -123,6 +122,22 @@ body {
 .main-nav a.active {
     color: var(--nav-link-hover);
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Search Container Styles */
+.search-container {
+    position: relative;
+    margin: 0;
+    width: 250px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    order: 4;
+    margin-left: auto;
+}
+
+.header-container .search-container {
+    margin: 0 0 0 20px;
 }
 
 /* Carousel Styles */
@@ -494,25 +509,29 @@ body {
 /* Desktop specific styles */
 @media (min-width: 769px) {
     .header-container {
-        justify-content: space-between; /* Space items evenly */
+        justify-content: flex-start; /* Start from the left */
     }
     
     .logo-link {
         flex: 0 0 auto; /* Don't grow or shrink */
+        order: 1;
     }
     
     .site-title {
-        flex: 0 1 auto; /* Can shrink if needed */
+        flex: 1; /* Take up available space in the middle */
         text-align: center; /* Center the text */
-    }
-    
-    .search-container {
-        flex: 0 1 auto; /* Can shrink if needed */
-        margin: 0 15px;
+        order: 2;
     }
     
     .main-nav {
         flex: 0 0 auto; /* Don't grow or shrink */
+        order: 3;
+    }
+    
+    .search-container {
+        flex: 0 0 auto; /* Don't grow or shrink */
+        order: 4;
+        margin-left: 20px;
     }
 }
 
@@ -526,11 +545,13 @@ body {
     .logo-link {
         margin-right: 0;
         margin-bottom: 10px;
+        order: 1;
     }
     
     .site-title {
         margin-bottom: 15px;
         margin: 10px 0;
+        order: 2;
     }
     
     .search-container {
