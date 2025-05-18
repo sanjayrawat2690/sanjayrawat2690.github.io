@@ -22,15 +22,10 @@ const deityTemplateHtml = fs.readFileSync('deity.html', 'utf8');
 // Read the admin.html template
 const adminTemplateHtml = fs.readFileSync('admin.html', 'utf8');
 
-// Create a directory for the static deity pages if it doesn't exist
-if (!fs.existsSync('deities')) {
-    fs.mkdirSync('deities');
-}
-
 // Generate static HTML for each deity
 deitiesData.forEach(deity => {
-    // For each deity, create a directory with their ID
-    const deityDir = path.join('deities', deity.id);
+    // For each deity, create a directory with their ID at the root level
+    const deityDir = deity.id;
     if (!fs.existsSync(deityDir)) {
         fs.mkdirSync(deityDir);
     }
@@ -48,6 +43,9 @@ deitiesData.forEach(deity => {
     deityHtml = deityHtml.replace(/href="index.html"/g, 'href="/"');
     deityHtml = deityHtml.replace(/href="deity.html\?id=/g, 'href="/');
     
+    // Fix image paths to be relative to the root, not the deity directory
+    deityHtml = deityHtml.replace(/'\.\.\/(\w+)\/'/g, "'/$1/'");
+    
     // Add script to load this specific deity data
     const scriptSection = `
     <script>
@@ -64,10 +62,10 @@ deitiesData.forEach(deity => {
             // Update content
             document.getElementById('deity-name').textContent = '${deity.name}';
             
-            // Add deity image
+            // Add deity image - fix path to be from root
             const deityImageContainer = document.getElementById('deity-image');
             if (deityImageContainer) {
-                deityImageContainer.style.backgroundImage = \`url('../${deity.image}')\`;
+                deityImageContainer.style.backgroundImage = \`url('/${deity.image}')\`;
             }
             
             // Current language state (default: Hindi)
@@ -200,6 +198,11 @@ deitiesData.forEach(deity => {
     deityHtml = deityHtml.replace(/<script src="data.js"><\/script>\s*<script src="deity.js"><\/script>/,
                               scriptSection);
     
+    // Update any resource paths to be absolute from root
+    deityHtml = deityHtml.replace(/href="styles.css"/g, 'href="/styles.css"');
+    deityHtml = deityHtml.replace(/href="autocomplete.css"/g, 'href="/autocomplete.css"');
+    deityHtml = deityHtml.replace(/src="search.js"/g, 'src="/search.js"');
+    
     // Write the index.html file to the deity's directory
     fs.writeFileSync(path.join(deityDir, 'index.html'), deityHtml);
     
@@ -215,6 +218,12 @@ if (!fs.existsSync('admin')) {
 let adminHtml = adminTemplateHtml;
 // Update links to use the new URL structure
 adminHtml = adminHtml.replace(/href="index.html"/g, 'href="/"');
+// Update resource paths to be absolute
+adminHtml = adminHtml.replace(/href="styles.css"/g, 'href="/styles.css"');
+adminHtml = adminHtml.replace(/href="admin-styles.css"/g, 'href="/admin-styles.css"');
+adminHtml = adminHtml.replace(/src="admin.js"/g, 'src="/admin.js"');
+adminHtml = adminHtml.replace(/src="image-utils.js"/g, 'src="/image-utils.js"');
+
 // Write the index.html file to the admin directory
 fs.writeFileSync(path.join('admin', 'index.html'), adminHtml);
 console.log('Generated admin page');
