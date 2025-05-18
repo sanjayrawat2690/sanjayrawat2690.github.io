@@ -1,0 +1,10 @@
+
+# Enable rewrite engine
+RewriteEngine On
+
+# Redirect old deity.html?id=xxx URLs to /xxx
+RewriteCond %{QUERY_STRING} ^id=([^&]+)
+RewriteRule ^deity.html$ /%1? [R=301,L]
+
+# Serve static deity pages
+RewriteRule ^([^/]+)/?$ deities/$1/index.html [L]

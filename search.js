@@ -69,7 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
             );
             
             if (matchingDeity) {
-                window.location.href = `deity.html?id=${matchingDeity.id}`;
+                // Use new URL format
+                window.location.href = `/${matchingDeity.id}`;
                 return;
             }
             
@@ -126,7 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             
             card.addEventListener('click', () => {
-                window.location.href = `deity.html?id=${deity.id}`;
+                // Use new URL format
+                window.location.href = `/${deity.id}`;
             });
             
             searchResultsGrid.appendChild(card);
