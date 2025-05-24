@@ -63,6 +63,22 @@
                         <!-- Aarti text will be populated here -->
                     </div>
                 </div>
+
+                <!-- YouTube Video Section (for Ganesh) -->
+                <div id="youtube-video-section" class="youtube-video-section" style="display: none;">
+                    <h3>Watch Ganesh Aarti</h3>
+                    <div class="video-container">
+                        <iframe 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/ZYxdhMAF4F0" 
+                            title="Ganesh Aarti Video"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
@@ -152,6 +168,12 @@
                     </div>
                 `;
                 return;
+            }
+            
+            // Show YouTube video section for Ganesh
+            const videoSection = document.getElementById('youtube-video-section');
+            if (videoSection && deityId === 'ganesh') {
+                videoSection.style.display = 'block';
             }
             
             // Get aarti ID from URL query parameter if any

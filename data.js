@@ -234,13 +234,6 @@ Sambandh Apne Sahasra Dasha,Rushi Panchami Dinesh।
 
 Puran Chalisa Bhayo,Mangal Murti Ganesha॥.`
             },
-            {
-                id: "ganesh-3",
-                title: "श्री गणेश 108 नाम",
-                hindi: `
-
-`,
-            }
         ]
     },
     {
