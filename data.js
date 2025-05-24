@@ -1,3 +1,27 @@
+/*
+ * Aarti Sangrah - Deities Data
+ * 
+ * HOW TO ADD YOUTUBE VIDEOS TO AARTIS:
+ * Simply add a "videoLink" property to any aarti object with the YouTube URL.
+ * 
+ * Example:
+ * {
+ *     id: "ganesh-1",
+ *     title: "जय गणेश देवा",
+ *     hindi: "...",
+ *     english: "...",
+ *     videoLink: "https://www.youtube.com/watch?v=VIDEO_ID"  // <- Add this line
+ * }
+ * 
+ * Supported YouTube URL formats:
+ * - https://www.youtube.com/watch?v=VIDEO_ID
+ * - https://youtu.be/VIDEO_ID
+ * - https://www.youtube.com/embed/VIDEO_ID
+ * 
+ * If videoLink is not provided, no video will be shown for that aarti.
+ * Each aarti can have its own unique video link.
+ */
+
 const deitiesData = [
     {
         id: "ganesh",
@@ -48,8 +72,7 @@ Baanjhan Ko Putra Det, Nirdhan Ko Maya.
 Soor Shyam Sharan Aaye, Safal Kije Seva.
 Jai Ganesh, Jai Ganesh, Jai Ganesh Deva.
 
-Mata Jaaki Parvati, Pita Mahadeva.`,
-                videoLink: "https://www.youtube.com/watch?v=ZYxdhMAF4F0"
+Mata Jaaki Parvati, Pita Mahadeva.`
             },
             {
                 id: "ganesh-2",
@@ -306,7 +329,8 @@ Om Glory to Mother Lakshmi.
 
 Whoever sings the aarti of Goddess Mahalakshmi,
 Their heart fills with joy, and their sins are washed away.
-Om Glory to Mother Lakshmi.`
+Om Glory to Mother Lakshmi.`,
+                videoLink: "https://www.youtube.com/watch?v=EXAMPLE_LAKSHMI_VIDEO"
             },
             {
                 id: "lakshmi-2",
@@ -377,7 +401,8 @@ Situated in the world, mother of the world, O Mahalakshmi, I bow to you.`
 The enchanter of Devaki, the darling of Nanda.
 
 A peacock feather adorns his head, a Vaijayanti garland beautifies his neck.
-On the banks of Yamuna, he performed the divine dance with the gopis.`
+On the banks of Yamuna, he performed the divine dance with the gopis.`,
+                videoLink: "https://youtu.be/EXAMPLE_KRISHNA_SHORT_URL"
             }
         ]
     },
@@ -450,7 +475,8 @@ Om glory to Shiva Omkara.
 
 Whoever sings the aarti of the Lord of the three qualities,
 Says Shivananda Swami, they shall obtain their heart's desire.
-Om glory to Shiva Omkara.`
+Om glory to Shiva Omkara.`,
+                videoLink: "https://www.youtube.com/watch?v=EXAMPLE_SHIVA_VIDEO"
             },
             {
                 id: "shiva-2",
