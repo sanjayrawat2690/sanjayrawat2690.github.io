@@ -299,89 +299,60 @@ Puran Chalisa Bhayo,Mangal Murti Ganesha॥.`
 महालक्ष्मी जी की आरती, जो कोई नर गाता।
 उर आनंद समाता, पाप उतर जाता॥
 ॐ जय लक्ष्मी माता॥`,
-                english: `Om Glory to Mother Lakshmi, Mother Glory to Mother Lakshmi.
-Day and night you are served by Lord Vishnu, the Creator.
-Om Glory to Mother Lakshmi.
+                english: `Om Jai Lakshmi Mata,
+Maiya Jai Lakshmi Mata ।
+Tumako Nishidin Sevat,
+Hari Vishnu Vidhata ॥
 
-Uma, Rama, Brahmani, you are the mother of the world.
-The sun and moon meditate on you, and sage Narada sings your praise.
-Om Glory to Mother Lakshmi.
+Uma Rama Brahmani,
+Tum Hi Jag-Mata ।
+Surya Chandrama Dhyavat,
+Narad Rishi Gata ॥
+॥Om Jai Lakshmi Mata...॥
 
-In the form of Durga, you are pure and the giver of happiness and wealth.
-Whoever meditates on you attains prosperity, accomplishments, and wealth.
-Om Glory to Mother Lakshmi.
+Durga Roop Niranjani,
+Sukh Sampatti Data ।
+Jo Koi Tumako Dhyavat,
+Riddhi-Siddhi Dhan Pata ॥
+॥Om Jai Lakshmi Mata...॥
 
-You dwell in the netherworld, you are the giver of auspiciousness.
-Illuminator of the effects of karma, savior from the ocean of existence.
-Om Glory to Mother Lakshmi.
+Tum Patal-Nivasini,
+Tum Hi Shubhdata ।
+Karma-Prabhav-Prakashini,
+Bhavanidhi Ki Trata ॥
+॥Om Jai Lakshmi Mata...॥
 
-In whichever home you reside, all virtues come.
-Everything becomes possible, the mind is never troubled.
-Om Glory to Mother Lakshmi.
+Jis Ghar Mein Tum Rahti,
+Sab Sadgun Aata ।
+Sab Sambhav Ho Jata,
+Man Nahi Ghabrata ॥
+॥Om Jai Lakshmi Mata...॥
 
-Without you, no sacrifice can be performed, no one receives clothes.
-The splendor of food and drink, all comes from you.
-Om Glory to Mother Lakshmi.
+Tum Bin Yagya Na Hote,
+Vastra Na Koi Pata ।
+Khan-Pan Ka Vaibhav,
+Sab Tumase Aata ॥
+॥Om Jai Lakshmi Mata...॥
 
-Beautiful temple of auspicious qualities, born from the ocean of milk.
-Without you, no one can attain the fourteen gems.
-Om Glory to Mother Lakshmi.
+Shubh-Gun Mandir Sundar,
+Kshirodadhi Jata ।
+Ratna Chaturdash Tum Bin,
+Koi Nahi Pata ॥
+॥Om Jai Lakshmi Mata...॥
 
-Whoever sings the aarti of Goddess Mahalakshmi,
-Their heart fills with joy, and their sins are washed away.
-Om Glory to Mother Lakshmi.`,
-                videoLink: "https://www.youtube.com/watch?v=EXAMPLE_LAKSHMI_VIDEO"
+Mahalakshmi Ji Ki Aarti,
+Jo Koi Jan Gata ।
+Ur Anand Samata,
+Paap Utar Jata ॥
+॥Om Jai Lakshmi Mata...॥
+
+Om Jai Lakshmi Mata,
+Maiya Jai Lakshmi Mata ।
+Tumako Nishidin Sevat,
+Hari Vishnu Vidhata ॥
+`,
+                videoLink: "https://www.youtube.com/watch?v=SyqgAt-T0iQ"
             },
-            {
-                id: "lakshmi-2",
-                title: "श्री महालक्ष्म्यष्टकम्",
-                hindi: `नमस्तेऽस्तु महामाये श्रीपीठे सुरपूजिते।
-शङ्ख चक्र गदा हस्ते महालक्ष्मि नमोऽस्तुते॥
-
-नमस्ते गरुडारूढे कोलासुर भयङ्करि।
-सर्वपाप हरे देवि महालक्ष्मि नमोऽस्तुते॥
-
-सर्वज्ञे सर्ववरदे सर्वदुष्ट भयङ्करि।
-सर्वदुःख हरे देवि महालक्ष्मि नमोऽस्तुते॥
-
-सिद्धिबुद्धिप्रदे देवि भुक्तिमुक्ति प्रदायिनि।
-मन्त्रमूर्ते सदा देवि महालक्ष्मि नमोऽस्तुते॥
-
-आद्यन्तरहिते देवि आद्यशक्ति महेश्वरि।
-योगजे योगसम्भूते महालक्ष्मि नमोऽस्तुते॥
-
-स्थूलसूक्ष्ममहारौद्रे महाशक्ति महोदरे।
-महापाप हरे देवि महालक्ष्मि नमोऽस्तुते॥
-
-पद्मासनस्थिते देवि परब्रह्मस्वरूपिणि।
-परमेशि जगन्मातर्महालक्ष्मि नमोऽस्तुते॥
-
-श्वेताम्बरधरे देवि नानालङ्कारभूषिते।
-जगत्स्थिते जगन्मातर्महालक्ष्मि नमोऽस्तुते॥`,
-                english: `I bow to you, O great illusion, worshipped by gods at the sacred seat.
-Holding conch, discus, and mace in hand, O Mahalakshmi, I bow to you.
-
-I bow to you, who rides upon Garuda, terrifying to the Kolasura demon.
-Remover of all sins, O Goddess, O Mahalakshmi, I bow to you.
-
-All-knowing, granter of all boons, terrifying to all the wicked.
-Remover of all sorrows, O Goddess, O Mahalakshmi, I bow to you.
-
-Bestower of accomplishment and intellect, O Goddess, giver of enjoyment and liberation.
-Always embodied in mantras, O Goddess, O Mahalakshmi, I bow to you.
-
-Without beginning or end, O Goddess, primordial energy, great goddess.
-Born of yoga, arising from yoga, O Mahalakshmi, I bow to you.
-
-Gross, subtle, terribly fierce, great energy, with a great belly.
-Remover of great sins, O Goddess, O Mahalakshmi, I bow to you.
-
-Seated on a lotus, O Goddess, embodiment of the supreme Brahman.
-Supreme ruler, mother of the world, O Mahalakshmi, I bow to you.
-
-Dressed in white garments, O Goddess, adorned with various ornaments.
-Situated in the world, mother of the world, O Mahalakshmi, I bow to you.`
-            }
         ]
     },
     {
