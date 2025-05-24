@@ -381,8 +381,8 @@ Puran Chalisa Bhayo,Mangal Murti Ganesha॥.`
 श्री विघ्नेश्वराय- ॐ श्री विघ्नेश्वराय नमः ॥ 108 ॥
 
 ॥ इति श्रीगणेशाष्टोत्तरशतनामावलिः सम्पूर्णा ॥
-',
-                english: '1) Gajanana- Om Gajananaya Namah।
+`,
+                english: `1) Gajanana- Om Gajananaya Namah।
 2) Ganadhyaksha- Om Ganadhyakshaya Namah।
 3) Vighnaraja- Om Vighnarajaya Namah।
 4) Vinayaka- Om Vinayakaya Namah।
@@ -520,22 +520,78 @@ Puran Chalisa Bhayo,Mangal Murti Ganesha॥.`
 कर्म-प्रभाव-प्रकाशिनी, भवनिधि की त्राता॥
 ॐ जय लक्ष्मी माता॥
 
-जिस घर में तुम रहतीं, सब सद्गुण आता।
-सब संभव हो जाता, मन नहीं घबराता॥
-ॐ जय लक्ष्मी माता॥
+जिस घर में तुम रहतीं, सब सद्गुण आता।महालक्ष्मी नमस्तुभ्यं,
+नमस्तुभ्यं सुरेश्वरि ।
+हरि प्रिये नमस्तुभ्यं,
+नमस्तुभ्यं दयानिधे ॥
 
-तुम बिन यज्ञ न होते, वस्त्र न कोई पाता।
-खान-पान का वैभव, सब तुमसे आता॥
-ॐ जय लक्ष्मी माता॥
+पद्मालये नमस्तुभ्यं,
+नमस्तुभ्यं च सर्वदे ।
+सर्वभूत हितार्थाय,
+वसु सृष्टिं सदा कुरुं ॥
 
-शुभ-गुण मंदिर सुंदर, क्षीरोदधि-जाता।
-रत्न चतुर्दश तुम बिन, कोई नहीं पाता॥
-ॐ जय लक्ष्मी माता॥
+ॐ जय लक्ष्मी माता,
+मैया जय लक्ष्मी माता ।
+तुमको निसदिन सेवत,
+हर विष्णु विधाता ॥
 
-महालक्ष्मी जी की आरती, जो कोई नर गाता।
-उर आनंद समाता, पाप उतर जाता॥
-ॐ जय लक्ष्मी माता॥`,
-                english: `Om Jai Lakshmi Mata,
+उमा, रमा, ब्रम्हाणी,
+तुम ही जग माता ।
+सूर्य चद्रंमा ध्यावत,
+नारद ऋषि गाता ॥
+॥ॐ जय लक्ष्मी माता...॥
+
+दुर्गा रुप निरंजनि,
+सुख-संपत्ति दाता ।
+जो कोई तुमको ध्याता,
+ऋद्धि-सिद्धि धन पाता ॥
+॥ॐ जय लक्ष्मी माता...॥
+
+तुम ही पाताल निवासनी,
+तुम ही शुभदाता ।
+कर्म-प्रभाव-प्रकाशनी,
+भव निधि की त्राता ॥
+॥ॐ जय लक्ष्मी माता...॥
+
+जिस घर तुम रहती हो,
+ताँहि में हैं सद्‍गुण आता ।
+सब सभंव हो जाता,
+मन नहीं घबराता ॥
+॥ॐ जय लक्ष्मी माता...॥
+
+तुम बिन यज्ञ ना होता,
+वस्त्र न कोई पाता ।
+खान पान का वैभव,
+सब तुमसे आता ॥
+॥ॐ जय लक्ष्मी माता...॥
+
+शुभ गुण मंदिर सुंदर,
+क्षीरोदधि जाता ।
+रत्न चतुर्दश तुम बिन,
+कोई नहीं पाता ॥
+॥ॐ जय लक्ष्मी माता...॥
+
+महालक्ष्मी जी की आरती,
+जो कोई नर गाता ।
+उँर आंनद समाता,
+पाप उतर जाता ॥
+॥ॐ जय लक्ष्मी माता...॥
+
+ॐ जय लक्ष्मी माता,
+मैया जय लक्ष्मी माता ।
+तुमको निसदिन सेवत,
+हर विष्णु विधाता ॥`,
+                english: `Mahalakshmi Namastubhyam,
+Namastubhyam Sureshvari ।
+Hari Priye Namastubhyam,
+Namastubhyam Dayanidhe ॥
+
+Padmalaye Namastubhyam,
+Namastubhyam Cha Sarvade ।
+Sarvbhoot Hitarthay,
+Vasu Srashtin Sada Kurum ॥
+
+Om Jai Lakshmi Mata,
 Maiya Jai Lakshmi Mata ।
 Tumako Nishidin Sevat,
 Hari Vishnu Vidhata ॥
@@ -588,6 +644,250 @@ Tumako Nishidin Sevat,
 Hari Vishnu Vidhata ॥
 `,
                 videoLink: "https://www.youtube.com/watch?v=SyqgAt-T0iQ"
+            },
+            {
+                id: "lakshmi-2",
+                title: "श्री लक्ष्मी के 108 नाम",
+                hindi: `ॐ प्रकृत्यै नमः ॥
+ॐ विकृत्यै नमः ॥
+ॐ विद्यायै नमः ॥
+ॐ सर्वभूतहितप्रदायै नमः ॥
+ॐ श्रद्धायै नमः ॥
+ॐ विभूत्यै नमः ॥
+ॐ सुरभ्यै नमः ॥
+ॐ परमात्मिकायै नमः ॥
+ॐ वाचे नमः ॥
+ॐ पद्मालयायै नमः ॥ 10 ॥
+ॐ पद्मायै नमः ॥
+ॐ शुचये नमः ॥
+ॐ स्वाहायै नमः ॥
+ॐ स्वधायै नमः ॥
+ॐ सुधायै नमः ॥
+ॐ धन्यायै नमः ॥
+ॐ हिरण्मय्यै नमः ॥
+ॐ लक्ष्म्यै नमः ॥
+ॐ नित्यपुष्टायै नमः ॥
+ॐ विभावर्यै नमः ॥ 20 ॥
+
+ॐ अदित्यै नमः ॥
+ॐ दित्ये नमः ॥
+ॐ दीपायै नमः ॥
+ॐ वसुधायै नमः ॥
+ॐ वसुधारिण्यै नमः ॥
+ॐ कमलायै नमः ॥
+ॐ कान्तायै नमः ॥
+ॐ कामाक्ष्यै नमः ॥
+ॐ क्ष्रीरोधसंभवाम् नमः ॥
+ॐ क्रोधसंभवायै नमः ॥ 30 ॥
+
+ॐ अनुग्रहप्रदायै नमः ॥
+ॐ बुद्धये नमः ॥
+ॐ अनघायै नमः ॥
+ॐ हरिवल्लभायै नमः ॥
+ॐ अशोकायै नमः ॥
+ॐ अमृतायै नमः ॥
+ॐ दीप्तायै नमः ॥
+ॐ लोकशोकविनाशिन्यै नमः ॥
+ॐ धर्मनिलयायै नमः ॥
+ॐ करुणायै नमः ॥ 40 ॥
+
+ॐ लोकमात्रे नमः ॥
+ॐ पद्मप्रियायै नमः ॥
+ॐ पद्महस्तायै नमः ॥
+ॐ पद्माक्ष्यै नमः ॥
+ॐ पद्मसुन्दर्यै नमः ॥
+ॐ पद्मोद्भवायै नमः ॥
+ॐ पद्ममुख्यै नमः ॥
+ॐ पद्मनाभप्रियायै नमः ॥
+ॐ रमायै नमः ॥
+ॐ पद्ममालाधरायै नमः ॥ 50 ॥
+
+ॐ देव्यै नमः ॥
+ॐ पद्मिन्यै नमः ॥
+ॐ पद्मगन्धिन्यै नमः ॥
+ॐ पुण्यगन्धायै नमः ॥
+ॐ सुप्रसन्नायै नमः ॥
+ॐ प्रसादाभिमुख्यै नमः ॥
+ॐ प्रभायै नमः ॥
+ॐ चन्द्रवदनायै नमः ॥
+ॐ चन्द्रायै नमः ॥
+ॐ चन्द्रसहोदर्यै नमः ॥ 60 ॥
+
+ॐ चतुर्भुजायै नमः ॥
+ॐ चन्द्ररूपायै नमः ॥
+ॐ इन्दिरायै नमः ॥
+ॐ इन्दुशीतलायै नमः ॥
+ॐ आह्लादजनन्यै नमः ॥
+ॐ पुष्टयै नमः ॥
+ॐ शिवायै नमः ॥
+ॐ शिवकर्यै नमः ॥
+ॐ सत्यै नमः ॥
+ॐ विमलायै नमः ॥ 70 ॥
+
+ॐ विश्वजनन्यै नमः ॥
+ॐ तुष्टयै नमः ॥
+ॐ दारिद्र्यनाशिन्यै नमः ॥
+ॐ प्रीतिपुष्करिण्यै नमः ॥
+ॐ शान्तायै नमः ॥
+ॐ शुक्लमाल्यांबरायै नमः ॥
+ॐ श्रियै नमः ॥
+ॐ भास्कर्यै नमः ॥
+ॐ बिल्वनिलयायै नमः ॥
+ॐ वरारोहायै नमः ॥ 80 ॥
+
+ॐ यशस्विन्यै नमः ॥
+ॐ वसुन्धरायै नमः ॥
+ॐ उदारांगायै नमः ॥
+ॐ हरिण्यै नमः ॥
+ॐ हेममालिन्यै नमः ॥
+ॐ धनधान्यकर्ये नमः ॥
+ॐ सिद्धये नमः ॥
+ॐ स्त्रैणसौम्यायै नमः ॥
+ॐ शुभप्रदाये नमः ॥
+ॐ नृपवेश्मगतानन्दायै नमः ॥ 90 ॥
+
+ॐ वरलक्ष्म्यै नमः ॥
+ॐ वसुप्रदायै नमः ॥
+ॐ शुभायै नमः ॥
+ॐ हिरण्यप्राकारायै नमः ॥
+ॐ समुद्रतनयायै नमः ॥
+ॐ जयायै नमः ॥
+ॐ मंगळा देव्यै नमः ॥
+ॐ विष्णुवक्षस्स्थलस्थितायै नमः ॥
+ॐ विष्णुपत्न्यै नमः ॥
+ॐ प्रसन्नाक्ष्यै नमः ॥ 100 ॥
+
+ॐ नारायणसमाश्रितायै नमः ॥
+ॐ दारिद्र्यध्वंसिन्यै नमः ॥
+ॐ देव्यै नमः ॥
+ॐ सर्वोपद्रव वारिण्यै नमः ॥
+ॐ नवदुर्गायै नमः ॥
+ॐ महाकाल्यै नमः ॥
+ॐ ब्रह्माविष्णुशिवात्मिकायै नमः ॥
+ॐ त्रिकालज्ञानसंपन्नायै नमः ॥ 108 ॥
+ॐ भुवनेश्वर्यै नमः ॥ 109 ॥
+
+॥ इति श्रीलक्ष्मीष्टोत्तरशतनामावलिः सम्पूर्णा ॥
+`,
+                english: `ॐ Vikrityai Namah ॥
+ॐ Prakrityai Namah ॥
+ॐ Vidyayai Namah ॥
+ॐ Sarvabhutahitapradayai Namah ॥
+ॐ Shraddhayai Namah ॥
+ॐ Vibhutyai Namah ॥
+ॐ Surabhyai Namah ॥
+ॐ Paramatmikayai Namah ॥
+ॐ Vache Namah ॥
+ॐ Padmalayayai Namah ॥ 10 ॥
+ॐ Swadhayai Namah ॥
+ॐ Padmayai Namah ॥
+ॐ Shuchaye Namah ॥
+ॐ Swahayai Namah ॥
+ॐ Sudhayai Namah ॥
+ॐ Dhanyayai Namah ॥
+ॐ Hiranmayyai Namah ॥
+ॐ Lakshmyai Namah ॥
+ॐ NityaPushtayai Namah ॥
+ॐ Vibhavaryai Namah ॥ 20 ॥
+
+ॐ Adityai Namah ॥
+ॐ Dityai Namah ॥
+ॐ Dipayai Namah ॥
+ॐ Vasudhayai Namah ॥
+ॐ Vasudharinyai Namah ॥
+ॐ Kamalayai Namah ॥
+ॐ Kantayai Namah ॥
+ॐ Kamakshyai Namah ॥
+ॐ Kshirodhasambhavam Namah ॥
+ॐ Krodhasambhavayai Namah ॥ 30 ॥
+
+ॐ Anugrahapradayai Namah ॥
+ॐ Buddhaye Namah ॥
+ॐ Anaghayai Namah ॥
+ॐ Harivallabhyai Namah ॥
+ॐ Ashokayai Namah ॥
+ॐ Amritayai Namah ॥
+ॐ Diptayai Namah ॥
+ॐ Lokashokavinashinyai Namah ॥
+ॐ Dharmanilayayai Namah ॥
+ॐ Karunayai Namah ॥ 40 ॥
+
+ॐ Lokamatre Namah ॥
+ॐ Padmapriyayai Namah ॥
+ॐ Padmahastayai Namah ॥
+ॐ Padmakshyai Namah ॥
+ॐ Padmasundaryai Namah ॥
+ॐ Padmodbhavayai Namah ॥
+ॐ Padmamukhyai Namah ॥
+ॐ Padmanabhapriyayai Namah ॥
+ॐ Ramayai Namah ॥
+ॐ Padmamaladharayai Namah ॥ 50 ॥
+
+ॐ Devyai Namah ॥
+ॐ Padminyai Namah ॥
+ॐ Padmagandhinyai Namah ॥
+ॐ Punyagandhayai Namah ॥
+ॐ Suprasannayai Namah ॥
+ॐ Prasadabhimukhyai Namah ॥
+ॐ Prabhayai Namah ॥
+ॐ Chandravadanayai Namah ॥
+ॐ Chandrayai Namah ॥
+ॐ Chandrasahodaryai Namah ॥ 60 ॥
+
+ॐ Chaturbhujayai Namah ॥
+ॐ Chandrarupayai Namah ॥
+ॐ Indirayai Namah ॥
+ॐ Indushitalayai Namah ॥
+ॐ Ahladajananyai Namah ॥
+ॐ Pushtayai Namah ॥
+ॐ Shivayai Namah ॥
+ॐ Shivakaryai Namah ॥
+ॐ Satyai Namah ॥
+ॐ Vimalayai Namah ॥ 70 ॥
+
+ॐ Vishwajananyai Namah ॥
+ॐ Tushtayai Namah ॥
+ॐ Daridryanashinyai Namah ॥
+ॐ Pritipushkarinyai Namah ॥
+ॐ Shantayai Namah ॥
+ॐ Shuklamalyambarayai Namah ॥
+ॐ Shriyai Namah ॥
+ॐ Bhaskaryai Namah ॥
+ॐ Bilvanilayayai Namah ॥
+ॐ Vararohayai Namah ॥ 80 ॥
+
+ॐ Yashaswinyai Namah ॥
+ॐ Vasundharayai Namah ॥
+ॐ Udarangayai Namah ॥
+ॐ Harinyai Namah ॥
+ॐ Hemamalinyai Namah ॥
+ॐ Dhanadhanyakaryai Namah ॥
+ॐ Siddhaye Namah ॥
+ॐ Strainasoumyayai Namah ॥
+ॐ Shubhapradayai Namah ॥
+ॐ Nripaveshmagatanandayai Namah ॥ 90 ॥
+
+ॐ Varalakshmyai Namah ॥
+ॐ Vasupradayai Namah ॥
+ॐ Shubhayai Namah ॥
+ॐ Hiranyaprakarayai Namah ॥
+ॐ Samudratanayayai Namah ॥
+ॐ Jayayai Namah ॥
+ॐ Mangala Devyai Namah ॥
+ॐ Vishnuvakshassthalasthitayai Namah ॥
+ॐ Vishnupatnyai Namah ॥
+ॐ Prasannakshyai Namah ॥ 100 ॥
+
+ॐ Narayanasamashritayai Namah ॥
+ॐ Daridryadhwamsinyai Namah ॥
+ॐ Devyai Namah ॥
+ॐ Sarvopadrava Varinyai Namah ॥
+ॐ Navadurgayai Namah ॥
+ॐ Mahakalyai Namah ॥
+ॐ Brahmavishnushivatmikayai Namah ॥
+ॐ Trikalajnanasampannayai Namah ॥ 108 ॥
+ॐ Bhuvaneshwaryai Namah ॥ 109 ॥
+`
             }
         ]
     },
@@ -598,18 +898,196 @@ Hari Vishnu Vidhata ॥
         aartis: [
             {
                 id: "krishna-1",
-                title: "यशोदा के नंदलाला",
-                hindi: `यशोदा के नंदलाला, श्रीगोपाल बाला।
-देवकी के मनमोहन, नंदके दुलारे॥
+                title: "आरती कुंजबिहारी की",
+                hindi: `आरती कुंजबिहारी की,
+श्री गिरिधर कृष्ण मुरारी की ॥
+आरती कुंजबिहारी की,
+श्री गिरिधर कृष्ण मुरारी की ॥
+गले में बैजंती माला,
+बजावै मुरली मधुर बाला ।
+श्रवण में कुण्डल झलकाला,
+नंद के आनंद नंदलाला ।
+गगन सम अंग कांति काली,
+राधिका चमक रही आली ।
+लतन में ठाढ़े बनमाली
+भ्रमर सी अलक,
+कस्तूरी तिलक,
+चंद्र सी झलक,
+ललित छवि श्यामा प्यारी की,
+श्री गिरिधर कृष्ण मुरारी की ॥
 
-मोरपंख सिर पर राजे, सोहे गल वैजंती माला।
-यमुना के तट पर होते, रास रचाया जिसने गोपियों संग रास रचाया॥`,
-                english: `The beloved son of Yashoda, Sri Gopal Bala.
-The enchanter of Devaki, the darling of Nanda.
+आरती कुंजबिहारी की,
+श्री गिरिधर कृष्ण मुरारी की ॥
 
-A peacock feather adorns his head, a Vaijayanti garland beautifies his neck.
-On the banks of Yamuna, he performed the divine dance with the gopis.`,
-                videoLink: "https://youtu.be/EXAMPLE_KRISHNA_SHORT_URL"
+कनकमय मोर मुकुट बिलसै,
+देवता दरसन को तरसैं ।
+गगन सों सुमन रासि बरसै ।
+बजे मुरचंग,
+मधुर मिरदंग,
+ग्वालिन संग,
+अतुल रति गोप कुमारी की,
+श्री गिरिधर कृष्णमुरारी की ॥
+
+आरती कुंजबिहारी की,
+श्री गिरिधर कृष्ण मुरारी की ॥
+
+जहां ते प्रकट भई गंगा,
+सकल मन हारिणि श्री गंगा ।
+स्मरन ते होत मोह भंगा
+बसी शिव सीस,
+जटा के बीच,
+हरै अघ कीच,
+चरन छवि श्रीबनवारी की,
+श्री गिरिधर कृष्णमुरारी की ॥
+
+आरती कुंजबिहारी की,
+श्री गिरिधर कृष्ण मुरारी की ॥
+
+चमकती उज्ज्वल तट रेनू,
+बज रही वृंदावन बेनू ।
+चहुं दिसि गोपि ग्वाल धेनू
+हंसत मृदु मंद,
+चांदनी चंद,
+कटत भव फंद,
+टेर सुन दीन दुखारी की,
+श्री गिरिधर कृष्णमुरारी की ॥
+
+आरती कुंजबिहारी की,
+श्री गिरिधर कृष्ण मुरारी की ॥
+
+आरती कुंजबिहारी की,
+श्री गिरिधर कृष्ण मुरारी की ॥
+आरती कुंजबिहारी की,
+श्री गिरिधर कृष्ण मुरारी की ॥
+`,
+                english: `Aarti Kunj Bihari Ki,
+Shri Girdhar Krishna Murari Ki ॥
+Aarti Kunj Bihari Ki,
+Shri Girdhar Krishna Murari Ki ॥
+Gale Mein Baijanti Mala,
+Bajave Murali Madhur Bala ।
+Shravan Mein Kundal Jhalakala,
+Nand Ke Anand Nandlala ।
+Gagan Sam Ang Kanti Kali,
+Radhika Chamak Rahi Aali ।
+Latan Mein Thadhe Banamali
+Bhramar Si Alak,
+Kasturi Tilak,
+Chandra Si Jhalak,
+Lalit Chavi Shyama Pyari Ki,
+Shri Girdhar Krishna Murari Ki ॥
+
+Aarti Kunj Bihari Ki,
+Shri Girdhar Krishna Murari Ki ॥
+
+Kanakmay Mor Mukut Bilse,
+Devata Darsan Ko Tarse ।
+Gagan So Suman Raasi Barse
+Baje Murchang,
+Madhur Mridang,
+Gwaalin Sang
+Atual Rati Gop Kumari Ki,
+Shri Girdhar Krishna Murari Ki ॥
+
+Aarti Kunj Bihari Ki,
+Shri Girdhar Krishna Murari Ki ॥
+
+Jahaan Te Pragat Bhayi Ganga,
+Sakal Man Haarini Shri Ganga ।
+Smaran Te Hot Moh Bhanga
+Basi Shiv Shish,
+Jataa Ke Beech,
+Harei Agh Keech,
+Charan Chhavi Shri Banvaari Ki,
+Shri Girdhar Krishna Murari Ki ॥
+
+Aarti Kunj Bihari Ki,
+Shri Girdhar Krishna Murari Ki ॥
+
+Chamakati Ujjawal Tat Renu,
+Baj Rahi Vrindavan Benu।
+Chahu Disi Gopi Gwaal Dhenu
+Hansat Mridu Mand,
+Chandani Chandra,
+Katat Bhav Phand,
+Ter Sun Deen Dukhari Ki,
+Shri Girdhar Krishna Murari Ki ॥
+
+Aarti Kunj Bihari Ki,
+Shri Girdhar Krishna Murari Ki ॥
+
+Aarti Kunj Bihari Ki,
+Shri Girdhar Krishna Murari Ki ॥
+Aarti Kunj Bihari Ki,
+Shri Girdhar Krishna Murari Ki ॥`,
+                videoLink: "https://www.youtube.com/watch?v=FEMR5alT7CY"
+        },
+            {
+                id: "krishna-2",
+                title: "छोटी छोटी गैया, छोटे छोटे ग्वाल",
+                hindi: `छोटी छोटी गैया, छोटे छोटे ग्वाल ।
+छोटो सो मेरो मदन गोपाल ॥
+छोटी छोटी गैया, छोटे छोटे ग्वाल ।
+छोटो सो मेरो मदन गोपाल ॥
+Read More
+आगे आगे गैया पीछे पीछे ग्वाल ।
+बीच में मेरो मदन गोपाल ॥
+
+छोटी छोटी गैया, छोटे छोटे ग्वाल ।
+छोटो सो मेरो मदन गोपाल ॥
+
+कारी कारी गैया, गोरे गोरे ग्वाल।
+श्याम वरण मेरो मदन गोपाल॥
+
+छोटी छोटी गैया, छोटे छोटे ग्वाल ।
+छोटो सो मेरो मदन गोपाल ॥
+
+घास खाए गैया, दूध पीवे ग्वाल ।
+माखन खावे मेरो मदन गोपाल ॥
+
+छोटी छोटी गैया, छोटे छोटे ग्वाल ।
+छोटो सो मेरो मदन गोपाल ॥
+
+छोटी छोटी लकुटी, छोले छोटे हाथ ।
+बंसी बजावे मेरो मदन गोपाल ॥
+
+छोटी छोटी गैया, छोटे छोटे ग्वाल ।
+छोटो सो मेरो मदन गोपाल ॥
+
+छोटी छोटी सखियाँ, मधुबन बाग ।
+रास राचावे मेरो मदन गोपाल ॥
+
+छोटी छोटी गैया, छोटे छोटे ग्वाल ।
+छोटो सो मेरो मदन गोपाल ॥
+छोटी छोटी गैया, छोटे छोटे ग्वाल ।
+छोटो सो मेरो मदन गोपाल ॥
+`,
+                english: `Choti Choti Gaiya, Chote Chote Gwal ।
+Choto so Mero Madan Gopal ॥
+॥ Choti Choti Gaiya… ॥
+Aage Aage Gaiya Pichhe Pichhe Gwal ।
+Bich Mein Mero Madan Gopal ॥
+॥ Choti Choti Gaiya… ॥
+
+Kaari Kaari Gaiya, Gore Gore Gwal ।
+Shyam Varan Mero Madan Gopal ॥
+॥ Choti Choti Gaiya… ॥
+
+Ghaas Khaye Gaiya, Doodh Pive Gwal ।
+Makhan Khave Mero Madan Gopal ॥
+॥ Choti Choti Gaiya… ॥
+
+Choti Choti Lakuti, Chhole Chhote Hath ।
+Bansi Bajave Mero Madan Gopal ॥
+॥ Choti Choti Gaiya… ॥
+
+Choti Choti Sakhiyan, Madhuban Baag ।
+Raas Rachave Mero Madan Gopal ॥
+॥ Choti Choti Gaiya… ॥
+
+Choti Choti Gaiya, Chote Chote Gwal ।
+Choto so Mero Madan Gopal ॥`,
+                videoLink: "https://www.youtube.com/watch?v=XzqJUoSDHZU"
             }
         ]
     },
