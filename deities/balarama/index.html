@@ -102,16 +102,37 @@
     <script src="/search.js"></script>
     <script src="/data.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        // Function to wait for deitiesData to be available
+        function waitForData(callback) {
+            if (typeof deitiesData !== 'undefined' && deitiesData && deitiesData.length > 0) {
+                callback();
+            } else {
+                // Wait a bit and try again
+                setTimeout(() => waitForData(callback), 50);
+            }
+        }
+
+        // Initialize deity page when data is available
+        function initializeDeityPage() {
             // Get deity ID from URL path - handle both /deity and /deity/ patterns
             const pathParts = window.location.pathname.split('/').filter(part => part !== '');
             const deityId = pathParts[pathParts.length - 1];
+            
+            console.log('Looking for deity:', deityId);
+            console.log('Available deities:', deitiesData.map(d => d.id));
             
             // Find the deity data
             const currentDeity = deitiesData.find(d => d.id === deityId);
             if (!currentDeity) {
                 console.error('Deity not found:', deityId);
-                window.location.href = '/'; // Redirect to home if deity not found
+                // Instead of immediate redirect, show error message
+                document.body.innerHTML = `
+                    <div style="text-align: center; padding: 50px;">
+                        <h2>Deity not found</h2>
+                        <p>The deity "${deityId}" was not found.</p>
+                        <a href="/" style="color: #ff6b35; text-decoration: none;">← Back to Home</a>
+                    </div>
+                `;
                 return;
             }
             
@@ -123,7 +144,10 @@
             document.title = `${currentDeity.name} Aarti - Aarti Sangrah`;
             
             // Update content
-            document.getElementById('deity-name').textContent = currentDeity.name;
+            const deityNameElement = document.getElementById('deity-name');
+            if (deityNameElement) {
+                deityNameElement.textContent = currentDeity.name;
+            }
             
             // Add deity image - fix path to be from root
             const deityImageContainer = document.getElementById('deity-image');
@@ -151,35 +175,37 @@
             
             // Populate aarti cards
             const aartiCardsContainer = document.getElementById('aarti-cards');
-            aartiCardsContainer.innerHTML = ''; // Clear any existing content
-            
-            aartis.forEach(aarti => {
-                const aartiCard = document.createElement('div');
-                aartiCard.className = 'aarti-card';
-                aartiCard.dataset.aartiId = aarti.id;
+            if (aartiCardsContainer) {
+                aartiCardsContainer.innerHTML = ''; // Clear any existing content
                 
-                const title = document.createElement('h4');
-                title.textContent = aarti.title;
-                
-                const preview = document.createElement('p');
-                // Show just the first line of the aarti for preview
-                const previewText = aarti.hindi ? aarti.hindi.split('\n')[0] : 'Preview not available';
-                preview.textContent = previewText;
-                
-                aartiCard.appendChild(title);
-                aartiCard.appendChild(preview);
-                
-                aartiCard.addEventListener('click', () => {
-                    // Update URL with the selected aarti ID without reloading the page
-                    const newUrl = new URL(window.location);
-                    newUrl.searchParams.set('aarti', aarti.id);
-                    window.history.pushState({}, '', newUrl);
+                aartis.forEach(aarti => {
+                    const aartiCard = document.createElement('div');
+                    aartiCard.className = 'aarti-card';
+                    aartiCard.dataset.aartiId = aarti.id;
                     
-                    selectAarti(aarti.id);
+                    const title = document.createElement('h4');
+                    title.textContent = aarti.title;
+                    
+                    const preview = document.createElement('p');
+                    // Show just the first line of the aarti for preview
+                    const previewText = aarti.hindi ? aarti.hindi.split('\n')[0] : 'Preview not available';
+                    preview.textContent = previewText;
+                    
+                    aartiCard.appendChild(title);
+                    aartiCard.appendChild(preview);
+                    
+                    aartiCard.addEventListener('click', () => {
+                        // Update URL with the selected aarti ID without reloading the page
+                        const newUrl = new URL(window.location);
+                        newUrl.searchParams.set('aarti', aarti.id);
+                        window.history.pushState({}, '', newUrl);
+                        
+                        selectAarti(aarti.id);
+                    });
+                    
+                    aartiCardsContainer.appendChild(aartiCard);
                 });
-                
-                aartiCardsContainer.appendChild(aartiCard);
-            });
+            }
             
             // If aartiId is not specified or not found, use the first aarti
             let initialAartiId = aartiId;
@@ -265,6 +291,11 @@
                     aartiLyrics.style.fontFamily = "'Arial', sans-serif";
                 }
             }
+        }
+
+        // Wait for DOM and data to be ready
+        document.addEventListener('DOMContentLoaded', () => {
+            waitForData(initializeDeityPage);
         });
     </script>
 </body>
