@@ -103,13 +103,14 @@
     <script src="/data.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Get deity ID from URL path
-            const pathParts = window.location.pathname.split('/');
+            // Get deity ID from URL path - handle both /deity and /deity/ patterns
+            const pathParts = window.location.pathname.split('/').filter(part => part !== '');
             const deityId = pathParts[pathParts.length - 1];
             
             // Find the deity data
             const currentDeity = deitiesData.find(d => d.id === deityId);
             if (!currentDeity) {
+                console.error('Deity not found:', deityId);
                 window.location.href = '/'; // Redirect to home if deity not found
                 return;
             }
@@ -150,6 +151,7 @@
             
             // Populate aarti cards
             const aartiCardsContainer = document.getElementById('aarti-cards');
+            aartiCardsContainer.innerHTML = ''; // Clear any existing content
             
             aartis.forEach(aarti => {
                 const aartiCard = document.createElement('div');
@@ -161,7 +163,7 @@
                 
                 const preview = document.createElement('p');
                 // Show just the first line of the aarti for preview
-                const previewText = aarti.hindi.split('\n')[0];
+                const previewText = aarti.hindi ? aarti.hindi.split('\n')[0] : 'Preview not available';
                 preview.textContent = previewText;
                 
                 aartiCard.appendChild(title);
@@ -192,26 +194,30 @@
             const hindiBtn = document.getElementById('hindi-btn');
             const englishBtn = document.getElementById('english-btn');
             
-            hindiBtn.addEventListener('click', () => {
-                if (currentLanguage !== 'hindi') {
-                    currentLanguage = 'hindi';
-                    updateButtonStates();
-                    updateAartiText();
-                }
-            });
+            if (hindiBtn) {
+                hindiBtn.addEventListener('click', () => {
+                    if (currentLanguage !== 'hindi') {
+                        currentLanguage = 'hindi';
+                        updateButtonStates();
+                        updateAartiText();
+                    }
+                });
+            }
             
-            englishBtn.addEventListener('click', () => {
-                if (currentLanguage !== 'english') {
-                    currentLanguage = 'english';
-                    updateButtonStates();
-                    updateAartiText();
-                }
-            });
+            if (englishBtn) {
+                englishBtn.addEventListener('click', () => {
+                    if (currentLanguage !== 'english') {
+                        currentLanguage = 'english';
+                        updateButtonStates();
+                        updateAartiText();
+                    }
+                });
+            }
             
             // Function to update button active states
             function updateButtonStates() {
-                hindiBtn.classList.toggle('active', currentLanguage === 'hindi');
-                englishBtn.classList.toggle('active', currentLanguage === 'english');
+                if (hindiBtn) hindiBtn.classList.toggle('active', currentLanguage === 'hindi');
+                if (englishBtn) englishBtn.classList.toggle('active', currentLanguage === 'english');
             }
             
             // Function to select an aarti
@@ -230,7 +236,10 @@
                 });
                 
                 // Update aarti title
-                document.getElementById('aarti-title').textContent = currentAarti.title;
+                const titleElement = document.getElementById('aarti-title');
+                if (titleElement) {
+                    titleElement.textContent = currentAarti.title;
+                }
                 
                 // Update the aarti text
                 updateAartiText();
@@ -243,9 +252,12 @@
                 }
                 
                 const aartiLyrics = document.getElementById('aarti-lyrics');
+                if (!aartiLyrics) {
+                    return;
+                }
                 
                 if (currentLanguage === 'hindi') {
-                    aartiLyrics.textContent = currentAarti.hindi;
+                    aartiLyrics.textContent = currentAarti.hindi || "Aarti text not available";
                     aartiLyrics.style.fontFamily = "'Arial', sans-serif";
                 } else {
                     // Show English translation
