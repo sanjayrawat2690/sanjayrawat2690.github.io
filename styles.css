@@ -1099,6 +1099,7 @@ body {
     position: relative;
     overflow: hidden;
     text-align: center;
+    width: 100%;
 }
 
 .youtube-video-section::before {
@@ -1118,6 +1119,7 @@ body {
     margin-bottom: 20px;
     position: relative;
     padding-bottom: 15px;
+    text-align: center;
 }
 
 .youtube-video-section h3::after {
@@ -1139,6 +1141,8 @@ body {
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .video-container iframe {

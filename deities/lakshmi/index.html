@@ -64,15 +64,16 @@
                     </div>
                 </div>
 
-                <!-- YouTube Video Section (for Ganesh) -->
+                <!-- YouTube Video Section (for aartis with video links) -->
                 <div id="youtube-video-section" class="youtube-video-section" style="display: none;">
-                    <h3>Watch Ganesh Aarti</h3>
+                    <h3 id="video-title">Watch Aarti</h3>
                     <div class="video-container">
                         <iframe 
+                            id="video-iframe"
                             width="560" 
                             height="315" 
-                            src="https://www.youtube.com/embed/ZYxdhMAF4F0" 
-                            title="Ganesh Aarti Video"
+                            src="" 
+                            title="Aarti Video"
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             allowfullscreen>
@@ -168,12 +169,6 @@
                     </div>
                 `;
                 return;
-            }
-            
-            // Show YouTube video section for Ganesh
-            const videoSection = document.getElementById('youtube-video-section');
-            if (videoSection && deityId === 'ganesh') {
-                videoSection.style.display = 'block';
             }
             
             // Get aarti ID from URL query parameter if any
@@ -330,6 +325,43 @@
                     aartiLyrics.textContent = currentAarti.english || "English translation not available yet.";
                     aartiLyrics.style.fontFamily = "'Arial', sans-serif";
                 }
+                
+                // Handle video display
+                updateVideoSection();
+            }
+            
+            // Function to update video section based on current aarti
+            function updateVideoSection() {
+                const videoSection = document.getElementById('youtube-video-section');
+                const videoIframe = document.getElementById('video-iframe');
+                const videoTitle = document.getElementById('video-title');
+                
+                if (!videoSection || !videoIframe || !videoTitle) {
+                    return;
+                }
+                
+                // Check if current aarti has a video link
+                if (currentAarti && currentAarti.videoLink) {
+                    // Convert YouTube watch URL to embed URL
+                    const videoId = extractVideoId(currentAarti.videoLink);
+                    if (videoId) {
+                        const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                        videoIframe.src = embedUrl;
+                        videoTitle.textContent = `Watch ${currentAarti.title}`;
+                        videoSection.style.display = 'block';
+                    } else {
+                        videoSection.style.display = 'none';
+                    }
+                } else {
+                    videoSection.style.display = 'none';
+                }
+            }
+            
+            // Function to extract video ID from YouTube URL
+            function extractVideoId(url) {
+                const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/;
+                const match = url.match(regex);
+                return match ? match[1] : null;
             }
         }
 

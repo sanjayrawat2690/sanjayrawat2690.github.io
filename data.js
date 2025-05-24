@@ -48,7 +48,8 @@ Baanjhan Ko Putra Det, Nirdhan Ko Maya.
 Soor Shyam Sharan Aaye, Safal Kije Seva.
 Jai Ganesh, Jai Ganesh, Jai Ganesh Deva.
 
-Mata Jaaki Parvati, Pita Mahadeva.`
+Mata Jaaki Parvati, Pita Mahadeva.`,
+                videoLink: "https://www.youtube.com/watch?v=ZYxdhMAF4F0"
             },
             {
                 id: "ganesh-2",
