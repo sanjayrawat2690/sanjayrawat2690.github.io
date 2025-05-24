@@ -349,11 +349,17 @@
                         videoIframe.src = embedUrl;
                         videoTitle.textContent = `Watch ${currentAarti.title}`;
                         videoSection.style.display = 'block';
+                        console.log('Showing video for:', currentAarti.title, 'URL:', embedUrl);
                     } else {
+                        videoIframe.src = '';
                         videoSection.style.display = 'none';
+                        console.log('Invalid video URL for:', currentAarti.title);
                     }
                 } else {
+                    // Clear iframe src and hide video section
+                    videoIframe.src = '';
                     videoSection.style.display = 'none';
+                    console.log('No video link for:', currentAarti ? currentAarti.title : 'unknown aarti');
                 }
             }
             
