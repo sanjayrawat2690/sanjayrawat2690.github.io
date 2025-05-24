@@ -258,6 +258,242 @@ Sambandh Apne Sahasra Dasha,Rushi Panchami Dinesh।
 
 Puran Chalisa Bhayo,Mangal Murti Ganesha॥.`
             },
+                {
+                    id: "ganesh-3",
+                    title: "श्री गणेश के 108 नाम",
+                    hindi: `गजानन- ॐ गजाननाय नमः ।
+गणाध्यक्ष- ॐ गणाध्यक्षाय नमः ।
+विघ्नराज- ॐ विघ्नराजाय नमः ।
+विनायक- ॐ विनायकाय नमः ।
+द्वैमातुर- ॐ द्वैमातुराय नमः ।
+द्विमुख- ॐ द्विमुखाय नमः ।
+प्रमुख- ॐ प्रमुखाय नमः ।
+सुमुख-ॐ सुमुखाय नमः ।
+कृति- ॐ कृतिने नमः ।
+सुप्रदीप- ॐ सुप्रदीपाय नमः ॥ 10 ॥
+
+सुखनिधी- ॐ सुखनिधये नमः ।
+सुराध्यक्ष- ॐ सुराध्यक्षाय नमः ।
+सुरारिघ्न- ॐ सुरारिघ्नाय नमः ।
+महागणपति- ॐ महागणपतये नमः ।
+मान्या- ॐ मान्याय नमः ।
+महाकाल- ॐ महाकालाय नमः ।
+महाबला- ॐ महाबलाय नमः ।
+हेरम्ब- ॐ हेरम्बाय नमः ।
+लम्बजठर- ॐ लम्बजठरायै नमः ।
+ह्रस्वग्रीव- ॐ ह्रस्व ग्रीवाय नमः ॥ 20 ॥
+
+महोदरा- ॐ महोदराय नमः ।
+मदोत्कट- ॐ मदोत्कटाय नमः ।
+महावीर- ॐ महावीराय नमः ।
+मन्त्रिणे- ॐ मन्त्रिणे नमः ।
+मङ्गल स्वरा- ॐ मङ्गल स्वराय नमः ।
+प्रमधा- ॐ प्रमधाय नमः ।
+प्रथम- ॐ प्रथमाय नमः ।
+प्रज्ञा- ॐ प्राज्ञाय नमः ।
+विघ्नकर्ता- ॐ विघ्नकर्त्रे नमः ।
+विघ्नहर्ता- ॐ विघ्नहर्त्रे नमः ॥ 30 ॥
+
+विश्वनेत्र- ॐ विश्वनेत्रे नमः ।
+विराट्पति- ॐ विराट्पतये नमः ।
+श्रीपति- ॐ श्रीपतये नमः ।
+वाक्पति- ॐ वाक्पतये नमः ।
+शृङ्गारिण- ॐ शृङ्गारिणे नमः ।
+अश्रितवत्सल- ॐ अश्रितवत्सलाय नमः ।
+शिवप्रिय- ॐ शिवप्रियाय नमः ।
+शीघ्रकारिण- ॐ शीघ्रकारिणे नमः ।
+शाश्वत - ॐ शाश्वताय नमः ।
+बल- ॐ बल नमः ॥ 40 ॥
+
+बलोत्थिताय- ॐ बलोत्थिताय नमः ।
+भवात्मजाय- ॐ भवात्मजाय नमः ।
+पुराण पुरुष- ॐ पुराण पुरुषाय नमः ।
+पूष्णे- ॐ पूष्णे नमः ।
+पुष्करोत्षिप्त वारिणे- ॐ पुष्करोत्षिप्त वारिणे नमः ।
+अग्रगण्याय- ॐ अग्रगण्याय नमः ।
+अग्रपूज्याय- ॐ अग्रपूज्याय नमः ।
+अग्रगामिने- ॐ अग्रगामिने नमः ।
+मन्त्रकृते- ॐ मन्त्रकृते नमः ।
+चामीकरप्रभाय- ॐ चामीकरप्रभाय नमः ॥ 50 ॥
+
+सर्वाय- ॐ सर्वाय नमः ।
+सर्वोपास्याय- ॐ सर्वोपास्याय नमः ।
+सर्व कर्त्रे- ॐ सर्व कर्त्रे नमः ।
+सर्वनेत्रे- ॐ सर्वनेत्रे नमः ।
+सर्वसिद्धिप्रदाय- ॐ सर्वसिद्धिप्रदाय नमः ।
+सिद्धये- ॐ सिद्धये नमः ।
+पञ्चहस्ताय- ॐ पञ्चहस्ताय नमः ।
+पार्वतीनन्दनाय- ॐ पार्वतीनन्दनाय नमः ।
+प्रभवे- ॐ प्रभवे नमः ।
+कुमारगुरवे- ॐ कुमारगुरवे नमः ॥ 60 ॥
+
+अक्षोभ्याय- ॐ अक्षोभ्याय नमः ।
+कुञ्जरासुर भञ्जनाय- ॐ कुञ्जरासुर भञ्जनाय नमः ।
+प्रमोदाय- ॐ प्रमोदाय नमः ।
+मोदकप्रियाय- ॐ मोदकप्रियाय नमः ।
+कान्तिमते- ॐ कान्तिमते नमः ।
+धृतिमते- ॐ धृतिमते नमः ।
+कामिने- ॐ कामिने नमः ।
+कपित्थपनसप्रियाय- ॐ कपित्थपनसप्रियाय नमः ।
+ब्रह्मचारिणे- ॐ ब्रह्मचारिणे नमः ।
+ब्रह्मरूपिणे- ॐ ब्रह्मरूपिणे नमः ॥ 70 ॥
+
+ब्रह्मविद्यादि दानभुवे- ॐ ब्रह्मविद्यादि दानभुवे नमः ।
+जिष्णवे- ॐ जिष्णवे नमः ।
+विष्णुप्रियाय- ॐ विष्णुप्रियाय नमः ।
+भक्त जीविताय- ॐ भक्त जीविताय नमः ।
+जितमन्मधाय- ॐ जितमन्मधाय नमः ।
+ऐश्वर्यकारणाय- ॐ ऐश्वर्यकारणाय नमः ।
+ज्यायसे- ॐ ज्यायसे नमः ।
+यक्षकिन्नेर सेविताय- ॐ यक्षकिन्नेर सेविताय नमः।
+गङ्गा सुताय- ॐ गङ्गा सुताय नमः ।
+गणाधीशाय- ॐ गणाधीशाय नमः ॥ 80 ॥
+
+गम्भीर निनदाय- ॐ गम्भीर निनदाय नमः ।
+वटवे- ॐ वटवे नमः ।
+अभीष्टवरदाय- ॐ अभीष्टवरदाय नमः ।
+ज्योतिषे- ॐ ज्योतिषे नमः ।
+भक्तनिधये- ॐ भक्तनिधये नमः ।
+भावगम्याय- ॐ भावगम्याय नमः ।
+मङ्गलप्रदाय- ॐ मङ्गलप्रदाय नमः ।
+अव्यक्ताय- ॐ अव्यक्ताय नमः ।
+अप्राकृत पराक्रमाय- ॐ अप्राकृत पराक्रमाय नमः ।
+सत्यधर्मिणे- ॐ सत्यधर्मिणे नमः ॥ 90 ॥
+
+सखये- ॐ सखये नमः ।
+सरसाम्बुनिधये- ॐ सरसाम्बुनिधये नमः ।
+महेशाय- ॐ महेशाय नमः ।
+दिव्याङ्गाय- ॐ दिव्याङ्गाय नमः ।
+मणिकिङ्किणी मेखालाय- ॐ मणिकिङ्किणी मेखालाय नमः ।
+समस्त देवता मूर्तये- ॐ समस्त देवता मूर्तये नमः ।
+सहिष्णवे- ॐ सहिष्णवे नमः ।
+सततोत्थिताय- ॐ सततोत्थिताय नमः ।
+विघातकारिणे- ॐ विघातकारिणे नमः ।
+विश्वग्दृशे- ॐ विश्वग्दृशे नमः ॥ 100 ॥
+
+विश्वरक्षाकृते- ॐ विश्वरक्षाकृते नमः ।
+कल्याणगुरवे- ॐ कल्याणगुरवे नमः ।
+उन्मत्तवेषाय- ॐ उन्मत्तवेषाय नमः ।
+अपराजिते- ॐ अपराजिते नमः ।
+समस्त जगदाधाराय- ॐ समस्त जगदाधाराय नमः ।
+सर्वैश्वर्यप्रदाय- ॐ सर्वैश्वर्यप्रदाय नमः ।
+आक्रान्त चिद चित्प्रभवे- ॐ आक्रान्त चिद चित्प्रभवे नमः ।
+श्री विघ्नेश्वराय- ॐ श्री विघ्नेश्वराय नमः ॥ 108 ॥
+
+॥ इति श्रीगणेशाष्टोत्तरशतनामावलिः सम्पूर्णा ॥
+',
+                english: '1) Gajanana- Om Gajananaya Namah।
+2) Ganadhyaksha- Om Ganadhyakshaya Namah।
+3) Vighnaraja- Om Vighnarajaya Namah।
+4) Vinayaka- Om Vinayakaya Namah।
+5) Dvaimatura- Om Dvaimaturaya Namah।
+6) Dwimukha- Om Dwimukhaya Namah।
+7) Pramukha- Om Pramukhaya Namah।
+8) Sumukha- Om Sumukhaya Namah।
+9) Kriti- Om Kritine Namah।
+10) Supradipa- Om Supradipaya Namah।
+11) Sukhanidhi- Om Sukhanidhaye Namah।
+12) Suradhyaksha- Om Suradhyakshaya Namah।
+13) Surarighna- Om Surarighnaya Namah।
+14) Mahaganapati- Om Mahaganapataye Namah।
+15) Manya- Om Manyaya Namah।
+16) Mahakala- Om Mahakalaya Namah।
+17) Mahabala- Om Mahabalaya Namah।
+18) Heramba- Om Herambaya Namah।
+19) Lambajathara- Om Lambajatharayai Namah।
+20) Haswagriva- Om Haswa Grivaya Namah।
+21) Mahodara- Om Mahodaraya Namah।
+22) Madotkata- Om Madotkataya Namah।
+23) Mahavira- Om Mahaviraya Namah।
+24) Mantrine- Om Mantrine Namah।
+25) Mangala Swara- Om Mangala Swaraya Namah।
+26) Pramadha- Om Pramadhaya Namah।
+27) Prathama- Om Prathamaya Namah।
+28) Prajna- Om Prajnaya Namah।
+29) Vighnakarta- Om Vighnakartre Namah।
+30) Vignaharta- Om Vignahartre Namah।
+31) Vishwanetra- Om Vishwanetre Namah।
+32) Viratpati- Om Viratpataye Namah।
+33) Shripati- Om Shripataye Namah।
+34) Vakpati- Om Vakpataye Namah।
+35) Shringarin- Om Shringarine Namah।
+36) Ashritavatsala- Om Ashritavatsalaya Namah।
+37) Shivapriya- Om Shivapriyaya Namah।
+38) Shighrakarina- Om Shighrakarine Namah।
+39) Shashwata- Om Shashwataya Namah।
+40) Bal- Om Bala Namah।
+41) Balotthitaya- Om Balotthitaya Namah।
+42) Bhavatmajaya- Om Bhavatmajaya Namah।
+43) Purana Purusha- Om Purana Purushaya Namah।
+44) Pushne- Om Pushne Namah।
+45) Pushkarotshipta Varine- Om Pushkarotshipta Varine Namah।
+46) Agraganyaya- Om Agraganyaya Namah।
+47) Agrapujyaya- Om Agrapujyaya Namah।
+48) Agragamine- Om Agragamine Namah।
+49) Mantrakrite- Om Mantrakrite Namah।
+50) Chamikaraprabhaya- Om Chamikaraprabhaya Namah।
+51) Sarvaya- Om Sarvaya Namah।
+52) Sarvopasyaya- Om Sarvopasyaya Namah।
+53) Sarvakartre- Om Sarva Kartre Namah।
+54) Sarvanetre- Om Sarvanetre Namah।
+55) Sarvasiddhipradaya- Om Sarvasiddhipradaya Namah।
+56) Siddhaye- Om Siddhaye Namah।
+57) Panchahastaya- Om Panchahastaya Namah।
+58) Parvatinadanaya- Om Parvatinandanaya Namah।
+59) Prabhave- Om Prabhave Namah।
+60) Kumaragurave- Om Kumaragurave Namah।
+61) Akshobhyaya- Om Akshobhyaya Namah।
+62) Kunjarasura Bhanjanaya- Om Kunjarasura Bhanjanaya Namah।
+63) Pramodaya- Om Pramodaya Namah।
+64) Modakapriyaya- Om Modakapriyaya Namah।
+65) Kantimate- Om Kantimate Namah।
+66) Dhritimate- Om Dhritimate Namah।
+67) Kamine- Om Kamine Namah।
+68) Kapitthapanasapriyaya- Om Kapitthapanasapriyaya Namah।
+69) Brahmacharine- Om Brahmacharine Namah।
+70) Brahmarupine- Om Brahmarupine Namah।
+71) Brahmavidyadi Danabhuve- Om Brahmavidyadi Danabhuve Namah।
+72) Jishnave- Om Jishnave Namah।
+73) Vishnupriyaya- Om Vishnupriyaya Namah।
+74) Bhakta Jivitaya- Om Bhakta Jivitaya Namah।
+75) Jitamanmadhaya- Om Jitamanmadhaya Namah।
+76) Aishwaryakaranaya- Om Aishwaryakaranaya Namah।
+77) Jyayase- Om Jyayase Namah।
+78) Yaksha Kinnerasevitaya- Om Yaksha Kinnerasevitaya Namah।
+79) Ganga Sutaya- Om Ganga Sutaya Namah।
+80) Ganadhishaya- Om Ganadhishaya Namah।
+81) Gambhira Ninadaya- Om Gambhira Ninadaya Namah।
+82) Vatave- Om Vatave Namah।
+83) Jyotishe Abhishtavaradaya- Om Abhishtavaradaya Namah।
+84) Om Jyotishe Namah।
+85) Bhktanidhaye- Om Bhktanidhaye Namah।
+86) Bhavagamyaya- Om Bhavagamyaya Namah।
+87) Mangalapradaya- Om Mangalapradaya Namah।
+88) Avyaktaya- Om Avyaktaya Namah।
+89) Aprakrita Parakramaya- Om Aprakrita Parakramaya Namah।
+90) Satyadharmine- Om Satyadharmine Namah।
+91) Sakhaye- Om Sakhaye Namah।
+92) Sarasambunidhaye- Om Sarasambunidhaye Namah।
+93) Maheshaya- Om Maheshaya Namah।
+94) Divyangaya- Om Divyangaya Namah।
+95) Manikinkini Mekhalaya- Om Manikinkini Mekhalaya Namah।
+96) Samasta Devata Murtaye- Om Samasta Devata Murtaye Namah।
+97) Sahishnave- Om Sahishnave Namah।
+98) Satatotthitaya- Om Satatotthitaya Namah।
+99) Vighatakarine- Om Vighatakarine Namah।
+100) Vishwagdrishe- Om Vishwagdrishe Namah।
+101) Vishwarakshakrite- Om Vishwarakshakrite Namah।
+102) Kalyanagurave- Om Kalyanagurave Namah।
+103) Unmattaveshaya- Om Unmattaveshaya Namah।
+104) Aparajite- Om Aparajite Namah।
+105) Samsta Jagadadharaya- Om Samsta Jagadadharaya Namah।
+106) Sarwaishwaryapradaya- Om Sarwaishwaryapradaya Namah।
+107) Akranta Chida Chitprabhave- Om Akranta Chida Chitprabhave Namah।
+108) Shri Vighneshwaraya- Om Shri Vighneshwaraya Namah।
+
+॥ Eti Shriganeshashtottar Shatnamavalih Sampoorna ॥
+`
+           }
         ]
     },
     {
@@ -352,7 +588,7 @@ Tumako Nishidin Sevat,
 Hari Vishnu Vidhata ॥
 `,
                 videoLink: "https://www.youtube.com/watch?v=SyqgAt-T0iQ"
-            },
+            }
         ]
     },
     {
