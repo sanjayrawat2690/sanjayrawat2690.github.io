@@ -1,67 +1,124 @@
-const fs = require('fs');
-const path = require('path');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goddess Parvati Aarti - Aarti Sangrah</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/autocomplete.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo (Om symbol) -->
+            <a href="/" class="logo-link">
+                <div class="om-logo">ॐ</div>
+            </a>
+            
+            <!-- Site title -->
+            <div class="site-title">
+                <h1>आरती संग्रह</h1>
+                <h2>Aarti Sangrah</h2>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search for deities or aartis...">
+                <button id="search-button" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <!-- Navigation menu -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-// Import the deity data
-// We'll need to modify this to work in Node.js environment
-let deitiesData;
-try {
-    // Read the data.js file and extract the deitiesData array
-    const dataJsContent = fs.readFileSync('data.js', 'utf8');
-    // Extract the array by removing the const declaration
-    const dataJsArray = dataJsContent.replace('const deitiesData = ', '');
-    // Evaluate the array (note: this is safe since we control the content of data.js)
-    deitiesData = eval(dataJsArray);
-} catch (error) {
-    console.error('Error loading deity data:', error);
-    process.exit(1);
-}
+    <div class="container">
+        <main>
+            <div class="deity-page">
+                <div class="deity-header">
+                    <div id="deity-image" class="deity-image"></div>
+                    <h1 id="deity-name">Deity Name</h1>
+                </div>
 
-// Read the deity template
-const deityTemplateHtml = fs.readFileSync('deity-template.html', 'utf8');
+                <div class="language-toggle">
+                    <button id="hindi-btn" class="active">हिंदी</button>
+                    <button id="english-btn">English</button>
+                </div>
 
-// Read the admin.html template
-const adminTemplateHtml = fs.readFileSync('admin.html', 'utf8');
+                <div class="aarti-cards" id="aarti-cards">
+                    <!-- Aarti cards will be populated here -->
+                </div>
 
-// Create deities directory if it doesn't exist
-if (!fs.existsSync('deities')) {
-    fs.mkdirSync('deities');
-}
+                <div class="aarti-content">
+                    <h2 id="aarti-title">Aarti Title</h2>
+                    <div id="aarti-lyrics" class="aarti-lyrics">
+                        <!-- Aarti text will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 
-// Generate static HTML for each deity
-deitiesData.forEach(deity => {
-    // For each deity, create a directory with their ID in the deities directory
-    const deityDir = path.join('deities', deity.id);
-    if (!fs.existsSync(deityDir)) {
-        fs.mkdirSync(deityDir);
-    }
-    
-    // Create the main index.html file for the deity
-    let deityHtml = deityTemplateHtml;
-    
-    // Update the HTML with deity-specific information
-    deityHtml = deityHtml.replace('<title>Deity Aarti - Aarti Sangrah</title>', 
-                               `<title>${deity.name} Aarti - Aarti Sangrah</title>`);
-    
-    // Add script to load this specific deity data
-    const scriptSection = `
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Aarti Sangrah</h3>
+                <p>A digital collection of traditional Hindu devotional hymns</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Aarti" target="_blank">About Aarti</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Aarti Sangrah. Created with devotion and love.</p>
+            <p><a href="/admin" class="admin-link">Manage Images</a></p>
+        </div>
+    </footer>
+
+    <script src="/search.js"></script>
+
     <script>
-        // Single deity data for ${deity.id}
-        const currentDeity = ${JSON.stringify(deity)};
+        // Single deity data for parvati
+        const currentDeity = {"id":"parvati","name":"Goddess Parvati","image":"images/parvati.jpg","aarti":"जय पार्वती माता, जग पालन करता।\nपुत्र चतुर वर दाता, रिद्धि सिद्धि दाता॥\nतेरी अमर कहानी, जगत में हुई नूर जवानी॥\nजय जय पार्वती अम्मा, जय जय शिव की अंगना॥"};
         document.addEventListener('DOMContentLoaded', () => {
             // Get aarti ID from URL query parameter if any
             const urlParams = new URLSearchParams(window.location.search);
             const aartiId = urlParams.get('aarti');
             
             // Update page title
-            document.title = \`${deity.name} Aarti - Aarti Sangrah\`;
+            document.title = `Goddess Parvati Aarti - Aarti Sangrah`;
             
             // Update content
-            document.getElementById('deity-name').textContent = '${deity.name}';
+            document.getElementById('deity-name').textContent = 'Goddess Parvati';
             
             // Add deity image - fix path to be from root
             const deityImageContainer = document.getElementById('deity-image');
             if (deityImageContainer) {
-                deityImageContainer.style.backgroundImage = \`url('/${deity.image}')\`;
+                deityImageContainer.style.backgroundImage = `url('/images/parvati.jpg')`;
             }
             
             // Current language state (default: Hindi)
@@ -75,7 +132,7 @@ deitiesData.forEach(deity => {
             if (!aartis) {
                 // Convert old format to new format on the fly
                 aartis = [{
-                    id: \`${deity.id}-1\`,
+                    id: `parvati-1`,
                     title: "आरती",
                     hindi: currentDeity.aarti || "Aarti text unavailable",
                     english: currentDeity.aartiEnglish || "English translation not available"
@@ -95,7 +152,7 @@ deitiesData.forEach(deity => {
                 
                 const preview = document.createElement('p');
                 // Show just the first line of the aarti for preview
-                const previewText = aarti.hindi.split('\\n')[0];
+                const previewText = aarti.hindi.split('\n')[0];
                 preview.textContent = previewText;
                 
                 aartiCard.appendChild(title);
@@ -188,56 +245,6 @@ deitiesData.forEach(deity => {
                 }
             }
         });
-    </script>`;
-    
-    // Add our inline script
-    deityHtml = deityHtml.replace('</body>', `${scriptSection}\n</body>`);
-    
-    // Write the index.html file to the deity's directory
-    fs.writeFileSync(path.join(deityDir, 'index.html'), deityHtml);
-    
-    console.log(`Generated static page for ${deity.name}`);
-});
-
-// Create the admin page
-console.log('Generating admin page...');
-if (!fs.existsSync('admin')) {
-    fs.mkdirSync('admin');
-}
-
-let adminHtml = adminTemplateHtml;
-// Update resource paths to be absolute
-adminHtml = adminHtml.replace(/href="styles.css"/g, 'href="/styles.css"');
-adminHtml = adminHtml.replace(/href="admin-styles.css"/g, 'href="/admin-styles.css"');
-adminHtml = adminHtml.replace(/src="admin.js"/g, 'src="/admin.js"');
-adminHtml = adminHtml.replace(/src="image-utils.js"/g, 'src="/image-utils.js"');
-
-// Write the index.html file to the admin directory
-fs.writeFileSync(path.join('admin', 'index.html'), adminHtml);
-console.log('Generated admin page');
-
-// Update the main index.html file to use the new URL format
-let mainIndexHtml = fs.readFileSync('index.html', 'utf8');
-mainIndexHtml = mainIndexHtml.replace(/window\.location\.href = `deity\.html\?id=\${deity\.id}`/g, 
-                                 'window.location.href = `/${deity.id}`');
-
-fs.writeFileSync('index.html', mainIndexHtml);
-console.log('Updated main index.html with new URLs');
-
-// Create .htaccess file for URL rewriting
-const htaccessContent = `
-# Enable rewrite engine
-RewriteEngine On
-
-# Redirect old deity.html?id=xxx URLs to /xxx
-RewriteCond %{QUERY_STRING} ^id=([^&]+)
-RewriteRule ^deity\.html$ /%1? [R=301,L]
-
-# Serve static deity pages
-RewriteRule ^([^/]+)/?$ deities/$1/index.html [L]
-`;
-
-fs.writeFileSync('.htaccess', htaccessContent);
-console.log('Created .htaccess file for URL rewriting');
-
-console.log('Static site generation complete!'); 
+    </script>
+</body>
+</html> 

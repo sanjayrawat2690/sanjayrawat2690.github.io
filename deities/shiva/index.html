@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lord Shiva Aarti - Aarti Sangrah</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/autocomplete.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo (Om symbol) -->
+            <a href="/" class="logo-link">
+                <div class="om-logo">ॐ</div>
+            </a>
+            
+            <!-- Site title -->
+            <div class="site-title">
+                <h1>आरती संग्रह</h1>
+                <h2>Aarti Sangrah</h2>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search for deities or aartis...">
+                <button id="search-button" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <!-- Navigation menu -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="deity-page">
+                <div class="deity-header">
+                    <div id="deity-image" class="deity-image"></div>
+                    <h1 id="deity-name">Deity Name</h1>
+                </div>
+
+                <div class="language-toggle">
+                    <button id="hindi-btn" class="active">हिंदी</button>
+                    <button id="english-btn">English</button>
+                </div>
+
+                <div class="aarti-cards" id="aarti-cards">
+                    <!-- Aarti cards will be populated here -->
+                </div>
+
+                <div class="aarti-content">
+                    <h2 id="aarti-title">Aarti Title</h2>
+                    <div id="aarti-lyrics" class="aarti-lyrics">
+                        <!-- Aarti text will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Aarti Sangrah</h3>
+                <p>A digital collection of traditional Hindu devotional hymns</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Aarti" target="_blank">About Aarti</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Aarti Sangrah. Created with devotion and love.</p>
+            <p><a href="/admin" class="admin-link">Manage Images</a></p>
+        </div>
+    </footer>
+
+    <script src="/search.js"></script>
+
+    <script>
+        // Single deity data for shiva
+        const currentDeity = {"id":"shiva","name":"Lord Shiva","image":"images/shiva.jpg","aartis":[{"id":"shiva-1","title":"ॐ जय शिव ओंकारा","hindi":"ॐ जय शिव ओंकारा, स्वामी जय शिव ओंकारा।\nब्रह्मा, विष्णु, सदाशिव, अर्द्धांगी धारा॥\nॐ जय शिव ओंकारा॥\n\nएकानन, चतुरानन, पंचानन राजे।\nहंसासन, गरुड़ासन, वृषवाहन साजे॥\nॐ जय शिव ओंकारा॥\n\nदो भुज, चार चतुर्भुज, दसभुज ते सोहे।\nतीनों रूप निरखता, त्रिभुवन जन मोहे॥\nॐ जय शिव ओंकारा॥\n\nअक्षमाला वनमाला, मुण्डमाला धारी।\nचंदन मृगमद चर्चित, भस्मांग भारी॥\nॐ जय शिव ओंकारा॥\n\nश्वेताम्बर, पीताम्बर, बाघम्बर अंगे।\nसंकर, शिव सनातन, पार्वती संगे॥\nॐ जय शिव ओंकारा॥\n\nकर के मध्य कमण्डल, चक्र त्रिशूल धरता।\nजगकर्ता, जगपालक, जग संहरता॥\nॐ जय शिव ओंकारा॥\n\nब्रह्मा, विष्णु, सदाशिव, जानत अविवेका।\nप्रणवाक्षर में शोभित, ये तीनों एका॥\nॐ जय शिव ओंकारा॥\n\nत्रिगुण स्वामी जी की आरती, जो कोई नर गावे।\nकहत शिवानंद स्वामी, मनवांछित फल पावे॥\nॐ जय शिव ओंकारा॥","english":"Om glory to Lord Shiva Omkara, Lord glory to Shiva Omkara.\nBrahma, Vishnu, Sadashiva, sharing half his body with Goddess Parvati.\nOm glory to Shiva Omkara.\n\nOne-faced, four-faced, five-faced he reigns.\nSeated on swan, on Garuda, adorned with the bull as his vehicle.\nOm glory to Shiva Omkara.\n\nTwo-armed, four-armed, ten-armed he shines.\nBeholding the three forms, the people of the three worlds are enchanted.\nOm glory to Shiva Omkara.\n\nWearer of rosary beads, forest garland, and garland of skulls.\nAnointed with sandalwood and musk, with ash-covered limbs.\nOm glory to Shiva Omkara.\n\nDressed in white, in yellow, in tiger skin.\nSankara, eternal Shiva, with Parvati by his side.\nOm glory to Shiva Omkara.\n\nIn his hand he holds a water pot, a discus, and a trident.\nCreator of the world, protector of the world, destroyer of the world.\nOm glory to Shiva Omkara.\n\nBrahma, Vishnu, Sadashiva, known as indivisible.\nAdorned in the syllable Om, these three are one.\nOm glory to Shiva Omkara.\n\nWhoever sings the aarti of the Lord of the three qualities,\nSays Shivananda Swami, they shall obtain their heart's desire.\nOm glory to Shiva Omkara."},{"id":"shiva-2","title":"शिव तांडव स्तोत्रम्","hindi":"जटाटवीगलज्जलप्रवाहपावितस्थले\nगलेऽवलम्ब्य लम्बितां भुजङ्गतुङ्गमालिकाम्।\nडमड्डमड्डमड्डमन्निनादवड्डमर्वयं\nचकार चण्डताण्डवं तनोतु नः शिवः शिवम्॥१॥\n\nजटाकटाहसम्भ्रमभ्रमन्निलिम्पनिर्झरी-\nविलोलवीचिवल्लरीविराजमानमूर्धनि।\nधगद्धगद्धगज्ज्वलल्ललाटपट्टपावके\nकिशोरचन्द्रशेखरे रतिः प्रतिक्षणं मम॥२॥","english":"From his matted locks, made sacred by the flowing Ganges,\nWith a snake garland hanging down his neck,\nCreating the sound of damaru, resounding loudly,\nMay Shiva, performing his fierce Tandava dance, bestow prosperity upon us.\n\nIn whose head shines the sprinkle of water from the Ganges,\nFlowing from his matted hair in constant motion,\nWith forehead blazing like fire,\nMay my devotion be ever fixed on the young moon-crested Lord."}]};
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get aarti ID from URL query parameter if any
+            const urlParams = new URLSearchParams(window.location.search);
+            const aartiId = urlParams.get('aarti');
+            
+            // Update page title
+            document.title = `Lord Shiva Aarti - Aarti Sangrah`;
+            
+            // Update content
+            document.getElementById('deity-name').textContent = 'Lord Shiva';
+            
+            // Add deity image - fix path to be from root
+            const deityImageContainer = document.getElementById('deity-image');
+            if (deityImageContainer) {
+                deityImageContainer.style.backgroundImage = `url('/images/shiva.jpg')`;
+            }
+            
+            // Current language state (default: Hindi)
+            let currentLanguage = 'hindi';
+            
+            // Current selected aarti
+            let currentAarti = null;
+            
+            // Handle both old format (single aarti) and new format (multiple aartis)
+            let aartis = currentDeity.aartis;
+            if (!aartis) {
+                // Convert old format to new format on the fly
+                aartis = [{
+                    id: `shiva-1`,
+                    title: "आरती",
+                    hindi: currentDeity.aarti || "Aarti text unavailable",
+                    english: currentDeity.aartiEnglish || "English translation not available"
+                }];
+            }
+            
+            // Populate aarti cards
+            const aartiCardsContainer = document.getElementById('aarti-cards');
+            
+            aartis.forEach(aarti => {
+                const aartiCard = document.createElement('div');
+                aartiCard.className = 'aarti-card';
+                aartiCard.dataset.aartiId = aarti.id;
+                
+                const title = document.createElement('h4');
+                title.textContent = aarti.title;
+                
+                const preview = document.createElement('p');
+                // Show just the first line of the aarti for preview
+                const previewText = aarti.hindi.split('\n')[0];
+                preview.textContent = previewText;
+                
+                aartiCard.appendChild(title);
+                aartiCard.appendChild(preview);
+                
+                aartiCard.addEventListener('click', () => {
+                    // Update URL with the selected aarti ID without reloading the page
+                    const newUrl = new URL(window.location);
+                    newUrl.searchParams.set('aarti', aarti.id);
+                    window.history.pushState({}, '', newUrl);
+                    
+                    selectAarti(aarti.id);
+                });
+                
+                aartiCardsContainer.appendChild(aartiCard);
+            });
+            
+            // If aartiId is not specified or not found, use the first aarti
+            let initialAartiId = aartiId;
+            if (!initialAartiId || !aartis.find(a => a.id === initialAartiId)) {
+                initialAartiId = aartis[0].id;
+            }
+            
+            // Select the initial aarti
+            selectAarti(initialAartiId);
+            
+            // Set up language toggle buttons
+            const hindiBtn = document.getElementById('hindi-btn');
+            const englishBtn = document.getElementById('english-btn');
+            
+            hindiBtn.addEventListener('click', () => {
+                if (currentLanguage !== 'hindi') {
+                    currentLanguage = 'hindi';
+                    updateButtonStates();
+                    updateAartiText();
+                }
+            });
+            
+            englishBtn.addEventListener('click', () => {
+                if (currentLanguage !== 'english') {
+                    currentLanguage = 'english';
+                    updateButtonStates();
+                    updateAartiText();
+                }
+            });
+            
+            // Function to update button active states
+            function updateButtonStates() {
+                hindiBtn.classList.toggle('active', currentLanguage === 'hindi');
+                englishBtn.classList.toggle('active', currentLanguage === 'english');
+            }
+            
+            // Function to select an aarti
+            function selectAarti(id) {
+                // Find the selected aarti
+                currentAarti = aartis.find(a => a.id === id);
+                
+                if (!currentAarti) {
+                    return;
+                }
+                
+                // Update active card
+                const aartiCards = document.querySelectorAll('.aarti-card');
+                aartiCards.forEach(card => {
+                    card.classList.toggle('active', card.dataset.aartiId === id);
+                });
+                
+                // Update aarti title
+                document.getElementById('aarti-title').textContent = currentAarti.title;
+                
+                // Update the aarti text
+                updateAartiText();
+            }
+            
+            // Function to update aarti text based on selected language
+            function updateAartiText() {
+                if (!currentAarti) {
+                    return;
+                }
+                
+                const aartiLyrics = document.getElementById('aarti-lyrics');
+                
+                if (currentLanguage === 'hindi') {
+                    aartiLyrics.textContent = currentAarti.hindi;
+                    aartiLyrics.style.fontFamily = "'Arial', sans-serif";
+                } else {
+                    // Show English translation
+                    aartiLyrics.textContent = currentAarti.english || "English translation not available yet.";
+                    aartiLyrics.style.fontFamily = "'Arial', sans-serif";
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

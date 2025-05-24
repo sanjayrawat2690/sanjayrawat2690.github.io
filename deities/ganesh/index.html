@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lord Ganesh Aarti - Aarti Sangrah</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/autocomplete.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo (Om symbol) -->
+            <a href="/" class="logo-link">
+                <div class="om-logo">ॐ</div>
+            </a>
+            
+            <!-- Site title -->
+            <div class="site-title">
+                <h1>आरती संग्रह</h1>
+                <h2>Aarti Sangrah</h2>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search for deities or aartis...">
+                <button id="search-button" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <!-- Navigation menu -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="deity-page">
+                <div class="deity-header">
+                    <div id="deity-image" class="deity-image"></div>
+                    <h1 id="deity-name">Deity Name</h1>
+                </div>
+
+                <div class="language-toggle">
+                    <button id="hindi-btn" class="active">हिंदी</button>
+                    <button id="english-btn">English</button>
+                </div>
+
+                <div class="aarti-cards" id="aarti-cards">
+                    <!-- Aarti cards will be populated here -->
+                </div>
+
+                <div class="aarti-content">
+                    <h2 id="aarti-title">Aarti Title</h2>
+                    <div id="aarti-lyrics" class="aarti-lyrics">
+                        <!-- Aarti text will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Aarti Sangrah</h3>
+                <p>A digital collection of traditional Hindu devotional hymns</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Aarti" target="_blank">About Aarti</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Aarti Sangrah. Created with devotion and love.</p>
+            <p><a href="/admin" class="admin-link">Manage Images</a></p>
+        </div>
+    </footer>
+
+    <script src="/search.js"></script>
+
+    <script>
+        // Single deity data for ganesh
+        const currentDeity = {"id":"ganesh","name":"Lord Ganesh","image":"images/ganesh.jpg","aartis":[{"id":"ganesh-1","title":"जय गणेश देवा","hindi":"जय गणेश, जय गणेश, जय गणेश देवा।\nमाता जाकी पार्वती, पिता महादेवा॥\n\nएक दंत दयावंत, चार भुजा धारी।\nमाथे पे सिंदूर सोहे, मूसे की सवारी॥\n\nजय गणेश, जय गणेश, जय गणेश देवा।\nमाता जाकी पार्वती, पिता महादेवा॥\n\nअंधन को आंख देत, कोढ़िन को काया।\nबांझन को पुत्र देत, निर्धन को माया॥\n\nजय गणेश, जय गणेश, जय गणेश देवा।\nमाता जाकी पार्वती, पिता महादेवा॥\n\nहार चढ़े, फूल चढ़े और चढ़े मेवा।\nलड्डुअन का भोग लगे, संत करें सेवा॥\n\nजय गणेश, जय गणेश, जय गणेश देवा।\nमाता जाकी पार्वती, पिता महादेवा॥\n\nदीनन की लाज रखो, शंभु सुतकारी।\nकामना को पूर्ण करो, जाग महारानी॥\n\nजय गणेश, जय गणेश, जय गणेश देवा।\nमाता जाकी पार्वती, पिता महादेवा॥","english":"Jai Ganesh, Jai Ganesh, Jai Ganesh Deva.\nMata Jaaki Parvati, Pita Mahadeva.\n\nEk Dant Dayavant, Char Bhuja Dhari.\nMathe Par Tilak Sohe, Moose Ki Savari.\n\nPaan Chade, Phool Chade, Aur Chade Meva.\nLadduan Ka Bhog Lage, Sant Karen Seva.\n\nAndhan Ko Aankh Det, Kodhin Ko Kaya.\nBaanjhan Ko Putra Det, Nirdhan Ko Maya.\n\nSoor Shyam Sharan Aaye, Safal Kije Seva.\nJai Ganesh, Jai Ganesh, Jai Ganesh Deva.\n\nMata Jaaki Parvati, Pita Mahadeva."},{"id":"ganesh-2","title":"श्री गणेश चालीसा","hindi":"॥ दोहा ॥\nजय गणपति सदगुण सदन,कविवर बदन कृपाल।\n\nविघ्न हरण मंगल करण,जय जय गिरिजालाल॥\n\n॥ चौपाई ॥\nजय जय जय गणपति गणराजू।मंगल भरण करण शुभः काजू॥\n\nजै गजबदन सदन सुखदाता।विश्व विनायका बुद्धि विधाता॥\n\nवक्र तुण्ड शुची शुण्ड सुहावना।तिलक त्रिपुण्ड भाल मन भावन॥\n\nराजत मणि मुक्तन उर माला।स्वर्ण मुकुट शिर नयन विशाला॥\n\nपुस्तक पाणि कुठार त्रिशूलं।मोदक भोग सुगन्धित फूलं॥\n\nसुन्दर पीताम्बर तन साजित।चरण पादुका मुनि मन राजित॥\n\nधनि शिव सुवन षडानन भ्राता।गौरी लालन विश्व-विख्याता॥\n\nऋद्धि-सिद्धि तव चंवर सुधारे।मुषक वाहन सोहत द्वारे॥\n\nकहौ जन्म शुभ कथा तुम्हारी।अति शुची पावन मंगलकारी॥\n\nएक समय गिरिराज कुमारी।पुत्र हेतु तप कीन्हा भारी॥\n\nभयो यज्ञ जब पूर्ण अनूपा।तब पहुंच्यो तुम धरी द्विज रूपा॥\n\nअतिथि जानी के गौरी सुखारी।बहुविधि सेवा करी तुम्हारी॥\n\nअति प्रसन्न हवै तुम वर दीन्हा।मातु पुत्र हित जो तप कीन्हा॥\n\nमिलहि पुत्र तुहि, बुद्धि विशाला।बिना गर्भ धारण यहि काला॥\n\nगणनायक गुण ज्ञान निधाना।पूजित प्रथम रूप भगवाना॥\n\nअस कही अन्तर्धान रूप हवै।पालना पर बालक स्वरूप हवै॥\n\nबनि शिशु रुदन जबहिं तुम ठाना।लखि मुख सुख नहिं गौरी समाना॥\n\nसकल मगन, सुखमंगल गावहिं।नाभ ते सुरन, सुमन वर्षावहिं॥\n\nशम्भु, उमा, बहुदान लुटावहिं।सुर मुनिजन, सुत देखन आवहिं॥\n\nलखि अति आनन्द मंगल साजा।देखन भी आये शनि राजा॥\n\nनिज अवगुण गुनि शनि मन माहीं।बालक, देखन चाहत नाहीं॥\n\nगिरिजा कछु मन भेद बढायो।उत्सव मोर, न शनि तुही भायो॥\n\nकहत लगे शनि, मन सकुचाई।का करिहौ, शिशु मोहि दिखाई॥\n\nनहिं विश्वास, उमा उर भयऊ।शनि सों बालक देखन कहयऊ॥\n\nपदतहिं शनि दृग कोण प्रकाशा।बालक सिर उड़ि गयो अकाशा॥\n\nगिरिजा गिरी विकल हवै धरणी।सो दुःख दशा गयो नहीं वरणी॥\n\nहाहाकार मच्यौ कैलाशा।शनि कीन्हों लखि सुत को नाशा॥\n\nतुरत गरुड़ चढ़ि विष्णु सिधायो।काटी चक्र सो गज सिर लाये॥\n\nबालक के धड़ ऊपर धारयो।प्राण मन्त्र पढ़ि शंकर डारयो॥\n\nनाम गणेश शम्भु तब कीन्हे।प्रथम पूज्य बुद्धि निधि, वर दीन्हे॥\n\nबुद्धि परीक्षा जब शिव कीन्हा।पृथ्वी कर प्रदक्षिणा लीन्हा॥\n\nचले षडानन, भरमि भुलाई।रचे बैठ तुम बुद्धि उपाई॥\n\nचरण मातु-पितु के धर लीन्हें।तिनके सात प्रदक्षिण कीन्हें॥\n\nधनि गणेश कही शिव हिये हरषे।नभ ते सुरन सुमन बहु बरसे॥\n\nतुम्हरी महिमा बुद्धि बड़ाई।शेष सहसमुख सके न गाई॥\n\nमैं मतिहीन मलीन दुखारी।करहूं कौन विधि विनय तुम्हारी॥\n\nभजत रामसुन्दर प्रभुदासा।जग प्रयाग, ककरा, दुर्वासा॥\n\nअब प्रभु दया दीना पर कीजै।अपनी शक्ति भक्ति कुछ दीजै॥\n\n॥ दोहा ॥\nश्री गणेश यह चालीसा,पाठ करै कर ध्यान।\n\nनित नव मंगल गृह बसै,लहे जगत सन्मान॥\n\nसम्बन्ध अपने सहस्र दश,ऋषि पंचमी दिनेश।\n\nपूरण चालीसा भयो,मंगल मूर्ती गणेश॥","english":"॥ Doha ॥\nJaya Ganapati Sadhguna Sadana,Kavi Vara Badana Kripaala।\n\nVighna Harana Mangala Karana,Jaya Jaya Girijaa Laala॥\n\n॥ Chaupai ॥\nJaya Jaya Jaya Ganapati Gan Raaju।Mangala Bharana Karana Shubha Kaaju॥\n\nJaya Gajabadana Sadana Sukhadaataa।Vishva Vinaayaka Buddhi Vidhaata॥\n\nVakra Tunda Shuchi Shunda Suhaavana।Tilaka Tripunda Bhaala Mana Bhaavana॥\n\nRaajata Mani Muktana Ura Maala।Svarna Mukuta Shira Nayana Vishaala॥\n\nPustaka Paani Kuthaara Trishoolam।Modaka Bhoga Sugandhita Phoolam॥\n\nSundara Pitaambara Tana Saajita।Charana Paaduka Muni Mana Raajita॥\n\nDhani Shiva Suvana Shadaanana Bhraata।Gauri Lalana Vishva-Vidhaata॥\n\nRiddhi Siddhi Tava Chanvara Sudhaare।Mushaka Vaahana Sohata Dvaare॥\n\nKahaun Janma Shubha Kathaa Tumhaari।Ati Shuchi Paavana Mangala Kaari॥\n\nEka Samaya Giriraaj Kumaari।Putra Hetu Tapa Kinha Bhaari॥\n\nBhayo Yagya Jaba Poorna Anoopa।Taba Pahunchyo Tuma Dhari Dvija Roopa॥\n\nAtithi Jaani Kai Gauri Sukhaari।Bahuvidhi Sevaa Kari Tumhaari॥\n\nAti Prasanna Hvai Tuma Vara Dinha।Maatu Putra Hita Jo Tapa Kinha॥\n\nMilahi Putra Tuhi Buddhi Vishaala।Binaa Garbha Dhaarana Yahi Kaala॥\n\nGananaayaka, Guna Gyaana Nidhaana।Poojita Prathama Roopa Bhagavana॥\n\nAsa Kahi Antardhyaana Roopa Hvai।Palana Para Baalaka Svaroopa Hvai॥\n\nBani Shishu Rudana Jabahi Tuma Thaana।Lakhi Mukha Sukha Nahin Gauri Samaan॥\n\nSakala Magana, Sukha Mangala Gaavahin।Nabha Te Surana Sumana Varshaavahin॥\n\nShambhu Uma, Bahu Dana Lutavahin।Sura Munijana, Suta Dekhana Aavahin॥\n\nLakhi Ati Aananda Mangala Saaja।Dekhana Bhi Aaye Shani Raaja॥\n\nNija Avaguna Guni Shani Mana Maahin।Baalaka, Dekhan Chaahata Naahin॥\n\nGiraja Kachhu Mana Bheda Badhaayo।Utsava Mora Na Shani Tuhi Bhaayo॥\n\nKahana Lage Shani, Mana Sakuchaai।Kaa Karihau, Shishu Mohi Dikhaai॥\n\nNahin Vishvaasa, Uma Ur Bhayau।Shani So Baalaka Dekhana Kahyau॥\n\nPadatahin, Shani Driga Kona Prakaasha।Baalaka Shira Udi Gayo Aakaasha॥\n\nGiraja Girin Vikala Hvai Dharani।So Dukha Dasha Gayo Nahin Varani॥\n\nHaahaakaara Machyo Kailaasha।Shani Kinhyon Lakhi Suta Ka Naasha॥\n\nTurata Garuda Chadhi Vishnu Sidhaaye।Kaati Chakra So Gaja Shira Laaye॥\n\nBaalaka Ke Dhada Upara Dhaarayo।Praana, Mantra Padha Shankara Darayo॥\n\nNaama 'Ganesha' Shambhu Taba Kinhe।Prathama Poojya Buddhi Nidhi, Vara Dinhe॥\n\nBuddhi Pariksha Jaba Shiva Kinha।Prithvi Kar Pradakshina Linha॥\n\nChale Shadaanana, Bharami Bhulaii।Rachi Baitha Tuma Buddhi Upaai॥\n\nCharana Maatu-Pitu Ke Dhara Linhen।Tinake Saata Pradakshina Kinhen॥\n\nDhani Ganesha, Kahi Shiva Hiya Harashe।Nabha Te Surana Sumana Bahu Barase॥॥\n\nTumhari Mahima Buddhi Badaye।Shesha Sahasa Mukha Sakai Na Gaai॥\n\nMein Mati Hina Malina Dukhaari।Karahun Kauna Vidhi Vinaya Tumhaari॥\n\nBhajata 'Raamasundara' Prabhudaasa।Lakha Prayaga, Kakara, Durvasa॥\n\nAba Prabhu Daya Dina Para Kijai।Apani Bhakti Shakti Kuchhu Dijai॥\n\n॥ Doha ॥\nShri Ganesh Yah Chalisa,Path Karai Dhari Dhyan।\n\nNit Nav Mangal Gruha Bashe,Lahi Jagat Sanman॥\n\nSambandh Apne Sahasra Dasha,Rushi Panchami Dinesh।\n\nPuran Chalisa Bhayo,Mangal Murti Ganesha॥."},{"id":"ganesh-3","title":"श्री गणेश 108 नाम","hindi":"\n\n"}]};
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get aarti ID from URL query parameter if any
+            const urlParams = new URLSearchParams(window.location.search);
+            const aartiId = urlParams.get('aarti');
+            
+            // Update page title
+            document.title = `Lord Ganesh Aarti - Aarti Sangrah`;
+            
+            // Update content
+            document.getElementById('deity-name').textContent = 'Lord Ganesh';
+            
+            // Add deity image - fix path to be from root
+            const deityImageContainer = document.getElementById('deity-image');
+            if (deityImageContainer) {
+                deityImageContainer.style.backgroundImage = `url('/images/ganesh.jpg')`;
+            }
+            
+            // Current language state (default: Hindi)
+            let currentLanguage = 'hindi';
+            
+            // Current selected aarti
+            let currentAarti = null;
+            
+            // Handle both old format (single aarti) and new format (multiple aartis)
+            let aartis = currentDeity.aartis;
+            if (!aartis) {
+                // Convert old format to new format on the fly
+                aartis = [{
+                    id: `ganesh-1`,
+                    title: "आरती",
+                    hindi: currentDeity.aarti || "Aarti text unavailable",
+                    english: currentDeity.aartiEnglish || "English translation not available"
+                }];
+            }
+            
+            // Populate aarti cards
+            const aartiCardsContainer = document.getElementById('aarti-cards');
+            
+            aartis.forEach(aarti => {
+                const aartiCard = document.createElement('div');
+                aartiCard.className = 'aarti-card';
+                aartiCard.dataset.aartiId = aarti.id;
+                
+                const title = document.createElement('h4');
+                title.textContent = aarti.title;
+                
+                const preview = document.createElement('p');
+                // Show just the first line of the aarti for preview
+                const previewText = aarti.hindi.split('\n')[0];
+                preview.textContent = previewText;
+                
+                aartiCard.appendChild(title);
+                aartiCard.appendChild(preview);
+                
+                aartiCard.addEventListener('click', () => {
+                    // Update URL with the selected aarti ID without reloading the page
+                    const newUrl = new URL(window.location);
+                    newUrl.searchParams.set('aarti', aarti.id);
+                    window.history.pushState({}, '', newUrl);
+                    
+                    selectAarti(aarti.id);
+                });
+                
+                aartiCardsContainer.appendChild(aartiCard);
+            });
+            
+            // If aartiId is not specified or not found, use the first aarti
+            let initialAartiId = aartiId;
+            if (!initialAartiId || !aartis.find(a => a.id === initialAartiId)) {
+                initialAartiId = aartis[0].id;
+            }
+            
+            // Select the initial aarti
+            selectAarti(initialAartiId);
+            
+            // Set up language toggle buttons
+            const hindiBtn = document.getElementById('hindi-btn');
+            const englishBtn = document.getElementById('english-btn');
+            
+            hindiBtn.addEventListener('click', () => {
+                if (currentLanguage !== 'hindi') {
+                    currentLanguage = 'hindi';
+                    updateButtonStates();
+                    updateAartiText();
+                }
+            });
+            
+            englishBtn.addEventListener('click', () => {
+                if (currentLanguage !== 'english') {
+                    currentLanguage = 'english';
+                    updateButtonStates();
+                    updateAartiText();
+                }
+            });
+            
+            // Function to update button active states
+            function updateButtonStates() {
+                hindiBtn.classList.toggle('active', currentLanguage === 'hindi');
+                englishBtn.classList.toggle('active', currentLanguage === 'english');
+            }
+            
+            // Function to select an aarti
+            function selectAarti(id) {
+                // Find the selected aarti
+                currentAarti = aartis.find(a => a.id === id);
+                
+                if (!currentAarti) {
+                    return;
+                }
+                
+                // Update active card
+                const aartiCards = document.querySelectorAll('.aarti-card');
+                aartiCards.forEach(card => {
+                    card.classList.toggle('active', card.dataset.aartiId === id);
+                });
+                
+                // Update aarti title
+                document.getElementById('aarti-title').textContent = currentAarti.title;
+                
+                // Update the aarti text
+                updateAartiText();
+            }
+            
+            // Function to update aarti text based on selected language
+            function updateAartiText() {
+                if (!currentAarti) {
+                    return;
+                }
+                
+                const aartiLyrics = document.getElementById('aarti-lyrics');
+                
+                if (currentLanguage === 'hindi') {
+                    aartiLyrics.textContent = currentAarti.hindi;
+                    aartiLyrics.style.fontFamily = "'Arial', sans-serif";
+                } else {
+                    // Show English translation
+                    aartiLyrics.textContent = currentAarti.english || "English translation not available yet.";
+                    aartiLyrics.style.fontFamily = "'Arial', sans-serif";
+                }
+            }
+        });
+    </script>
+</body>
+</html> 
