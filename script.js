@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
         deityCard.appendChild(aartiCount);
         deityGrid.appendChild(deityCard);
         
-        // Add click event to navigate to deity page with new URL format
+        // Add click event to navigate to deity page with GitHub Pages compatible URL
         deityCard.addEventListener('click', () => {
-            // Use the new static URL format instead of query parameters
-            window.location.href = `/${deity.id}`;
+            // Use the full path to the deities folder
+            window.location.href = `/deities/${deity.id}/`;
         });
     });
 }); 

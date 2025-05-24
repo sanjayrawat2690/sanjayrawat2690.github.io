@@ -114,9 +114,27 @@
 
         // Initialize deity page when data is available
         function initializeDeityPage() {
-            // Get deity ID from URL path - handle both /deity and /deity/ patterns
+            // Get deity ID from URL path - handle GitHub Pages structure /deities/deity-id/
             const pathParts = window.location.pathname.split('/').filter(part => part !== '');
-            const deityId = pathParts[pathParts.length - 1];
+            let deityId;
+            
+            // Check if we're in the deities folder structure
+            if (pathParts.length >= 2 && pathParts[0] === 'deities') {
+                deityId = pathParts[1];
+            } else if (pathParts.length === 1) {
+                // Fallback for direct deity access
+                deityId = pathParts[0];
+            } else {
+                console.error('Invalid URL structure:', window.location.pathname);
+                document.body.innerHTML = `
+                    <div style="text-align: center; padding: 50px;">
+                        <h2>Page not found</h2>
+                        <p>The page you're looking for doesn't exist.</p>
+                        <a href="/" style="color: #ff6b35; text-decoration: none;">← Back to Home</a>
+                    </div>
+                `;
+                return;
+            }
             
             console.log('Looking for deity:', deityId);
             console.log('Available deities:', deitiesData.map(d => d.id));

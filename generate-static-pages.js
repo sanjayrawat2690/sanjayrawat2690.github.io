@@ -65,28 +65,4 @@ adminHtml = adminHtml.replace(/src="image-utils.js"/g, 'src="/image-utils.js"');
 fs.writeFileSync(path.join('admin', 'index.html'), adminHtml);
 console.log('Generated admin page');
 
-// Update the main index.html file to use the new URL format
-let mainIndexHtml = fs.readFileSync('index.html', 'utf8');
-mainIndexHtml = mainIndexHtml.replace(/window\.location\.href = `deity\.html\?id=\${deity\.id}`/g, 
-                                 'window.location.href = `/${deity.id}`');
-
-fs.writeFileSync('index.html', mainIndexHtml);
-console.log('Updated main index.html with new URLs');
-
-// Create .htaccess file for URL rewriting
-const htaccessContent = `
-# Enable rewrite engine
-RewriteEngine On
-
-# Redirect old deity.html?id=xxx URLs to /xxx
-RewriteCond %{QUERY_STRING} ^id=([^&]+)
-RewriteRule ^deity\.html$ /%1? [R=301,L]
-
-# Serve static deity pages
-RewriteRule ^([^/]+)/?$ deities/$1/index.html [L]
-`;
-
-fs.writeFileSync('.htaccess', htaccessContent);
-console.log('Created .htaccess file for URL rewriting');
-
 console.log('Static site generation complete!'); 

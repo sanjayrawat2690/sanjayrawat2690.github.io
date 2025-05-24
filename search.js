@@ -69,13 +69,13 @@ document.addEventListener('DOMContentLoaded', function() {
             );
             
             if (matchingDeity) {
-                // Use new URL format
-                window.location.href = `/${matchingDeity.id}`;
+                // Use GitHub Pages compatible URL
+                window.location.href = `/deities/${matchingDeity.id}/`;
                 return;
             }
             
             // If no exact match but we have query, redirect to search page
-            window.location.href = `index.html?search=${encodeURIComponent(query)}`;
+            window.location.href = `/?search=${encodeURIComponent(query)}`;
             return;
         }
         
@@ -127,8 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             
             card.addEventListener('click', () => {
-                // Use new URL format
-                window.location.href = `/${deity.id}`;
+                // Use GitHub Pages compatible URL
+                window.location.href = `/deities/${deity.id}/`;
             });
             
             searchResultsGrid.appendChild(card);
