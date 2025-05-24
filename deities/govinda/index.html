@@ -100,6 +100,161 @@
     </footer>
 
     <script src="/search.js"></script>
+    <script src="/data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get deity ID from URL path
+            const pathParts = window.location.pathname.split('/');
+            const deityId = pathParts[pathParts.length - 1];
+            
+            // Find the deity data
+            const currentDeity = deitiesData.find(d => d.id === deityId);
+            if (!currentDeity) {
+                window.location.href = '/'; // Redirect to home if deity not found
+                return;
+            }
+            
+            // Get aarti ID from URL query parameter if any
+            const urlParams = new URLSearchParams(window.location.search);
+            const aartiId = urlParams.get('aarti');
+            
+            // Update page title
+            document.title = `${currentDeity.name} Aarti - Aarti Sangrah`;
+            
+            // Update content
+            document.getElementById('deity-name').textContent = currentDeity.name;
+            
+            // Add deity image - fix path to be from root
+            const deityImageContainer = document.getElementById('deity-image');
+            if (deityImageContainer) {
+                deityImageContainer.style.backgroundImage = `url('/${currentDeity.image}')`;
+            }
+            
+            // Current language state (default: Hindi)
+            let currentLanguage = 'hindi';
+            
+            // Current selected aarti
+            let currentAarti = null;
+            
+            // Handle both old format (single aarti) and new format (multiple aartis)
+            let aartis = currentDeity.aartis;
+            if (!aartis) {
+                // Convert old format to new format on the fly
+                aartis = [{
+                    id: `${deityId}-1`,
+                    title: "आरती",
+                    hindi: currentDeity.aarti || "Aarti text unavailable",
+                    english: currentDeity.aartiEnglish || "English translation not available"
+                }];
+            }
+            
+            // Populate aarti cards
+            const aartiCardsContainer = document.getElementById('aarti-cards');
+            
+            aartis.forEach(aarti => {
+                const aartiCard = document.createElement('div');
+                aartiCard.className = 'aarti-card';
+                aartiCard.dataset.aartiId = aarti.id;
+                
+                const title = document.createElement('h4');
+                title.textContent = aarti.title;
+                
+                const preview = document.createElement('p');
+                // Show just the first line of the aarti for preview
+                const previewText = aarti.hindi.split('\n')[0];
+                preview.textContent = previewText;
+                
+                aartiCard.appendChild(title);
+                aartiCard.appendChild(preview);
+                
+                aartiCard.addEventListener('click', () => {
+                    // Update URL with the selected aarti ID without reloading the page
+                    const newUrl = new URL(window.location);
+                    newUrl.searchParams.set('aarti', aarti.id);
+                    window.history.pushState({}, '', newUrl);
+                    
+                    selectAarti(aarti.id);
+                });
+                
+                aartiCardsContainer.appendChild(aartiCard);
+            });
+            
+            // If aartiId is not specified or not found, use the first aarti
+            let initialAartiId = aartiId;
+            if (!initialAartiId || !aartis.find(a => a.id === initialAartiId)) {
+                initialAartiId = aartis[0].id;
+            }
+            
+            // Select the initial aarti
+            selectAarti(initialAartiId);
+            
+            // Set up language toggle buttons
+            const hindiBtn = document.getElementById('hindi-btn');
+            const englishBtn = document.getElementById('english-btn');
+            
+            hindiBtn.addEventListener('click', () => {
+                if (currentLanguage !== 'hindi') {
+                    currentLanguage = 'hindi';
+                    updateButtonStates();
+                    updateAartiText();
+                }
+            });
+            
+            englishBtn.addEventListener('click', () => {
+                if (currentLanguage !== 'english') {
+                    currentLanguage = 'english';
+                    updateButtonStates();
+                    updateAartiText();
+                }
+            });
+            
+            // Function to update button active states
+            function updateButtonStates() {
+                hindiBtn.classList.toggle('active', currentLanguage === 'hindi');
+                englishBtn.classList.toggle('active', currentLanguage === 'english');
+            }
+            
+            // Function to select an aarti
+            function selectAarti(id) {
+                // Find the selected aarti
+                currentAarti = aartis.find(a => a.id === id);
+                
+                if (!currentAarti) {
+                    return;
+                }
+                
+                // Update active card
+                const aartiCards = document.querySelectorAll('.aarti-card');
+                aartiCards.forEach(card => {
+                    card.classList.toggle('active', card.dataset.aartiId === id);
+                });
+                
+                // Update aarti title
+                document.getElementById('aarti-title').textContent = currentAarti.title;
+                
+                // Update the aarti text
+                updateAartiText();
+            }
+            
+            // Function to update aarti text based on selected language
+            function updateAartiText() {
+                if (!currentAarti) {
+                    return;
+                }
+                
+                const aartiLyrics = document.getElementById('aarti-lyrics');
+                
+                if (currentLanguage === 'hindi') {
+                    aartiLyrics.textContent = currentAarti.hindi;
+                    aartiLyrics.style.fontFamily = "'Arial', sans-serif";
+                } else {
+                    // Show English translation
+                    aartiLyrics.textContent = currentAarti.english || "English translation not available yet.";
+                    aartiLyrics.style.fontFamily = "'Arial', sans-serif";
+                }
+            }
+        });
+    </script>
 
     <script>
         // Single deity data for govinda
