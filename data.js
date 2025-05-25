@@ -250,14 +250,15 @@ Bhajata 'Raamasundara' Prabhudaasa।Lakha Prayaga, Kakara, Durvasa॥
 
 Aba Prabhu Daya Dina Para Kijai।Apani Bhakti Shakti Kuchhu Dijai॥
 
-॥ Doha ॥
+॥ दोहा ॥
 Shri Ganesh Yah Chalisa,Path Karai Dhari Dhyan।
 
 Nit Nav Mangal Gruha Bashe,Lahi Jagat Sanman॥
 
 Sambandh Apne Sahasra Dasha,Rushi Panchami Dinesh।
 
-Puran Chalisa Bhayo,Mangal Murti Ganesha॥.`
+Puran Chalisa Bhayo,Mangal Murti Ganesha॥`,
+                videoLink: "https://www.youtube.com/watch?v=SyqgAt-T0iQ"
             },
                 {
                     id: "ganesh-3",
@@ -1791,7 +1792,7 @@ Maatu Lijiye Ank ॥
         id: "hanuman",
         name: "Lord Hanuman",
         image: "images/hanuman.jpg",
-        aarti:[
+        aartis:[
             {
                 id: "hanuman-1", 
                 title: "हनुमान आरती (Hanuman Aarti)",
