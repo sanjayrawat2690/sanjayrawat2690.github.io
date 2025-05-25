@@ -72,7 +72,8 @@ Baanjhan Ko Putra Det, Nirdhan Ko Maya.
 Soor Shyam Sharan Aaye, Safal Kije Seva.
 Jai Ganesh, Jai Ganesh, Jai Ganesh Deva.
 
-Mata Jaaki Parvati, Pita Mahadeva.`
+Mata Jaaki Parvati, Pita Mahadeva.`,
+videoLink: "https://www.youtube.com/watch?v=Yuex2EnsGiY"
             },
             {
                 id: "ganesh-2",
@@ -1130,60 +1131,233 @@ Choto so Mero Madan Gopal ॥`,
 त्रिगुण स्वामी जी की आरती, जो कोई नर गावे।
 कहत शिवानंद स्वामी, मनवांछित फल पावे॥
 ॐ जय शिव ओंकारा॥`,
-                english: `Om glory to Lord Shiva Omkara, Lord glory to Shiva Omkara.
-Brahma, Vishnu, Sadashiva, sharing half his body with Goddess Parvati.
-Om glory to Shiva Omkara.
+                english: `Om Jai Shiv Omkara Har Jai Shiv OmKara।
+Brahma Vishnu Sadashiv Ardhaangi Dhaara॥
 
-One-faced, four-faced, five-faced he reigns.
-Seated on swan, on Garuda, adorned with the bull as his vehicle.
-Om glory to Shiva Omkara.
+Ekanan Chaturanan Panchanan Raajey।
+Hansanan Garurasan Vrishvaahan Saajey॥
 
-Two-armed, four-armed, ten-armed he shines.
-Beholding the three forms, the people of the three worlds are enchanted.
-Om glory to Shiva Omkara.
+Do Bhuj Chaar Chaturbhuj Das Bhuj Te Sohey।
+Teeno Roop Nirakhta Tribhuvan Jan Mohey॥
 
-Wearer of rosary beads, forest garland, and garland of skulls.
-Anointed with sandalwood and musk, with ash-covered limbs.
-Om glory to Shiva Omkara.
+Akshmala Banmala Mundmala Dhaari।
+Chandan Mrigmad Sohay Bholay Shubhkari॥
 
-Dressed in white, in yellow, in tiger skin.
-Sankara, eternal Shiva, with Parvati by his side.
-Om glory to Shiva Omkara.
+Shwetambar Pitambar Baagambar Angey।
+Sankadik Brahmadik Bhutadik Sangey॥
 
-In his hand he holds a water pot, a discus, and a trident.
-Creator of the world, protector of the world, destroyer of the world.
-Om glory to Shiva Omkara.
+Karkey Madhya Kamandal Chakra Trishul Dharta।
+Jagkarta Jagbharta Jagsanhaarkarta॥
 
-Brahma, Vishnu, Sadashiva, known as indivisible.
-Adorned in the syllable Om, these three are one.
-Om glory to Shiva Omkara.
+Brahma Vishnu Sada Shiv Jaanat Aviveka।
+Pranvaakshar Madhye Ye Teeno Eka॥
 
-Whoever sings the aarti of the Lord of the three qualities,
-Says Shivananda Swami, they shall obtain their heart's desire.
-Om glory to Shiva Omkara.`,
-                videoLink: "https://www.youtube.com/watch?v=EXAMPLE_SHIVA_VIDEO"
+Trigun Shivji Ki Aarti Jo Koi Nar Gaavey।
+Kahat Shivanand Swami Manvaanchit Phal Paavey॥
+
+Om Jai Shiv Omkara Har Jai Shiv OmKara।
+Brahma Vishnu Sadashiv Ardhaangi Dhaara॥`,
+                videoLink: "https://www.youtube.com/watch?v=BhwOproElxU"
             },
             {
                 id: "shiva-2",
-                title: "शिव तांडव स्तोत्रम्",
-                hindi: `जटाटवीगलज्जलप्रवाहपावितस्थले
-गलेऽवलम्ब्य लम्बितां भुजङ्गतुङ्गमालिकाम्।
-डमड्डमड्डमड्डमन्निनादवड्डमर्वयं
-चकार चण्डताण्डवं तनोतु नः शिवः शिवम्॥१॥
+                title: "शिव चालीसा (Shiv Chalisa)",
+                hindi: `॥ दोहा ॥
+जय गणेश गिरिजा सुवन,
+मंगल मूल सुजान ।
+कहत अयोध्यादास तुम,
+देहु अभय वरदान ॥
+॥ चौपाई ॥
+जय गिरिजा पति दीन दयाला ।
+सदा करत सन्तन प्रतिपाला ॥
 
-जटाकटाहसम्भ्रमभ्रमन्निलिम्पनिर्झरी-
-विलोलवीचिवल्लरीविराजमानमूर्धनि।
-धगद्धगद्धगज्ज्वलल्ललाटपट्टपावके
-किशोरचन्द्रशेखरे रतिः प्रतिक्षणं मम॥२॥`,
-                english: `From his matted locks, made sacred by the flowing Ganges,
-With a snake garland hanging down his neck,
-Creating the sound of damaru, resounding loudly,
-May Shiva, performing his fierce Tandava dance, bestow prosperity upon us.
+भाल चन्द्रमा सोहत नीके ।
+कानन कुण्डल नागफनी के ॥
 
-In whose head shines the sprinkle of water from the Ganges,
-Flowing from his matted hair in constant motion,
-With forehead blazing like fire,
-May my devotion be ever fixed on the young moon-crested Lord.`
+अंग गौर शिर गंग बहाये ।
+मुण्डमाल तन क्षार लगाए ॥
+
+वस्त्र खाल बाघम्बर सोहे ।
+छवि को देखि नाग मन मोहे ॥ 4
+
+मैना मातु की हवे दुलारी ।
+बाम अंग सोहत छवि न्यारी ॥
+
+कर त्रिशूल सोहत छवि भारी ।
+करत सदा शत्रुन क्षयकारी ॥
+
+नन्दि गणेश सोहै तहँ कैसे ।
+सागर मध्य कमल हैं जैसे ॥
+
+कार्तिक श्याम और गणराऊ ।
+या छवि को कहि जात न काऊ ॥ 8
+
+देवन जबहीं जाय पुकारा ।
+तब ही दुख प्रभु आप निवारा ॥
+
+किया उपद्रव तारक भारी ।
+देवन सब मिलि तुमहिं जुहारी ॥
+
+तुरत षडानन आप पठायउ ।
+लवनिमेष महँ मारि गिरायउ ॥
+
+आप जलंधर असुर संहारा ।
+सुयश तुम्हार विदित संसारा ॥ 12
+
+त्रिपुरासुर सन युद्ध मचाई ।
+सबहिं कृपा कर लीन बचाई ॥
+
+किया तपहिं भागीरथ भारी ।
+पुरब प्रतिज्ञा तासु पुरारी ॥
+
+दानिन महँ तुम सम कोउ नाहीं ।
+सेवक स्तुति करत सदाहीं ॥
+
+वेद नाम महिमा तव गाई।
+अकथ अनादि भेद नहिं पाई ॥ 16
+
+प्रकटी उदधि मंथन में ज्वाला ।
+जरत सुरासुर भए विहाला ॥
+
+कीन्ही दया तहं करी सहाई ।
+नीलकण्ठ तब नाम कहाई ॥
+
+पूजन रामचन्द्र जब कीन्हा ।
+जीत के लंक विभीषण दीन्हा ॥
+
+सहस कमल में हो रहे धारी ।
+कीन्ह परीक्षा तबहिं पुरारी ॥ 20
+
+एक कमल प्रभु राखेउ जोई ।
+कमल नयन पूजन चहं सोई ॥
+
+कठिन भक्ति देखी प्रभु शंकर ।
+भए प्रसन्न दिए इच्छित वर ॥
+
+जय जय जय अनन्त अविनाशी ।
+करत कृपा सब के घटवासी ॥
+
+दुष्ट सकल नित मोहि सतावै ।
+भ्रमत रहौं मोहि चैन न आवै ॥ 24
+
+त्राहि त्राहि मैं नाथ पुकारो ।
+येहि अवसर मोहि आन उबारो ॥
+
+लै त्रिशूल शत्रुन को मारो ।
+संकट से मोहि आन उबारो ॥
+
+मात-पिता भ्राता सब होई ।
+संकट में पूछत नहिं कोई ॥
+
+स्वामी एक है आस तुम्हारी ।
+आय हरहु मम संकट भारी ॥ 28
+
+धन निर्धन को देत सदा हीं ।
+जो कोई जांचे सो फल पाहीं ॥
+
+अस्तुति केहि विधि करैं तुम्हारी ।
+क्षमहु नाथ अब चूक हमारी ॥
+
+शंकर हो संकट के नाशन ।
+मंगल कारण विघ्न विनाशन ॥
+
+योगी यति मुनि ध्यान लगावैं ।
+शारद नारद शीश नवावैं ॥ 32
+
+नमो नमो जय नमः शिवाय ।
+सुर ब्रह्मादिक पार न पाय ॥
+
+जो यह पाठ करे मन लाई ।
+ता पर होत है शम्भु सहाई ॥
+
+ॠनियां जो कोई हो अधिकारी ।
+पाठ करे सो पावन हारी ॥
+
+पुत्र हीन कर इच्छा जोई ।
+निश्चय शिव प्रसाद तेहि होई ॥ 36
+
+पण्डित त्रयोदशी को लावे ।
+ध्यान पूर्वक होम करावे ॥
+
+त्रयोदशी व्रत करै हमेशा ।
+ताके तन नहीं रहै कलेशा ॥
+
+धूप दीप नैवेद्य चढ़ावे ।
+शंकर सम्मुख पाठ सुनावे ॥
+
+जन्म जन्म के पाप नसावे ।
+अन्त धाम शिवपुर में पावे ॥ 40
+
+कहैं अयोध्यादास आस तुम्हारी ।
+जानि सकल दुःख हरहु हमारी ॥
+
+॥ दोहा ॥
+नित्त नेम कर प्रातः ही,
+पाठ करौं चालीसा ।
+तुम मेरी मनोकामना,
+पूर्ण करो जगदीश ॥
+
+मगसर छठि हेमन्त ॠतु,
+संवत चौसठ जान ।
+अस्तुति चालीसा शिवहि,
+पूर्ण कीन कल्याण ॥`,
+                english: `॥ Doha ॥
+Jai Ganesh Girija Suvan Mangal Mul Sujan।
+Kahat Ayodhya Das Tum Dev Abhaya Varadan ॥
+॥ Chaupai ॥
+Jai Girija Pati Dinadayala। Sada Karat Santan Pratipala ॥
+Bhala Chandrama Sohat Nike Kanan। Kundal Nagaphani Ke ॥
+Anga Gaur Shira Ganga Bahaye। Mundamala Tan Chhara Lagaye ॥
+Vastra Khala Baghambar Sohain Chhavi। Ko Dekha Naga Muni Mohain ॥
+
+Maina Matu Ki Havai Dulari। Vama Anga Sohat Chhavi Nyari ॥
+Kara Trishul Sohat Chhavi Bhari Karat। Sada Shatrun Chhayakari ॥
+Nandi Ganesh Sohain Tahan Kaise। Sagar Madhya Kamal Hain Jaise ॥
+Kartik Shyam Aur Ganara-U Ya Chhavi। Ko Kahi Jata Na Kauo ॥
+
+Devan Jabahi Jaya Pukara। Tabahi Dukha Prabhu Apa Nivara ॥
+Kiya Upadrav Tarak Bhari Devan Sab Mili। Tumahi Juhari ॥
+Turata Shadanana Apa Pathayau। Lava-Ni-Mesh Mahan Mari Girayau ॥
+Apa Jalandhara Asura Sanhara Suyash। Tumhara Vidit Sansara ॥
+
+Tripurasur Sana Yudha Machayi। Sabhi Kripakar Lina Bachayi ॥
+Kiya Tapahin Bhagiratha Bhari Purva। Pratigya Tasu Purari ॥
+Danin Mahan Tum Sama Kou Nahin। Sevak Astuti Karat Sadahin ॥
+Veda Nam Mahima Tab Gayaee Akatha। Anandi Bhed Nahin Payee ॥
+
+Pragate Udadhi Mantan Men Jvala। Jarat Sura-Sur Bhaye Vihala ॥
+Kinha Daya Tahan Kari Sahayee। Nilakantha Tab Nam Kahayee ॥
+Pujan Ramchandra Jab Kinha। Jiti Ke Lanka Vibhishan Dinhi ॥
+Sahas Kamal Men Ho Rahe Dhari Kinha। Pariksha Tabahin Purari ॥
+
+Ek Kamal Prabhu Rakheu Joi। Kushal-Nain Pujan Chaha Soi ॥
+Kathin Bhakti Dekhi Prabhu Shankar। Bhaye Prasanna Diye-Ichchhit Var ॥
+Jai Jai Jai Anant Avinashi। Karat Kripa Sabake Ghat Vasi ॥
+Dushta Sakal Nit Mohin Satavai। Bhramat Rahe Mohin Chain Na Avai ॥
+
+Trahi-Trahi Main Nath Pukaro। Yahi Avasar Mohi Ana Ubaro ॥
+Lai Trishul Shatrun Ko Maro। Sankat Se Mohin Ana Ubaro ॥
+Mata Pita Bhrata Sab Hoi। Sankat Men Puchhat Nahin Koi ॥
+Svami Ek Hai Asha Tumhari। Ava Harahu Aba Sankat Bhari ॥
+
+Dhan Nirdhan Ko Deta Sadahin। Jo Koi Janche So Phal Pahin ॥
+Astuti Kehi Vidhi Karai Tumhari। Kshamahu Nath Aba Chuka Hamari ॥
+Shankar Ho Sankat Ke Nishan। Vighna Vinashan Mangal Karan ॥
+Yogi Yati Muni Dhyan Lagavan। Sharad Narad Shisha Navavain ॥
+
+Namo Namo Jai Namah Shivaya। Sura Brahmadik Par Na Paya ॥
+Jo Yah Patha Karai Man Lai। Tapar Hota Hai Shambhu Sahayee ॥
+Riniyan Jo Koi Ho Adhikari। Patha Karai So Pavan Hari ॥
+Putra-hin Ichchha Kar Koi। Nischaya Shiva Prasad Tehin Hoi ॥
+
+Pandit Trayodashi Ko Lavai। Dhyan-Purvak Homa Karavai ॥
+Trayodashi Vrat Kare Hamesha। Tan Nahin Take Rahe Kalesha ॥
+Dhupa Dipa Naivedya Charhavai। Anta Vasa Shivapur Men Pavai ॥
+Kahai Ayodhya Asha Tumhari। Jani Sakal Dukha Harahu Hamari ॥
+
+॥ Doha ॥
+Nitya Nema kari Pratahi। Patha karau Chalis ॥
+Tum Meri Man Kamana। Purna Karahu Jagadish ॥`
             }
         ]
     },
@@ -1194,75 +1368,813 @@ May my devotion be ever fixed on the young moon-crested Lord.`
         aartis: [
             {
                 id: "durga-1",
-                title: "ॐ जय अम्बे गौरी",
-                hindi: `ॐ जय अम्बे गौरी, मैया जय श्यामा गौरी।
-तुमको निशदिन ध्यावत, हरि ब्रह्मा शिवारी॥
-ॐ जय अम्बे गौरी॥
+                title: "जय अम्बे गौरी, मैया जय श्यामा गौरी - आरती (Jai Ambe Gauri Maiya Jai Shyama Gauri)",
+                hindi: `जय अम्बे गौरी,
+मैया जय श्यामा गौरी ।
+तुमको निशदिन ध्यावत,
+हरि ब्रह्मा शिवरी ॥
+ॐ जय अम्बे गौरी..॥
 
-मांग सिंदूर विराजत, टीको मृगमद को।
-उज्ज्वल से दोउ नैना, चंद्रवदन नीको॥
-ॐ जय अम्बे गौरी॥`,
-                english: `Om Glory to Mother Ambe Gauri, Mother Glory to Shyama Gauri.
-Day and night you are worshipped by Hari, Brahma, and Shiva.
-Om Glory to Mother Ambe Gauri.
+मांग सिंदूर विराजत,
+टीको मृगमद को ।
+उज्ज्वल से दोउ नैना,
+चंद्रवदन नीको ॥
+ॐ जय अम्बे गौरी..॥
 
-Vermilion adorns your parting, a musk mark on your forehead.
-Bright are your two eyes, and beautiful is your moon-like face.
-Om Glory to Mother Ambe Gauri.`
-            }
+कनक समान कलेवर,
+रक्ताम्बर राजै ।
+रक्तपुष्प गल माला,
+कंठन पर साजै ॥
+ॐ जय अम्बे गौरी..॥
+
+केहरि वाहन राजत,
+खड्ग खप्पर धारी ।
+सुर-नर-मुनिजन सेवत,
+तिनके दुखहारी ॥
+ॐ जय अम्बे गौरी..॥
+
+कानन कुण्डल शोभित,
+नासाग्रे मोती ।
+कोटिक चंद्र दिवाकर,
+सम राजत ज्योती ॥
+ॐ जय अम्बे गौरी..॥
+
+शुंभ-निशुंभ बिदारे,
+महिषासुर घाती ।
+धूम्र विलोचन नैना,
+निशदिन मदमाती ॥
+ॐ जय अम्बे गौरी..॥
+
+चण्ड-मुण्ड संहारे,
+शोणित बीज हरे ।
+मधु-कैटभ दोउ मारे,
+सुर भयहीन करे ॥
+ॐ जय अम्बे गौरी..॥
+
+ब्रह्माणी, रूद्राणी,
+तुम कमला रानी ।
+आगम निगम बखानी,
+तुम शिव पटरानी ॥
+ॐ जय अम्बे गौरी..॥
+
+चौंसठ योगिनी मंगल गावत,
+नृत्य करत भैरों ।
+बाजत ताल मृदंगा,
+अरू बाजत डमरू ॥
+ॐ जय अम्बे गौरी..॥
+
+तुम ही जग की माता,
+तुम ही हो भरता,
+भक्तन की दुख हरता ।
+सुख संपति करता ॥
+ॐ जय अम्बे गौरी..॥
+
+भुजा चार अति शोभित,
+वर मुद्रा धारी । [खड्ग खप्पर धारी]
+मनवांछित फल पावत,
+सेवत नर नारी ॥
+ॐ जय अम्बे गौरी..॥
+
+कंचन थाल विराजत,
+अगर कपूर बाती ।
+श्रीमालकेतु में राजत,
+कोटि रतन ज्योती ॥
+ॐ जय अम्बे गौरी..॥
+
+श्री अंबेजी की आरति,
+जो कोइ नर गावे ।
+कहत शिवानंद स्वामी,
+सुख-संपति पावे ॥
+ॐ जय अम्बे गौरी..॥
+
+जय अम्बे गौरी,
+मैया जय श्यामा गौरी ।`,
+                english: `Jai Ambe Gauri Maiya,
+Jaa Shyama Gauri
+Nishdin Tumko Dhyaavat,
+Hari Brahma Shivji ॥
+
+Mang Sinduur Biraajat,
+Tiko Mrigmadko,
+Ujjvalse Dou Naina,
+Chandravadan Niko ॥
+॥Jai Ambe Gauri...॥
+
+Kanak Saman Kalevar,
+Raktambar Raje,
+Raktapushp Galmala,
+Kanthhar Saje ॥
+॥Jai Ambe Gauri...॥
+
+Kehari Vahan Rajat,
+Khadg Khappar Dhari
+Sur Nar Munijan Sevat,
+Tinke Dukhahari ॥
+॥Jai Ambe Gauri...॥
+
+Kanan Kundal Shobhit,
+Nasagre Moti
+Kotik Chandra Divakar,
+Samrajat Jyoti ॥
+॥Jai Ambe Gauri...॥
+
+Shumbh- Nishumbh Vidare,
+Mahishasur Ghatia
+Dhumra-Vilochan Naina,
+Nishdin Madmati ॥
+॥Jai Ambe Gauri...॥
+
+Chanda-Munda Sanhera,
+Shonit Beed Hare,
+Madhu-Katitabha Mare,
+Sur Bhayahin Kare ॥
+॥Jai Ambe Gauri...॥
+
+Brahmani, Rudrani,
+Tum Kamala Rani,
+Agam-Nigam Bakhani,
+Turn Shiv Patrani ॥
+॥Jai Ambe Gauri...॥
+
+Chaunsath Yogini Gavat,
+Nritya Karat Bhairon,
+Bajat Tab Mridanga,
+Aur Bajat Damru ॥
+॥Jai Ambe Gauri...॥
+
+Tum Ho Jag Ki Mata,
+Tum Hi Ho Bharta,
+Bhaktan Ki Dukh Harta,
+Sukh Sampati Karta ॥
+॥Jai Ambe Gauri...॥
+
+Bhuja Char Ati Shobhit,
+Var Mudra Dhari,
+Manvanchhit Phal Pavat,
+Sevat Nar Nari॥
+॥Jai Ambe Gauri...॥
+
+Kanchan Thal Virajat,
+Agaru Kapur Bati
+Malketu Men Rajat,
+Kotiratan Jyoti ॥
+॥Jai Ambe Gauri...॥
+
+Jai Ambe Gauri Maiya,
+Jaa Shyama Gauri
+Nishdin Tumko Dhyaavat,
+Hari Brahma Shivji ॥`
+            },
+        {
+            id: "durga-2",
+            title: "Durga Chalisa (दुर्गा चालीसा)",
+            hindi: `नमो नमो दुर्गे सुख करनी ।
+नमो नमो दुर्गे दुःख हरनी ॥
+निरंकार है ज्योति तुम्हारी ।
+तिहूँ लोक फैली उजियारी ॥
+शशि ललाट मुख महाविशाला ।
+नेत्र लाल भृकुटि विकराला ॥
+
+रूप मातु को अधिक सुहावे ।
+दरश करत जन अति सुख पावे ॥
+
+तुम संसार शक्ति लै कीना ।
+पालन हेतु अन्न धन दीना ॥
+
+अन्नपूर्णा हुई जग पाला ।
+तुम ही आदि सुन्दरी बाला ॥
+
+प्रलयकाल सब नाशन हारी ।
+तुम गौरी शिवशंकर प्यारी ॥
+
+शिव योगी तुम्हरे गुण गावें ।
+ब्रह्मा विष्णु तुम्हें नित ध्यावें ॥
+
+रूप सरस्वती को तुम धारा ।
+दे सुबुद्धि ऋषि मुनिन उबारा ॥
+
+धरयो रूप नरसिंह को अम्बा ।
+परगट भई फाड़कर खम्बा ॥10॥
+
+रक्षा करि प्रह्लाद बचायो ।
+हिरण्याक्ष को स्वर्ग पठायो ॥
+
+लक्ष्मी रूप धरो जग माहीं ।
+श्री नारायण अंग समाहीं ॥
+
+क्षीरसिन्धु में करत विलासा ।
+दयासिन्धु दीजै मन आसा ॥
+
+हिंगलाज में तुम्हीं भवानी ।
+महिमा अमित न जात बखानी ॥
+
+मातंगी अरु धूमावति माता ।
+भुवनेश्वरी बगला सुख दाता ॥
+
+श्री भैरव तारा जग तारिणी ।
+छिन्न भाल भव दुःख निवारिणी ॥
+
+केहरि वाहन सोह भवानी ।
+लांगुर वीर चलत अगवानी ॥
+
+कर में खप्पर खड्ग विराजै ।
+जाको देख काल डर भाजै ॥
+
+सोहै अस्त्र और त्रिशूला ।
+जाते उठत शत्रु हिय शूला ॥
+
+नगरकोट में तुम्हीं विराजत ।
+तिहुँलोक में डंका बाजत ॥20॥
+
+शुम्भ निशुम्भ दानव तुम मारे ।
+रक्तबीज शंखन संहारे ॥
+
+महिषासुर नृप अति अभिमानी ।
+जेहि अघ भार मही अकुलानी ॥
+
+रूप कराल कालिका धारा ।
+सेन सहित तुम तिहि संहारा ॥
+
+परी गाढ़ सन्तन पर जब जब ।
+भई सहाय मातु तुम तब तब ॥
+
+अमरपुरी अरु बासव लोका ।
+तब महिमा सब रहें अशोका ॥
+
+ज्वाला में है ज्योति तुम्हारी ।
+तुम्हें सदा पूजें नरनारी ॥
+
+प्रेम भक्ति से जो यश गावें ।
+दुःख दारिद्र निकट नहिं आवें ॥
+
+ध्यावे तुम्हें जो नर मन लाई ।
+जन्ममरण ताकौ छुटि जाई ॥
+
+जोगी सुर मुनि कहत पुकारी ।
+योग न हो बिन शक्ति तुम्हारी ॥
+
+शंकर आचारज तप कीनो ।
+काम अरु क्रोध जीति सब लीनो ॥30
+
+निशिदिन ध्यान धरो शंकर को ।
+काहु काल नहिं सुमिरो तुमको ॥
+
+शक्ति रूप का मरम न पायो ।
+शक्ति गई तब मन पछितायो ॥
+
+शरणागत हुई कीर्ति बखानी ।
+जय जय जय जगदम्ब भवानी ॥
+
+भई प्रसन्न आदि जगदम्बा ।
+दई शक्ति नहिं कीन विलम्बा ॥
+
+मोको मातु कष्ट अति घेरो ।
+तुम बिन कौन हरै दुःख मेरो ॥
+
+आशा तृष्णा निपट सतावें ।
+मोह मदादिक सब बिनशावें ॥
+
+शत्रु नाश कीजै महारानी ।
+सुमिरौं इकचित तुम्हें भवानी ॥
+
+करो कृपा हे मातु दयाला ।
+ऋद्धिसिद्धि दै करहु निहाला ॥
+
+जब लगि जिऊँ दया फल पाऊँ ।
+तुम्हरो यश मैं सदा सुनाऊँ ॥
+
+श्री दुर्गा चालीसा जो कोई गावै ।
+सब सुख भोग परमपद पावै ॥40
+
+देवीदास शरण निज जानी ।
+कहु कृपा जगदम्ब भवानी ॥
+
+॥दोहा॥
+शरणागत रक्षा करे,
+भक्त रहे नि:शंक ।
+मैं आया तेरी शरण में,
+मातु लिजिये अंक ॥
+
+॥ इति श्री दुर्गा चालीसा संपूर्ण ॥`,
+            english: `Namo Namo Durge Sukh Karani ।
+Namo Namo Ambe Dukh Harani ॥
+Nirakar Hai Jyoti Tumhari ।
+Tihoun Lok Phaili Uujiyaari ॥
+
+Shashi Lalaat Mukh Maha Vishala ।
+Netra Lal Bhrikoutee Vikaraala ॥
+
+Roop Maatu Ko Adhik Suhaave ।
+Darshan Karata Jana Ati Sukh Paave ॥4
+
+Tum Sansar Shakti Laya Keena ।
+Palana Hetu Anna Dhan Deena ॥
+
+Annapoorna Hui Tu Jag Pala ।
+Tumhi Aadi Sundari Bala ॥
+
+Pralayakala Sab Nashana Haari ।
+Tum Gouri Shiv Shankar Pyari ॥
+
+Shiv Yogi Tumhre Gun Gaavein ।
+Brahma Vishnu Tumhein Nit Dhyavein ॥8
+
+Roop Saraswati Ka Tum Dhara ।
+Day Subuddhi Rishi Munina Ubara ॥
+
+Dharyo Roop Narsimha Ko Amba ।
+Pragat Bhayi Phaad Ke Khamba ॥
+
+Raksha Kari Prahlad Bachaayo ।
+Hiranyaykush Ko Swarga Pathayo ॥
+
+Lakshmi Roop Dharo Jag Maahin ।
+Shree Narayan Anga Samahin ॥12
+
+Ksheer Sindhu Mein Karat Vilaasa ।
+Daya Sindhu Deejey Man Aasa ॥
+
+Hingalaja Mein Tumhi Bhavani ।
+Mahima Amit Na Jaat Bakhani ॥
+
+Matangi Aru Dhoomawati Mata ।
+Bhuvaneshwari Bagala Sukhdata ॥
+
+Shree Bhairav Tara Jag Tarani ।
+Chhinna Bhala Bhava Dukh Nivarini ॥16
+
+Kehari Vahan Soha Bhavani ।
+Laangur Veer Chalata Agavani ॥
+
+Kar Mein Khappar Khadaga Virajay ।
+Jako Dekh Kaal Dar Bhajey ॥
+
+Sohe Astra Aur Trishula ।
+Jase Uthata Shatru Hiya Shoola ॥
+
+Nagarkot Mein Toumhi Virajat ।
+Tihoun Lok Mein Danka Baajat ॥20
+
+Shumbh-Nishumbh Daanuv Tum Maare ।
+Rakta Beej Shankhana Sanghaare ॥
+
+Mahishasur Nrip Ati Abhimaani ।
+Jehi Agh Bhar Mahi Akulaani ॥
+
+Roop Karaal Kali ka Dhara ।
+Sen Sahita Tum Tihin Samhara ॥
+
+Pari Gaarh Santana Par Jab Jab ।
+Bhayi Sahay Matou Tum Tab Tab ॥24
+
+Amarpuri Arubaa Sab Lokaa ।
+Tab Mahima Sab Kahey Ashoka ॥
+
+Jwala Mein Hai Jyoti Tumhari ।
+Tumhein Sada Poojey Nar Nari ॥
+
+Prem Bhakti Se Jo Yash Gave ।
+Dukh Daridra Nikat Nahin Aave ॥
+
+Dhyaave Tumhein Jo Nar Man Layi ।
+Janma Maran Tako Chhouti Jaayi ॥28
+
+Yogi Sur Muni Kahat Pukaari ।
+Yog Na Hoye Bina Shakti Tumhari ॥
+
+Shankara Acharaj Tap Ati Keenho ।
+Kaam Krodh Jeet Sab Leenho ॥
+
+Nishidin Dhyan Dharo Shankar Ko ।
+Kaahu Kaal Nahin Soumiro Tumko ॥
+
+Shakti Roop Ko Maram Na Payo ।
+Shakti Gayi Tab Man Pachitayo ॥32
+
+Sharnagat Huyi Kirti Bakhaani ।
+Jai Jai Jai Jagadambe Bhavani ॥
+
+Bhayi Prasanna Aadi Jagadamba ।
+Dayi Shakti Nahin Keen Vilamba ॥
+
+Maukon Maatu Kashta Ati Ghero ।
+Tum Bin Kaun Harey Dukh Mero ॥
+
+Asha Trishna Nipat Satavein ।
+Ripu Moorakh Mohe Ati Darpaave ॥36
+
+Shatru Nash Kijey Maharani ।
+Soumiron Ikchit Tumhein Bhavani ॥
+
+Karo Kripa Hey Maatu Dayala ।
+Riddhi Siddhi Dey Karahou Nihaala ॥
+
+Jab Lagi Jiyoun Daya Phal Paoun ।
+Tumhro Yash Mein Sada Sounaoun ॥
+
+Durga Chalisa Jo Nar Gaavey ।
+Sab Sukh Bhog Parampad Pavey ॥40
+
+Devidas Sharan Nij Jaani ।
+Karahoun Kripa Jagadambe Bhavani ॥
+
+॥Doha॥
+Sharanaagat Rakshaa Kare,
+Bhakt Rahe Nishank ।
+Main Aayaa Teri Sharan Me,
+Maatu Lijiye Ank ॥
+॥ Et Shree Durga Chalisa ॥`
+        }
         ]
     },
     {
         id: "hanuman",
         name: "Lord Hanuman",
         image: "images/hanuman.jpg",
-        aarti: `आरती कीजै हनुमान लला की।दुष्ट दलन रघुनाथ कला की॥
+        aarti:[
+            {
+                id: "hanuman-1", 
+                title: "हनुमान आरती (Hanuman Aarti)",
+                hindi: `॥ श्री हनुमंत स्तुति ॥
+मनोजवं मारुत तुल्यवेगं,
+जितेन्द्रियं, बुद्धिमतां वरिष्ठम् ॥
+वातात्मजं वानरयुथ मुख्यं,
+श्रीरामदुतं शरणम प्रपद्धे ॥
 
-जाके बल से गिरिवर कांपे।रोग दोष जाके निकट न झांके॥
+॥ आरती ॥
+आरती कीजै हनुमान लला की ।
+दुष्ट दलन रघुनाथ कला की ॥
 
-अंजनि पुत्र महा बलदाई।सन्तन के प्रभु सदा सहाई॥
+जाके बल से गिरवर काँपे ।
+रोग-दोष जाके निकट न झाँके ॥
+अंजनि पुत्र महा बलदाई ।
+संतन के प्रभु सदा सहाई ॥
+आरती कीजै हनुमान लला की ॥
 
-दे बीरा रघुनाथ पठाए।लंका जारि सिया सुधि लाए॥
+दे वीरा रघुनाथ पठाए ।
+लंका जारि सिया सुधि लाये ॥
+लंका सो कोट समुद्र सी खाई ।
+जात पवनसुत बार न लाई ॥
+आरती कीजै हनुमान लला की ॥
 
-लंका सो कोट समुद्र-सी खाई।जात पवनसुत बार न लाई॥
+लंका जारि असुर संहारे ।
+सियाराम जी के काज सँवारे ॥
+लक्ष्मण मुर्छित पड़े सकारे ।
+लाये संजिवन प्राण उबारे ॥
+आरती कीजै हनुमान लला की ॥
 
-लंका जारि असुर संहारे।सियारामजी के काज सवारे॥
+पैठि पताल तोरि जमकारे ।
+अहिरावण की भुजा उखारे ॥
+बाईं भुजा असुर दल मारे ।
+दाहिने भुजा संतजन तारे ॥
+आरती कीजै हनुमान लला की ॥
 
-लक्ष्मण मूर्छित पड़े सकारे।आनि संजीवन प्राण उबारे॥
+सुर-नर-मुनि जन आरती उतरें ।
+जय जय जय हनुमान उचारें ॥
+कंचन थार कपूर लौ छाई ।
+आरती करत अंजना माई ॥
+आरती कीजै हनुमान लला की ॥
 
-पैठि पाताल तोरि जम-कारे।अहिरावण की भुजा उखारे॥
+जो हनुमानजी की आरती गावे ।
+बसहिं बैकुंठ परम पद पावे ॥
+लंक विध्वंस किये रघुराई ।
+तुलसीदास स्वामी कीर्ति गाई ॥
 
-बाएं भुजा असुरदल मारे।दाहिने भुजा संतजन तारे॥
+आरती कीजै हनुमान लला की ।
+दुष्ट दलन रघुनाथ कला की ॥
+॥ इति संपूर्णंम् ॥`,
+                english: `॥ Shri Hanuman Stuti ॥
+Manojavm maaruta tulyavegam,
+jitendriyam buddhimatam varissttha ॥
+Vaatatmajam Vaanarayutha mukhyam,
+Shriiramdutam sharanam prapadye ॥
 
-सुर नर मुनि आरती उतारें।जय जय जय हनुमान उचारें॥
+॥ Aarti ॥
+Aarti Ki Jai Hanuman Lala Ki ।
+Dushat Dalan Ragunath Kala Ki ॥
 
-कंचन थार कपूर लौ छाई।आरती करत अंजना माई॥
+Jake Bal Se Giriver Kaanpe ।
+Rog Dosh Ja Ke Nikat Na Jaanke ॥
+Anjani Putra Mahabaldaye ।
+Santan Ke Prabhu Sada Sahaye ॥
+Aarti Ki Jai Hanuman Lala Ki ॥
 
-जो हनुमानजी की आरती गावे।बसि बैकुण्ठ परम पद पावे॥`,
-        aartiEnglish: `Aarti Kije Hanuman Lala Ki।Dusht Dalan Ragunath Kala Ki॥
+De Beeraha Raghunath Pathai ।
+Lanka Jaari Siya Sudhi Laiye॥
+Lanka So Kot Samundra Se Khaiy ।
+Jaat Pavan Sut Baar Na Laiye ॥
+Aarti Ki Jai Hanuman Lala Ki ॥
 
-Jake Bal Se Girivar Kaanpe।Rog Dosh Ja Ke Nikat Na Jhaanke॥
+Lanka Jaari Asur Sab Maare ।
+Siya Ramji Ke Kaaj Sanvare ॥
+Lakshman Moorchit Parhe Sakare ।
+Aan Sajeevan Pran Ubhaare ॥
+Aarti Ki Jai Hanuman Lala Ki ॥
 
-Anjani Putra Maha Baldaaee।Santan Ke Prabhu Sada Sahai॥
+Paith Pataal Tori Yamkare ।
+Ahiravan Ke Bhuja Ukhaare ॥
+Baayen Bhuja Asur Dal Mare ।
+Daayen Bhuja Sab Santa Jana Tare ॥
+Aarti Ki Jai Hanuman Lala Ki ॥
 
-De Beera Raghunath Pathaaye।Lanka Jaari Siya Sudhi Laaye॥
+Surnar Munijan Aarti Utare ।
+Jai Jai Jai Hanuman Uchaare ॥
+Kanchan Thaar Kapoor Lo Chhai ।
+Aarti Karat Aajani Mai ॥
+Aarti Ki Jai Hanuman Lala Ki ॥
 
-Lanka So Kot Samundra-Si Khai।Jaat Pavan Sut Baar Na Lai॥
+Jo Hanumanji Ki Aarti Gaave ।
+Basi Baikuntha Amar Padh Pave ॥
+Lanka Vidvance Kiye Ragurai ।
+Tulsidas Swami Aarti Gaaie ॥
+Aarti Ki Jai Hanuman Lala Ki ॥
 
-Lanka Jaari Asur Sanhare।Siyaramji Ke Kaaj Sanvare॥
+Aarti Ki Jai Hanuman Lala Ki ।
+Dushat Dalan Ragunath Kala Ki ॥
+॥ Eti Sampuarnam ॥`,
+                videoLink: "https://www.youtube.com/watch?v=r7GJ8GoGSD8"
+            },
+            {
+                id: "hanuman-2",
+                title: "हनुमान चालीसा (Hanuman Chalisa)",
+                hindi: `॥ दोहा॥
+श्रीगुरु चरन सरोज रज
+निज मनु मुकुरु सुधारि ।
+बरनउँ रघुबर बिमल जसु
+जो दायकु फल चारि ॥
+बुद्धिहीन तनु जानिके
+सुमिरौं पवन-कुमार ।
+बल बुधि बिद्या देहु मोहिं
+हरहु कलेस बिकार ॥
 
-Lakshman Moorchhit Pade Sakaare।Aani Sajeevan Pran Ubaare॥
+॥ चौपाई ॥
+जय हनुमान ज्ञान गुन सागर ।
+जय कपीस तिहुँ लोक उजागर ॥
 
-Paithi Pataal Tori Jam-kaare।Ahiravan Ke Bhuja Ukhaare॥
+राम दूत अतुलित बल धामा ।
+अंजनि पुत्र पवनसुत नामा ॥
 
-Baayen Bhuja Asur Dal Mare।Daahine Bhuja Santjan Tare॥
+महाबीर बिक्रम बजरंगी ।
+कुमति निवार सुमति के संगी ॥
 
-Sur Nar Muni Aarti Utare।Jai Jai Jai Hanuman Uchaare॥
+कंचन बरन बिराज सुबेसा ।
+कानन कुण्डल कुँचित केसा ॥४
 
-Kanchan Thaar Kapoor Lau Chhaai।Aarti Karat Anjana Maai॥
+हाथ बज्र अरु ध्वजा बिराजै ।
+काँधे मूँज जनेउ साजै ॥
 
-Jo Hanumanji Ki Aarti Gaave।Basi Baikunth Param Pad Pave॥`
-    },
+शंकर स्वयं/सुवन केसरी नंदन ।
+तेज प्रताप महा जगवंदन ॥
+
+बिद्यावान गुनी अति चातुर ।
+राम काज करिबे को आतुर ॥
+
+प्रभु चरित्र सुनिबे को रसिया ।
+राम लखन सीता मन बसिया ॥८
+
+सूक्ष्म रूप धरि सियहिं दिखावा ।
+बिकट रूप धरि लंक जरावा ॥
+
+भीम रूप धरि असुर सँहारे ।
+रामचन्द्र के काज सँवारे ॥
+
+लाय सजीवन लखन जियाए ।
+श्री रघुबीर हरषि उर लाये ॥
+
+रघुपति कीन्ही बहुत बड़ाई ।
+तुम मम प्रिय भरतहि सम भाई ॥१२
+
+सहस बदन तुम्हरो जस गावैं ।
+अस कहि श्रीपति कण्ठ लगावैं ॥
+
+सनकादिक ब्रह्मादि मुनीसा ।
+नारद सारद सहित अहीसा ॥
+
+जम कुबेर दिगपाल जहाँ ते ।
+कबि कोबिद कहि सके कहाँ ते ॥
+
+तुम उपकार सुग्रीवहिं कीह्ना ।
+राम मिलाय राज पद दीह्ना ॥१६
+
+तुम्हरो मंत्र बिभीषण माना ।
+लंकेश्वर भए सब जग जाना ॥
+
+जुग सहस्त्र जोजन पर भानु ।
+लील्यो ताहि मधुर फल जानू ॥
+
+प्रभु मुद्रिका मेलि मुख माहीं ।
+जलधि लाँघि गये अचरज नाहीं ॥
+
+दुर्गम काज जगत के जेते ।
+सुगम अनुग्रह तुम्हरे तेते ॥२०
+
+राम दुआरे तुम रखवारे ।
+होत न आज्ञा बिनु पैसारे ॥
+
+सब सुख लहै तुम्हारी सरना ।
+तुम रक्षक काहू को डरना ॥
+
+आपन तेज सम्हारो आपै ।
+तीनों लोक हाँक तै काँपै ॥
+
+भूत पिशाच निकट नहिं आवै ।
+महावीर जब नाम सुनावै ॥२४
+
+नासै रोग हरै सब पीरा ।
+जपत निरंतर हनुमत बीरा ॥
+
+संकट तै हनुमान छुडावै ।
+मन क्रम बचन ध्यान जो लावै ॥
+
+सब पर राम तपस्वी राजा ।
+तिनके काज सकल तुम साजा ॥
+
+और मनोरथ जो कोई लावै ।
+सोई अमित जीवन फल पावै ॥२८
+
+चारों जुग परताप तुम्हारा ।
+है परसिद्ध जगत उजियारा ॥
+
+साधु सन्त के तुम रखवारे ।
+असुर निकंदन राम दुलारे ॥
+
+अष्ट सिद्धि नौ निधि के दाता ।
+अस बर दीन जानकी माता ॥
+
+राम रसायन तुम्हरे पासा ।
+सदा रहो रघुपति के दासा ॥३२
+
+तुम्हरे भजन राम को पावै ।
+जनम जनम के दुख बिसरावै ॥
+
+अंतकाल रघुवरपुर जाई ।
+जहाँ जन्म हरिभक्त कहाई ॥
+
+और देवता चित्त ना धरई ।
+हनुमत सेइ सर्ब सुख करई ॥
+
+संकट कटै मिटै सब पीरा ।
+जो सुमिरै हनुमत बलबीरा ॥३६
+
+जै जै जै हनुमान गोसाईं ।
+कृपा करहु गुरुदेव की नाईं ॥
+
+जो सत बार पाठ कर कोई ।
+छूटहि बंदि महा सुख होई ॥
+
+जो यह पढ़ै हनुमान चालीसा ।
+होय सिद्धि साखी गौरीसा ॥
+
+तुलसीदास सदा हरि चेरा ।
+कीजै नाथ हृदय मह डेरा ॥४०
+
+॥ दोहा ॥
+पवन तनय संकट हरन,
+मंगल मूरति रूप ।
+राम लखन सीता सहित,
+हृदय बसहु सुर भूप ॥`,
+                english: `॥ Shri Hanuman Chalisa Lyrics ॥
+॥ Doha ॥
+Shri Guru Charan Saroj raj
+Nija manu Mukura sudhari ।
+Baranau Raghuvar Bimal Jasu
+Jo Dayaku Phala Chari ॥
+Budheeheen Tanu Jannike
+Sumiro Pavan Kumara ।
+Bal Buddhi Vidya Dehoo Mohee
+Harahu Kalesh Vikaar ॥
+
+॥ Chaupai ॥
+Jai Hanuman gyan gun sagar ।
+Jai Kapis tihun lok ujagar ॥
+
+Ram doot atulit bal dhama ।
+Anjani putra Pavan sut nama ॥
+
+Mahabir vikram Bajrangi ।
+Kumati nivar sumati Ke sangi ॥
+
+Kanchan varan viraj subesa ।
+Kanan Kundal Kunchit Kesha ॥ 4
+
+Hath Vajra Aur Dhwaja Viraje ।
+Kaandhe moonj janeu saaje ॥
+
+Sankar suvan kesri Nandan ।
+Tej prataap maha jag vandan ॥
+
+Vidyavaan guni ati chatur ।
+Ram kaj karibe ko aatur ॥
+
+Prabhu charitra sunibe ko rasiya ।
+Ram Lakhan Sita man Basiya ॥ 8
+
+Sukshma roop dhari Siyahi dikhava ।
+Vikat roop dhari lank jalava ॥
+
+Bhim roop dhari asur sanhare ।
+Ramachandra ke kaj sanvare ॥
+
+Laye Sanjivan Lakhan Jiyaye ।
+Shri Raghuvir Harashi ur laye ॥
+
+Raghupati Kinhi bahut badai ।
+Tum mama priya Bharat-hi-sam bhai ॥ 12
+
+Sahas badan tumharo yash gaave ।
+As kahi Shripati kanth lagaave ॥
+
+Sankadhik Brahmaadi Muneesa ।
+Narad Sarad sahit Aheesa ॥
+
+Yam Kuber Dikpaal Jahan te ।
+Kavi kovid kahi sake kahan te ॥
+
+Tum upkar Sugreevahin keenha ।
+Ram milaye rajpad deenha ॥ 16 ॥
+
+Tumhro mantra Vibheeshan maana ।
+Lankeshwar Bhaye Sab jag jana ॥
+
+Yug sahasra yojan par Bhanu ।
+Leelyo tahi madhur phal janu ॥
+
+Prabhu mudrika meli mukh mahee ।
+Jaladhi langhi gaye achraj nahee ॥
+
+Durgam kaj jagat ke jete ।
+Sugam anugraha tumhre tete ॥ 20
+
+Ram duwaare tum rakhvare ।
+Hot na agya binu paisare ॥
+
+Sab sukh lahai tumhari sarna ।
+Tum rakshak kahu ko darna ॥
+
+Aapan tej samharo aapai ।
+Teenon lok hank te kanpai ॥
+
+Bhoot pisaach Nikat nahin aavai ।
+Mahavir jab naam sunavai ॥ 24
+
+Nase rog harae sab peera ।
+Japat nirantar Hanumat beera ॥
+
+Sankat se Hanuman chhudavai ।
+Man Kram Vachan dhyan jo lavai ॥
+
+Sab par Ram tapasvee raja ।
+Tin ke kaj sakal Tum saja ॥
+
+Aur manorath jo koi lavai ।
+Soi amit jeevan phal pavai ॥ 28
+
+Charon jug partap tumhara ।
+Hai parsiddh jagat ujiyara ॥
+
+Sadhu Sant ke tum Rakhware ।
+Asur nikandan Ram dulare ॥
+
+Ashta siddhi nav nidhi ke data ।
+As var deen Janki mata ॥
+
+Ram rasayan tumhare pasa ।
+Sada raho Raghupati ke dasa ॥ 32
+
+Tumhare bhajan Ram ko pavai ।
+Janam janam ke dukh bisraavai ॥
+
+Antkaal Raghuvar pur jayee ।
+Jahan janam Hari Bhakt Kahayee ॥
+
+Aur Devta Chitt na dharahin ।
+Hanumat sei sarv sukh karahin ॥
+
+Sankat kate mite sab peera ।
+Jo sumirai Hanumat Balbeera ॥ 36
+
+Jai Jai Jai Hanuman Gosain ।
+Kripa Karahun Gurudev ki nayin ॥
+
+Jo shat bar path kare koi ।
+Chhutahin bandi maha sukh hoi ॥
+
+Jo yeh padhe Hanuman Chalisa ।
+Hoye siddhi saakhi Gaureesa ॥
+
+Tulsidas sada hari chera ।
+Keejai Nath Hriday mahn dera ॥ 40
+
+॥ Doha ॥
+Pavan Tanay Sankat Harana,
+Mangala Murati Roop ।
+Ram Lakhan Sita Sahita,
+Hriday Basahu Soor Bhoop ॥`,
+videoLink: "https://www.youtube.com/watch?v=AETFvQonfV8"
+            }
+        ]
+            
+        },
     {
         id: "saraswati",
         name: "Goddess Saraswati",
